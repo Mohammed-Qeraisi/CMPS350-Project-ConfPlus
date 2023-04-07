@@ -163,30 +163,50 @@ main{
     justify-content: center;
     gap: 40px;
 }
-
 .schedule-card{
-    border: 1px #2C2C2C solid;
-    padding: 10px 20px;
-    background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
+}
+
+.card{
+    border: 1px #2C2C2C solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     color: #2C2C2C;
-    width: 600px;
-    height: auto;
+    width: 800px;
+    height: 200px;
     border-radius: 20px;
 }
 
 .schedule-card img{
-    width: 100%;
-    height: auto;
+    border-radius: 50%;
+    width: 300px;
 }
 
 .card-info{
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+}
+.card-info-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-info p{
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
