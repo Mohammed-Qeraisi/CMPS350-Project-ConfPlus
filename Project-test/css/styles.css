@@ -14,16 +14,18 @@
     height: 100vh;
 }
 
-.background-container{
+.background-container {
     background-image: url(../images/h.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 100vw 0 0 0 rgb(0 0 0 / 0.5) inset;
 }
-body{
+
+body {
     background-color: #f7f7f7;
 }
+
 nav {
     display: flex;
     align-items: center;
@@ -44,12 +46,12 @@ ul {
     margin-right: 1rem;
 }
 
-a{
+a {
     cursor: pointer;
     color: white;
 }
 
-a:hover{
+a:hover {
     color: #3658C1;
 }
 
@@ -109,20 +111,23 @@ button {
     border-radius: 10px;
     padding: 12px;
 }
-button:hover{
+
+button:hover {
     color: #3658C1;
     border: 1px solid #3658C1;
     background-color: #fff;
     cursor: pointer;
 }
-#cta-button{
+
+#cta-button {
     width: 50%;
 }
-#login-button{
+
+#login-button {
     width: 15%;
 }
 
-main{
+main {
     padding: 0 42px;
     background-color: #f7f7f7;
     margin: 0 auto;
@@ -130,13 +135,14 @@ main{
     transform: translateY(-100px);
 }
 
-.schedule-section h1{
+.schedule-section h1 {
     color: #2C2C2C;
     text-align: center;
     font-size: xx-large;
     padding-top: 20px;
 }
-.schedule-days{
+
+.schedule-days {
     margin-top: 20px;
     padding: 0 500px;
     display: flex;
@@ -144,18 +150,18 @@ main{
 }
 
 #day1,
-#day2{
+#day2 {
     font-size: xx-large;
 }
 
 #day1:hover,
-#day2:hover{
-    color:#3658C1;
+#day2:hover {
+    color: #3658C1;
     box-shadow: inset 0 -2px 0 0 #3658C1;
     cursor: pointer;
 }
 
-.schedule-cards-container{
+.schedule-cards-container {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -163,14 +169,15 @@ main{
     justify-content: center;
     gap: 40px;
 }
-.schedule-card{
+
+.schedule-card {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
-.card{
+.card {
     border: 1px #2C2C2C solid;
     display: flex;
     justify-content: center;
@@ -182,12 +189,12 @@ main{
     border-radius: 20px;
 }
 
-.schedule-card img{
+.schedule-card img {
     border-radius: 50%;
     width: 300px;
 }
 
-.card-info{
+.card-info {
     padding: 10px 20px;
     display: flex;
     justify-content: center;
@@ -195,14 +202,15 @@ main{
     flex-direction: column;
     gap: 10px;
 }
-.card-info-header{
+
+.card-info-header {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.card-info p{
+.card-info p {
     display: -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
@@ -210,3 +218,61 @@ main{
     text-overflow: ellipsis;
 }
 
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.footer-nav {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 20px;
+    margin-top: 0px;
+    align-items: center;
+    flex-direction: row;
+}
+
+.footer-link:hover{
+    color: #3658C1;
+    cursor: pointer;
+}
+
+.home-separator {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 0px;
+    display: flex;
+    margin-top: 2rem;
+    align-items: flex-start;
+    border: 1px #2C2C2C solid;
+    margin-bottom: 1rem;
+    flex-direction: row;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.secondary-footer {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
