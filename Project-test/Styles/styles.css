@@ -104,7 +104,7 @@ header {
     line-height: 1.5rem;
 }
 
-button {
+.header-btns {
     background-color: #3658C1;
     color: #fff;
     border: none;
@@ -112,7 +112,7 @@ button {
     padding: 12px;
 }
 
-button:hover {
+.header-btns:hover {
     color: #3658C1;
     border: 1px solid #3658C1;
     background-color: #fff;
@@ -139,7 +139,7 @@ main {
     transform: translateY(-100px);
 }
 
-.schedule-section{
+.schedule-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,28 +229,144 @@ main {
     text-overflow: ellipsis;
 }
 
-.staff-container{
+.staff-container {
     /* margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(min-content, max-content));
     border: 2px red solid;
     gap: 1rem; */
+    margin-top: 1rem;
     display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-gap: 18px;
+    height: 1500px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 2px red solid;
 }
 
-.staff-card{
+.container {
+    max-width: 1400px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.card-wrapper {
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+.staff-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    width: 350px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: .5s;
+}
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image:hover img {
+    opacity: 0.4;
+    transition: .5s;
+}
+
+.staff-card:hover .card-image {
+    transform: translateY(-100px);
+    transition: all .9s;
+}
+
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 120px;
+    z-index: 1;
+    padding: 10px;
+}
+
+h2 {
+    margin: 30px 0;
+    padding: 0;
+    text-align: center;
+}
+
+.job-title {
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: #333;
+    font-weight: 300;
+}
+
+
+.faqs-container {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
 }
 
-.staff-card img{
+.accordions-container {
+    margin-top: 1rem;
+    display: flex;
     width: 100%;
-    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.accordion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.accordion-btn {
+    color: #2C2C2C;
+    background-color: #f7f7f7;
+    width: 50%;
+    padding: 20px 40px;
+    text-align: left;
+    font-size: larger;
+    outline: 1px solid #2C2C2C;
+    border-radius: 20px;
+}
+
+.activated-panel,
+.accordion-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.panel {
+    padding: 0 18px;
+    color: #2C2C2C;
+    font-size: large;
+    align-self: left;
+    display: none;
+    overflow: hidden;
 }
 
 .footer-container {
@@ -282,7 +398,7 @@ main {
     flex-direction: row;
 }
 
-.footer-link:hover{
+.footer-link:hover {
     color: #3658C1;
     cursor: pointer;
 }

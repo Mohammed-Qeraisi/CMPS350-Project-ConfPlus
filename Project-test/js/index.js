@@ -4,20 +4,20 @@ const day2 = document.querySelector('#day2');
 day1.addEventListener('click', handleDay1);
 day2.addEventListener('click', handleDay2);
 
-function handleDay1(){
+function handleDay1() {
     const scheduleContainer = document.querySelector('.schedule-cards-container')
     scheduleContainer.innerHTML = ''
     scheduleContainer.innerHTML = generateDay1()
 
 }
 
-function handleDay2(){
+function handleDay2() {
     const scheduleContainer = document.querySelector('.schedule-cards-container')
     scheduleContainer.innerHTML = ''
     scheduleContainer.innerHTML = generateDay2()
 }
 
-function generateDay1(){
+function generateDay1() {
     console.log('day1....')
     return `
     <article class="schedule-card">
@@ -35,7 +35,7 @@ function generateDay1(){
     `
 }
 
-function generateDay2(){
+function generateDay2() {
     console.log('day2....')
     return `
     <article class="schedule-card">
@@ -55,3 +55,17 @@ function generateDay2(){
 
 //Default show the day 1 contents.
 handleDay1()
+
+const acc = document.getElementsByClassName("accordion-btn");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
