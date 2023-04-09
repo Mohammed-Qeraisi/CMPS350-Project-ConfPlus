@@ -129,13 +129,24 @@ button:hover {
 
 main {
     padding: 0 42px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
     background-color: #f7f7f7;
     margin: 0 auto;
     border-radius: 50px 50px 0 0;
     transform: translateY(-100px);
 }
 
-.schedule-section h1 {
+.schedule-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.schedule-section h1,
+.team-container h1 {
     color: #2C2C2C;
     text-align: center;
     font-size: xx-large;
@@ -216,6 +227,30 @@ main {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.staff-container{
+    /* margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    border: 2px red solid;
+    gap: 1rem; */
+    display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 18px;
+}
+
+.staff-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.staff-card img{
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .footer-container {

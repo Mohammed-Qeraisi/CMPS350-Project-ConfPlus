@@ -16,6 +16,7 @@ function handleDay2(){
     scheduleContainer.innerHTML = ''
     scheduleContainer.innerHTML = generateDay2()
 }
+
 function generateDay1(){
     console.log('day1....')
     return `
@@ -52,4 +53,5 @@ function generateDay2(){
     `
 }
 
+//Default show the day 1 contents.
 handleDay1()
