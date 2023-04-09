@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Project-test/Styles/submitPaper.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="col-6" id="logo">ConfPlus</h1>
+            <ul class="col-6">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Schedule</a></li>
+                <li><a href="index.html">About</a></li>
+                <button class="button" id="login-button">Login</button>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="submit-paper-form">
+            <fieldset>
+
+                <h3>Paper Details</h3>
+                <div class="form-group">
+                    <input type="text" id="paper-title" name="paper-title" required>
+                    <label for="paper-title">Title</label>
+                </div>
+
+                <div class="add-author"></div>
+                <section id="authors" class="authors">
+
+                    <div class="section-title">Author 1</div>
+
+                    <div class="form-group">
+                        <input type="text" id="author-name" class="author-name" name="author-name" required>
+                        <label for="author-name">Author Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="author-affiliation" class="author-affiliation" name="author-affiliation"
+                            required>
+                        <label for="author-affiliation">Author Affiliation</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" id="author-email" class="author-email" name="author-email" required>
+                        <label for="author-email">Email</label>
+                    </div>
+
+                </section>
+
+                <!-- <div class="form-group">
+                    <input type="text" id="paper-summary" name="paper-summary" required>
+                    <label for="paper-summary">Summary</label>
+                </div> -->
+                <div class="form-group">
+                    <textarea id="paper-summary" name="paper-summary" rows="10" placeholder="Summary"
+                        required></textarea>
+                    <label for="paper-summary"></label>
+                </div>
+
+            </fieldset>
+            <fieldset>
+
+                <h3>Presenter Information</h3>
+                <div class="form-group">
+                    <input type="text" id="presenter-name" name="presenter-name" required>
+                    <label for="presenter-name">Presenter Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="presenter-affiliation" name="presenter-affiliation" required>
+                    <label for="presenter-affiliation">Presenter Affiliation</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="presenter-email" name="presenter-email" required>
+                    <label for="presenter-email">Presenter Email</label>
+                </div>
+
+            </fieldset>
+
+            <!-- Paper Upload Form -->
+            <fieldset>
+                <h3>Paper Upload</h3>
+                <div>
+                    <label for="paper-upload">Upload Paper (PDF format): &nbsp;</label>
+                    <input type="file" id="paper-upload" name="paper-upload" required>
+                </div>
+            </fieldset>
+
+            <button type="submit" id="submit-paper">Submit Paper</button>
+        </form>
+    </main>
+
+</body>
+
+</html>
