@@ -33,6 +33,7 @@ main {
 
 .rightside img {
     width: 80%;
+    height: 100%;
 }
 
 .leftside {
@@ -40,6 +41,7 @@ main {
     flex-direction: column;
     width: 50%;
     padding: 20px;
+    height: 100%;
 }
 
 .leftside h2 {
@@ -90,5 +92,13 @@ ion-icon {
 }
 
 @media screen and (max-width:768px) {
+
+    .rightside {
+        display: none;
+    }
+
+    .leftside {
+        width: 100%;
+    }
 
 }
