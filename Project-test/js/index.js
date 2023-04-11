@@ -56,10 +56,12 @@ function generateDay2() {
 //Default show the day 1 contents.
 handleDay1()
 
-const acc = document.getElementsByClassName("accordion-btn");
 
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
+//Handle accordions in HOME
+const accordions = document.getElementsByClassName("accordion-btn");
+
+for (let i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function () {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
         if (panel.style.display === "block") {
