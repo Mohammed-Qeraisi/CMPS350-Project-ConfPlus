@@ -18,7 +18,7 @@ async function login(event) {
   if (user.errorMessage) {
     alert("Invalid email or password. Please try again.");
   } else {
-    window.location.href = "index.html";
+    window.location.href = "home.html";
     sessionStorage.setItem("isLoggedIn", "true");
   }
 }

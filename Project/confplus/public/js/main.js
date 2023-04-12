@@ -11,6 +11,6 @@ if (isLoggedIn) {
   });
 } else {
   loginBtn.addEventListener("click", () => {
-    window.location.href = "newlogin.html";
+    window.location.href = "login.html";
   });
 }
