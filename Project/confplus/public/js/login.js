@@ -1,3 +1,5 @@
+import usersRepo from "../repository/users-repo.js";
+
 const loginForm = document.querySelector("#form");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
@@ -8,26 +10,17 @@ loginForm.addEventListener("submit", login);
 async function login(event) {
   event.preventDefault();
 
-  const users = await fetchUsers();
+  const email = emailInput.value;
+  const password = passwordInput.value;
 
-  console.log(passwordInput.type);
+  const user = await usersRepo.getUser(email, password);
 
-  const user = users.find(
-    (user) =>
-      user.email === emailInput.value && user.password === passwordInput.value
-  );
-
-  if (user) {
-    window.location.href = "/HTML/index.html";
-  } else {
+  if (user.errorMessage) {
     alert("Invalid email or password. Please try again.");
+  } else {
+    window.location.href = "index.html";
+    sessionStorage.setItem("isLoggedIn", "true");
   }
-}
-
-async function fetchUsers() {
-  const response = await fetch("/JSON/users.json");
-  const data = await response.json();
-  return data;
 }
 
 eyeIcon.addEventListener("click", () => {
