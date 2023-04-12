@@ -5,7 +5,6 @@ class UsersRepo {
   constructor() {
     this.filePath = path.join(process.cwd(), "app/json/users.json");
   }
-
   async getUser(email, password) {
     try {
       const users = await fs.readJSON(this.filePath);
@@ -13,6 +12,7 @@ class UsersRepo {
       const user = users.find(
         (user) => user.email === email && user.password === password
       );
+
 
       if (!user) {
         return { errorMessage: "Invalid email or password" };
@@ -27,6 +27,10 @@ class UsersRepo {
   async getUsersByRole(role) {
     try {
       const users = await fs.readJson(this.filePath);
+
+      if(role === 'nonAuthorUsers'){
+        return users.filter(user => user.role !== 'author');
+      }
 
       const usersByRole = users.filter((user) => user.role === role);
 
