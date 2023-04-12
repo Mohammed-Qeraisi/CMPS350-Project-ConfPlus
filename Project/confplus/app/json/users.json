@@ -1,0 +1,175 @@
+[
+  {
+    "id": 1,
+    "first_name": "Mahmoud",
+    "last_name": "Barhamgi",
+    "email": "Mahmoud@organizer.com",
+    "password": "password123",
+    "role": "organizer",
+    "image": "https://i.postimg.cc/pVsBtM4D/afacCzY.png"
+  },
+  {
+    "id": 2,
+    "first_name": "Abdulahi",
+    "last_name": "Hassen",
+    "email": "Abdulahi@organizer.com",
+    "password": "password123",
+    "role": "organizer",
+    "image": "https://i.postimg.cc/xjpL4yN5/bsLDVoZ.png"
+  },
+  {
+    "id": 3,
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "email": "bobsmith@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/k4BWJBkK/pexels-photo-220453.jpg"
+  },
+  {
+    "id": 4,
+    "first_name": "Alice",
+    "last_name": "Johnson",
+    "email": "alicejohnson@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/Zq9q0p5b/2203055-Cop8-Ui.jpg"
+  },
+  {
+    "id": 5,
+    "first_name": "David",
+    "last_name": "Brown",
+    "email": "davidbrown@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/NM6Br4qc/profile-guy.jpg"
+  },
+  {
+    "id": 6,
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "emilydavis@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/JnLWmkyd/meet-the-cast-of-emily-in-paris-on-netflix-1601402341-view-0.jpg"
+  },
+  {
+    "id": 7,
+    "first_name": "Oliver",
+    "last_name": "Martin",
+    "email": "olivermartin@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/1tPbb1Tk/artworks-000333533862-e40yth-t500x500.jpg"
+  },
+  {
+    "id": 8,
+    "first_name": "Sophie",
+    "last_name": "Miller",
+    "email": "sophiemiller@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/Rhp836Fm/profile05.jpg"
+  },
+  {
+    "id": 9,
+    "first_name": "Luke",
+    "last_name": "Harris",
+    "email": "lukeharris@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/Jn1dPcHm/MV5-BMj-Fh-Zj-I3-N2-Ut-Yjhi-NS00-NWJl-LWE5-Yj-Et-MWUw-Nj-Yx-Njcx-OTgy-Xk-Ey-Xk-Fqc-Gde-QXVy-NTcw-NTkx-NTI-V1.jpg"
+  },
+  {
+    "id": 10,
+    "first_name": "Mia",
+    "last_name": "Wilson",
+    "email": "miawilson@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/Vktf81Gv/63-630946-why-do-we-come-to-work-office-girl.png"
+  },
+  {
+    "id": 11,
+    "first_name": "Noah",
+    "last_name": "Thomas",
+    "email": "noahthomas@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/4xGfsqr1/pexels-photo-936117-jpeg-cs-srgb-dl-pexels-nappy-936117.jpg"
+  },
+  {
+    "id": 12,
+    "first_name": "Ava",
+    "last_name": "Lee",
+    "email": "avalee@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/DyTkXsBv/Richest-women-banner.jpg"
+  },
+  {
+    "id": 13,
+    "first_name": "Jacob",
+    "last_name": "Clark",
+    "email": "jacobclark@reviewer.com",
+    "password": "password123",
+    "role": "reviewer",
+    "image": "https://i.postimg.cc/659bKhMv/1677644286489.jpg"
+  },
+  {
+    "id": 14,
+    "first_name": "Emma",
+    "last_name": "Walker",
+    "email": "emmawalker@author.com",
+    "password": "password123",
+    "role": "author"
+  },
+  {
+    "id": 15,
+    "first_name": "Ethan",
+    "last_name": "Turner",
+    "email": "ethanturner@author.com",
+    "password": "password123",
+    "role": "author"
+  },
+  {
+    "id": 16,
+    "first_name": "Chloe",
+    "last_name": "Parker",
+    "email": "chloeparker@author.com",
+    "password": "password123",
+    "role": "author"
+  },
+  {
+    "id": 17,
+    "first_name": "William",
+    "last_name": "Hall",
+    "email": "williamhall@author.com",
+    "password": "password123",
+    "role": "author"
+  },
+  {
+    "id": 18,
+    "first_name": "Grace",
+    "last_name": "Garcia",
+    "email": "gracegarcia@author.com",
+    "password": "password123",
+    "role": "author"
+  },
+  {
+    "id": 19,
+    "first_name": "Daniel",
+    "last_name": "Young",
+    "email": "danielyoung@author.com",
+    "password": "password123",
+    "role": "author"
+  },
+  {
+    "id": 20,
+    "first_name": "Zoe",
+    "last_name": "Allen",
+    "email": "zoeallen@author.com",
+    "password": "password123",
+    "role": "author"
+  }
+]
