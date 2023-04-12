@@ -13,67 +13,12 @@ body {
 }
 
 body {
-    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
 }
 
-.main-nav {
-    border: 2px red solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 20px;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-#logo {
-    font-size: 32px;
-    margin-left: 1rem;
-    color: #2C2C2C;
-}
-
-ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 44px;
-    margin-right: 1rem;
-}
-
-a {
-    cursor: pointer;
-    color: #2C2C2C;
-}
-
-a:hover {
-    color: #3658C1;
-}
-
-.col-1 {
-    width: calc(100% / 12);
-}
-
-.col-2 {
-    width: calc(100% / 6);
-}
-
-.col-3 {
-    width: calc(100% / 4);
-}
-
-.col-4 {
-    width: calc(100% / 3);
-}
-
-.col-6 {
-    width: calc(100% / 2);
-}
-
-.col-12 {
-    width: 100%;
+ul{
+    padding: 16px 0;
 }
 
 .header-btns {
@@ -81,7 +26,7 @@ a:hover {
     color: #f7f7f7;
     border: none;
     border-radius: 10px;
-    padding: 12px;
+    padding: 10px;
 }
 
 .header-btns:hover {
@@ -97,7 +42,6 @@ a:hover {
 
 main {
     width: 100%;
-    border: 2px red solid;
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
@@ -181,7 +125,6 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #f7f7f7;
-    border: 2px red solid;
 }
 
 .main-footer {
