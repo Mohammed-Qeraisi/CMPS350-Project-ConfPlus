@@ -58,7 +58,8 @@ header {
 .header-btns {
     background-color: #3658C1;
     color: #f7f7f7;
-    border: 3px solid #f7f7f7;
+    border: 3px solid transparent;
+    font-weight: bold;
     border-radius: 10px;
     padding: 10px;
 }
@@ -278,6 +279,7 @@ h2 {
 
 .accordions-container {
     margin-top: 1rem;
+    margin-bottom: 3rem;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -287,7 +289,7 @@ h2 {
 }
 
 .accordion {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -296,10 +298,10 @@ h2 {
 }
 
 .accordion-btn {
-    color: #222222;
+    color: #2C2C2C;
     background-color: #a9a398;
-    width: 50%;
-    padding: 20px 40px;
+    width: 100%;
+    padding: 20px 20px;
     text-align: left;
     font-size: larger;
     font-weight: bold;
@@ -316,6 +318,7 @@ h2 {
 .panel {
     padding: 0 18px;
     color: #2C2C2C;
+    width: 100%;
     font-size: large;
     font-weight: bold;
     align-self: left;
