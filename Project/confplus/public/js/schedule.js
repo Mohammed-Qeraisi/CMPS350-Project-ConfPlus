@@ -1,21 +1,26 @@
+
 import papersRepo from "../repository/papers-repo.js";
 import usersRepo from "../repository/users-repo.js";
+
+window.loadPapers = loadPapers;
+window.handleSearch = handleSearch;
+
 let users = [];
 let papers = [];
 let papersContainer = document.querySelector('.papers-container')
 
-window.addEventListener('load', async () => {
+window.addEventListener('load', loadPapers());
+async function loadPapers() {
     users = await usersRepo.getUserByRole('author');
     papers = await papersRepo.getPapers();
-    console.log(papers);
+
     papers.forEach(paper => {
         papersContainer.innerHTML += generatePaper(paper);
     });
-});
+};
 
 function generatePaper(paper){
     const author = users.find(author => author.id === paper.authorId);
-    console.log(author)
     return `
     <article class="schedule-card">
         <section class="card">
@@ -32,4 +37,19 @@ function generatePaper(paper){
         </section>
     </article>
     `
+}
+
+function handleSearch(input){
+    if(input !== ''){
+        papersContainer.innerHTML = '';
+        const searchedPapers = papers.filter(paper => paper.title.toLowerCase().includes(input));
+        if(searchedPapers.length > 0){
+            searchedPapers.forEach(paper => {
+                papersContainer.innerHTML += generatePaper(paper);
+            })
+        }
+    } else {
+        papersContainer.innerHTML = '';
+        loadPapers();
+    }
 }
