@@ -30,15 +30,20 @@
                     <input type="text" id="paper-title" name="paper-title" required>
                     <label for="paper-title">Title</label>
                 </div>
-                
-                <div class="add-author"></div>
+
+                <!--<div class="add-author"></div>  -->
+
                 <section id="authors" class="authors">
 
                     <div class="section-title">Author 1</div>
-
+    
                     <div class="form-group">
-                        <input type="text" id="author-name" class="author-name" name="author-name" required>
-                        <label for="author-name">Author Name</label>
+                        <input type="text" id="author-fname" class="author-fname" name="author-fname" required>
+                        <label for="author-fname">Author first Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="author-lname" class="author-lname" name="author-lname" required>
+                        <label for="author-lname">Author last Name</label>
                     </div>
                     <div class="form-group">
                         <input type="text" id="author-affiliation" class="author-affiliation" name="author-affiliation"
@@ -50,10 +55,15 @@
                         <input type="text" id="author-email" class="author-email" name="author-email" required>
                         <label for="author-email">Email</label>
                     </div>
-                    
-                    <div class="extra-author-container">
-                        
+
+                    <section id="extra-author-container">
+
+                    </section>
+                    <div class="buttons">
+                        <button type="button" id="add-author">Add Author</button>
+                        <button type="button" id="delete-author">Delete Author</button>
                     </div>
+
                     <!--button to add author-->
                 </section>
 
@@ -68,7 +78,7 @@
                 </div>
 
             </fieldset>
-            <fieldset>
+            <!-- <fieldset>
 
                 <h3>Presenter Information</h3>
                 <div class="form-group">
@@ -84,7 +94,7 @@
                     <label for="presenter-email">Presenter Email</label>
                 </div>
 
-            </fieldset>
+            </fieldset> -->
 
             <!-- Paper Upload Form -->
             <fieldset>
@@ -98,7 +108,7 @@
             <button type="submit" id="submit-paper">Submit Paper</button>
         </form>
     </main>
-
+    <script type="module" src="../js/submit-paper.js"></script>
 </body>
 
 </html>

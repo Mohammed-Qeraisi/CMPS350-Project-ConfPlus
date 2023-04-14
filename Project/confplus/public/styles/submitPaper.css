@@ -114,6 +114,8 @@ button:hover {
     width: 15%;
 }
 
+
+
 /* //////////////////////////////////////////////////////////////////////// */
 
 form {
@@ -278,4 +280,15 @@ textarea:focus {
 #submit-paper:hover {
     background-color: white;
     color: #2E8BC0;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+#add-author,
+#delete-author {
+    width: 100%;
 }
