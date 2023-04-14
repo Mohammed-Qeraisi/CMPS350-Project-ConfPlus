@@ -5,11 +5,10 @@ const deleteAuthor = document.querySelector("#delete-author");
 const authorsContainer = document.querySelector("#extra-author-container");
 const submitPaper = document.querySelector("#submit-paper");
 const form = document.querySelector("#submit-paper-form");
-// async function loadExtraAuthors() {}
 
 addAuthor.addEventListener("click", async () => {
   console.log("hi this is add author");
-  const author = extraAuthor(true);
+  const author = extraAuthor();
   authorsContainer.appendChild(author);
   console.log("hi author number " + authorNumber);
 });
@@ -17,9 +16,11 @@ addAuthor.addEventListener("click", async () => {
 deleteAuthor.addEventListener("click", () => {
   console.log("hi this is delete author");
   if (authorNumber > 1) {
-    const lastAuthor = authorsContainer.lastElementChild;
-    authorsContainer.removeChild(lastAuthor);
+    const lastExtraAuthor = authorsContainer.lastElementChild;
+    authorsContainer.removeChild(lastExtraAuthor);
     authorNumber--;
+  } else {
+    alert("There must be at least 1 Author");
   }
 });
 
@@ -31,16 +32,8 @@ deleteAuthor.addEventListener("click", () => {
 //   console.log(data);
 // });
 
-function extraAuthor(check) {
-  if (check === true) {
-    console.log("trying to add author");
-    ++authorNumber;
-  } else if (check === false && authorNumber > 1) {
-    console.log("trying to delete author");
-    --authorNumber;
-    authorsContainer.remove();
-    return;
-  }
+function extraAuthor() {
+  ++authorNumber;
 
   const newAuthorHtml = ` 
   <div class="section-title">Author ${authorNumber} </div>
