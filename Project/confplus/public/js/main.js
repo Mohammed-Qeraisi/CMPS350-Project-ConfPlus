@@ -1,5 +1,6 @@
 const loginBtn = document.querySelector("#login-button");
 const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+const mainNav = document.querySelector("#main-nav")
 
 if (isLoggedIn) {
   loginBtn.textContent = "Logout";
