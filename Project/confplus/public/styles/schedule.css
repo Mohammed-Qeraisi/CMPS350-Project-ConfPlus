@@ -19,6 +19,10 @@ main{
     flex: 1;
 }
 
+.organizer-section-container{
+    display: none;
+}
+
 label{
     font-weight: bold;
     font-size: 32px;

@@ -7,9 +7,18 @@ window.handleSearch = handleSearch;
 
 let users = [];
 let papers = [];
+const currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
+const organizerSection = document.querySelector('.organizer-section-container');
 let papersContainer = document.querySelector('.papers-container')
 
-window.addEventListener('load', loadPapers());
+window.addEventListener('load', async () => {
+    console.log(currentUser);
+    console.log(organizerSection.style.display);
+     if(currentUser.role === "organizer"){
+        organizerSection.style.display = 'block'
+    }
+    loadPapers();
+});
 async function loadPapers() {
     users = await usersRepo.getUserByRole('author');
     papers = await papersRepo.getPapers();

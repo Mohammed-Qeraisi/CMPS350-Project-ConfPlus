@@ -20,6 +20,7 @@ async function login(event) {
   } else {
     window.location.href = "home.html";
     sessionStorage.setItem("isLoggedIn", "true");
+    sessionStorage.setItem("CurrentUser", JSON.stringify(user));
   }
 }
 
