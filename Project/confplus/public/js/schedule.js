@@ -1,24 +1,38 @@
 
 import papersRepo from "../repository/papers-repo.js";
 import usersRepo from "../repository/users-repo.js";
+import datesRepo from "../repository/dates-repo.js";
 
 window.loadPapers = loadPapers;
 window.handleSearch = handleSearch;
 
 let users = [];
 let papers = [];
+let dates = [];
 const currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 const organizerSection = document.querySelector('.organizer-section-container');
 let papersContainer = document.querySelector('.papers-container')
 
 window.addEventListener('load', async () => {
-    console.log(currentUser);
-    console.log(organizerSection.style.display);
-     if(currentUser.role === "organizer"){
-        organizerSection.style.display = 'block'
-    }
+    loadDates();
     loadPapers();
+    if(currentUser !== null){
+        if(currentUser.role === "organizer"){
+            organizerSection.style.display = 'block';
+        }
+    }
 });
+
+async function loadDates(){
+    dates = await datesRepo.getDates();
+    const select = document.querySelector('#date-filter');
+    dates.forEach(date => {
+        console.log(date);
+        var option = document.createElement('option');
+        option.text = option.value = date.date;
+        select.appendChild(option);
+    })
+}
 async function loadPapers() {
     users = await usersRepo.getUserByRole('author');
     papers = await papersRepo.getPapers();

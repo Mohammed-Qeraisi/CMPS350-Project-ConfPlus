@@ -7,7 +7,9 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 html,
 body{
     height: 100%;

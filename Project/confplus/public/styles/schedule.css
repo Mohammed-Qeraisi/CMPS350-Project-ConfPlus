@@ -8,7 +8,7 @@ body {
     flex-direction: column;
 }
 
-main{
+main {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
@@ -16,21 +16,23 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border: 2px red solid;
+    gap: 2rem;
     flex: 1;
 }
 
-.organizer-section-container{
+.organizer-section-container {
     display: none;
 }
 
-label{
+label {
     font-weight: bold;
     font-size: 32px;
     margin-bottom: 1rem;
     color: #2C2C2C;
 }
 
-input{
+input {
     width: 50%;
     padding: 15px 20px;
     font-size: 18px;
@@ -38,7 +40,25 @@ input{
     color: #2C2C2C;
 }
 
-.papers-container{
+.filtering-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: rgba(206, 215, 244, 0.514);
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+.papers-container {
     margin: 2rem 0;
     display: flex;
     justify-content: center;
@@ -66,8 +86,8 @@ input{
     border-radius: 20px;
 }
 
-.card h3{
-    font-weight:900;
+.card h3 {
+    font-weight: 900;
 }
 
 .schedule-card img {
@@ -85,12 +105,14 @@ input{
     flex-direction: column;
     gap: 10px;
 }
-.card-main-info{
+
+.card-main-info {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 10px;
 }
+
 .card-info-header {
     width: 100%;
     display: flex;
