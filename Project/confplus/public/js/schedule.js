@@ -9,9 +9,11 @@ window.handleSearch = handleSearch;
 let users = [];
 let papers = [];
 let dates = [];
+
 const currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 const organizerSection = document.querySelector('.organizer-section-container');
-let papersContainer = document.querySelector('.papers-container')
+let papersContainer = document.querySelector('.papers-container');
+const filterDropdown = document.querySelector('#date-filter');
 
 window.addEventListener('load', async () => {
     loadDates();
@@ -23,16 +25,39 @@ window.addEventListener('load', async () => {
     }
 });
 
+//Filtering
 async function loadDates(){
     dates = await datesRepo.getDates();
-    const select = document.querySelector('#date-filter');
+
     dates.forEach(date => {
-        console.log(date);
         var option = document.createElement('option');
         option.text = option.value = date.date;
-        select.appendChild(option);
+        filterDropdown.appendChild(option);
     })
-}
+};
+
+filterDropdown.addEventListener('change', filterPapersByDate);
+
+function filterPapersByDate() {
+    const selectedDate = filterDropdown.value;
+
+    if (selectedDate === "all") {
+        // Show all papers if "all" is selected
+        papersContainer.innerHTML = "";
+        papers.forEach(paper => {
+            papersContainer.innerHTML += generatePaper(paper);
+        });
+    } else {
+        const selectedDay = dates.find(date => date.date === selectedDate);
+        // Filter papers based on selected day
+        const filteredPapers = papers.filter(paper => paper.day === selectedDay.day);
+        papersContainer.innerHTML = "";
+        filteredPapers.forEach(paper => {
+            papersContainer.innerHTML += generatePaper(paper);
+        });
+    }
+};
+
 async function loadPapers() {
     users = await usersRepo.getUserByRole('author');
     papers = await papersRepo.getPapers();

@@ -16,7 +16,6 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 2px red solid;
     gap: 2rem;
     flex: 1;
 }
