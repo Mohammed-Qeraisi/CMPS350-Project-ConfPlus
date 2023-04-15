@@ -24,13 +24,13 @@ deleteAuthor.addEventListener("click", () => {
   }
 });
 
-// submitPaper.addEventListener("submit", (event) => {
-//   event.preventDefault();
-//   console.log("form submitted");
+submitPaper.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("form submitted");
 
-//   const data = infoFormToObject(form);
-//   console.log(data);
-// });
+  const data = infoFormToObject(form);
+  console.log(data);
+});
 
 function extraAuthor() {
   ++authorNumber;
@@ -38,21 +38,21 @@ function extraAuthor() {
   const newAuthorHtml = ` 
   <div class="section-title">Author ${authorNumber} </div>
    <div class="form-group">
-     <input type="text" id="author-fname" class="author-fname" name="author-fname" required>
+     <input type="text" id="author-fname" class="author-fname" name="author-fname-${authorNumber}" required>
      <label for="author-fname">Author first Name</label>
    </div>
    <div class="form-group">
-     <input type="text" id="author-lname" class="author-lname" name="author-lname" required>
+     <input type="text" id="author-lname" class="author-lname" name="author-lname-${authorNumber}" required>
      <label for="author-lname">Author last Name</label>
    </div>
    <div class="form-group">
-     <input type="text" id="author-affiliation" class="author-affiliation" name="author-affiliation"
+     <input type="text" id="author-affiliation" class="author-affiliation" name="author-affiliation-${authorNumber}"
          required>
      <label for="author-affiliation">Author Affiliation</label>
    </div>
 
  <div class="form-group">
-     <input type="text" id="author-email" class="author-email" name="author-email" required>
+     <input type="text" id="author-email" class="author-email" name="author-email-${authorNumber}" required>
      <label for="author-email">Email</label>
  </div>
  `;
@@ -65,10 +65,28 @@ function extraAuthor() {
 
 function infoFormToObject(form) {
   const formData = new FormData(form);
-  data = {};
+  let data = {
+    presenter: {},
+  };
+  let authors = [];
+  const regex = /\d+$/;
+
   for (const [key, value] of formData) {
-    data[key] = value;
+    if (key.startsWith("presenter-")) {
+      data.presenter[key] = value;
+    } else if (key.startsWith("author-")) {
+      console.log(key + " : " + value);
+      const authorNumber = key.match(regex)[0];
+      const author = authors[authorNumber - 2] || {};
+      author[key] = value;
+      authors[authorNumber - 2] = author;
+    } else {
+      data[key] = value;
+    }
   }
+
+  data.authors = authors;
+
   return data;
 }
 console.log("hi author number " + authorNumber);
