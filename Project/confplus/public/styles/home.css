@@ -180,10 +180,21 @@ main {
     text-overflow: ellipsis;
 }
 
+.organizer-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}
+
 .staff-container {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.staff-container > :nth-last-child(-n+2) {
+    padding-left: 30rem;
 }
 
 .container {

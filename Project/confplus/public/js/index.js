@@ -1,13 +1,15 @@
 import papersRepo from "../repository/papers-repo.js";
 import usersRepo from "../repository/users-repo.js";
-import scheduleRepo from "../repository/schedule-repo.js";
+// import scheduleRepo from "../repository/schedule-repo.js";
 
 // const day1 = document.querySelector("#day1");
 // const day2 = document.querySelector("#day2");
 // let papersContainer = document.querySelector(".schedule-cards-container");
+const organizerContainer = document.querySelector('.organizer-container');
 const staffContainer = document.querySelector(".staff-container");
 // let papersByDay = {};
 // let authorUsers = [];
+let organizerUsers = [];
 let staffUsers = [];
 // let papers = [];
 
@@ -24,8 +26,14 @@ window.addEventListener("load", async () => {
   // Generate papers for the first day by default
   // generatePapersForDay(1);
 
+  //getting organizer users
+  organizerUsers = await usersRepo.getUserByRole('organizer');
+  organizerUsers.forEach((user) => {
+    organizerContainer.innerHTML += generateUsers(user);
+  });
+
   //getting all users by specifying no email and password argument
-  staffUsers = await usersRepo.getUserByRole("nonAuthorUsers");
+  staffUsers = await usersRepo.getUserByRole("reviewer");
 
   staffUsers.forEach((user) => {
     staffContainer.innerHTML += generateUsers(user);

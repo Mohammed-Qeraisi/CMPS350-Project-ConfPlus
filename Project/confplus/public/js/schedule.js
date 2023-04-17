@@ -49,6 +49,7 @@ function filterPapersByDate() {
         });
     } else {
         const selectedDay = dates.find(date => date.date === selectedDate);
+        
         // Filter papers based on selected day
         const filteredPapers = papers.filter(paper => paper.day === selectedDay.day);
         papersContainer.innerHTML = "";
