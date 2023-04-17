@@ -1,16 +1,1 @@
-[
-    {
-        "paperId": 1,
-        "title": "Fulldive technology using neurology and computer vision",
-        "abstract": "This is the abstract for the fulldive paper",
-        "authorId": 14,
-        "day": 1
-    },
-    {
-        "paperId": 2,
-        "title": "Limbs replacement using nanotechnology",
-        "abstract": "This is the abstract for the limbs paper",
-        "authorId": 15,
-        "day": 2
-    }
-]
+[]

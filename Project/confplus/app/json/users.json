@@ -122,8 +122,7 @@
     "last_name": "Walker",
     "email": "emmawalker@author.com",
     "password": "password123",
-    "role": "author",
-    "image": "https://i.postimg.cc/pVsBtM4D/afacCzY.png"
+    "role": "author"
   },
   {
     "id": 15,

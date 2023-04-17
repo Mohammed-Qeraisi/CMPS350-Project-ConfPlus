@@ -1,4 +1,5 @@
-console.log("welcome to submit-paper.js");
+import papersRepo from "../repository/papers-repo.js";
+
 let authorNumber = 1;
 const addAuthor = document.querySelector("#add-author");
 const deleteAuthor = document.querySelector("#delete-author");
@@ -6,15 +7,12 @@ const authorsContainer = document.querySelector("#extra-author-container");
 const submitPaper = document.querySelector("#submit-paper");
 const form = document.querySelector("#submit-paper-form");
 
-addAuthor.addEventListener("click", async () => {
-  console.log("hi this is add author");
+addAuthor.addEventListener("click", () => {
   const author = extraAuthor();
   authorsContainer.appendChild(author);
-  console.log("hi author number " + authorNumber);
 });
 
 deleteAuthor.addEventListener("click", () => {
-  console.log("hi this is delete author");
   if (authorNumber > 1) {
     const lastExtraAuthor = authorsContainer.lastElementChild;
     authorsContainer.removeChild(lastExtraAuthor);
@@ -24,12 +22,19 @@ deleteAuthor.addEventListener("click", () => {
   }
 });
 
-submitPaper.addEventListener("click", (event) => {
-  event.preventDefault();
-  console.log("form submitted");
+submitPaper.addEventListener("click", async (event) => {
+  try {
+    event.preventDefault();
+    const formCheck = event.target;
+    const isFormValid = formCheck.checkValidity();
+    if (!isFormValid) return;
 
-  const data = infoFormToObject(form);
-  console.log(data);
+    const paper = infoFormToObject(form);
+    const addedPaper = await papersRepo.addPaper(paper);
+    console.log(addedPaper);
+  } catch (error) {
+    console.log(error.name + " | " + error.message);
+  }
 });
 
 function extraAuthor() {
@@ -75,18 +80,18 @@ function infoFormToObject(form) {
     if (key.startsWith("presenter-")) {
       data.presenter[key] = value;
     } else if (key.startsWith("author-")) {
-      console.log(key + " : " + value);
       const authorNumber = key.match(regex)[0];
       const author = authors[authorNumber - 2] || {};
-      author[key] = value;
+      author.key = value;
       authors[authorNumber - 2] = author;
     } else {
       data[key] = value;
     }
   }
 
-  data.authors = authors;
+  if (authors.length > 0) {
+    data.authors = authors;
+  }
 
   return data;
 }
-console.log("hi author number " + authorNumber);

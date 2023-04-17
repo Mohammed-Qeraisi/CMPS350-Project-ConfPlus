@@ -1,0 +1,30 @@
+[
+  {
+    "locationID": 1,
+    "location": "College of Engineering building H07-C333"
+  },
+  {
+    "locationID": 2,
+    "location": "Female Engineering Building C07-145"
+  },
+  {
+    "locationID": 3,
+    "location": "CSE Meeting Room BCR-E104"
+  },
+  {
+    "locationID": 4,
+    "location": "QU Library B13-201"
+  },
+  {
+    "locationID": 5,
+    "location": "Student Affairs Auditorium I11"
+  },
+  {
+    "locationID": 6,
+    "location": "QU Ibn Khaldoon Hall B11"
+  },
+  {
+    "locationID": 7,
+    "location": "QU Al Bitar Building Auditorium 106-G.A6.01"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "location": "Qatar University"
+  },
+  {
+    "id": 2,
+    "location": "University of Doha for Science and Technology"
+  },
+  {
+    "id": 3,
+    "location": "Carnegie Mellon University in Qatar"
+  },
+  {
+    "id": 4,
+    "location": "Hamad Bin Khalifa University"
+  },
+  {
+    "id": 5,
+    "location": "Texas A&M University in Qatar"
+  },
+  {
+    "id": 6,
+    "location": "Weill Cornell University in Qatar"
+  },
+  {
+    "id": 7,
+    "location": "Georgetown University in Qatar"
+  }
+]
