@@ -82,7 +82,7 @@ function infoFormToObject(form) {
     } else if (key.startsWith("author-")) {
       const authorNumber = key.match(regex)[0];
       const author = authors[authorNumber - 2] || {};
-      author.key = value;
+      author[key] = value;
       authors[authorNumber - 2] = author;
     } else {
       data[key] = value;
