@@ -1,4 +1,5 @@
 import papersRepo from "../repository/papers-repo.js";
+import usersRepo from "../repository/users-repo.js";
 
 let authorNumber = 1;
 const addAuthor = document.querySelector("#add-author");
@@ -29,13 +30,28 @@ submitPaper.addEventListener("click", async (event) => {
     const isFormValid = formCheck.checkValidity();
     if (!isFormValid) return;
 
+    const reviewersID = await getRandomReviewer();
+
     const paper = infoFormToObject(form);
+    paper.reviewersID = reviewersID;
     const addedPaper = await papersRepo.addPaper(paper);
     console.log(addedPaper);
   } catch (error) {
     console.log(error.name + " | " + error.message);
   }
 });
+
+async function getRandomReviewer() {
+  const reviewerUsers = await usersRepo.getUserByRole("reviewer");
+  const reviewers = [];
+  const numReviewers = Math.min(2, reviewerUsers.length);
+  for (let i = 0; i < numReviewers; i++) {
+    const index = Math.floor(Math.random() * reviewerUsers.length);
+    reviewers.push({ id: reviewerUsers[index].id });
+    reviewerUsers.splice(index, 1);
+  }
+  return reviewers;
+}
 
 function extraAuthor() {
   ++authorNumber;

@@ -1,0 +1,163 @@
+header {
+    text-align: center;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+
+.main-container {
+    padding: 20px 30px;
+}
+
+.paper-container {
+    display: flex;
+    text-align: center;
+}
+
+.paper-details {
+    padding: 20px;
+    width: 100%;
+}
+
+.paper-details h1,
+.paper-details p {
+    margin-bottom: 10px;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.presenter-container {
+    position: relative;
+    align-items: center;
+    padding: 30px;
+}
+
+.card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 15px;
+}
+
+.card:hover {
+    height: 320px;
+}
+
+.image {
+    position: relative;
+    width: 260px;
+    height: 260px;
+
+    top: -40%;
+    left: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.content {
+    position: relative;
+    top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    min-height: 130px;
+    overflow: hidden;
+}
+
+.content h3,
+.content p {
+    padding-bottom: 10px;
+}
+
+.card:hover .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+
+}
+
+.evaluation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.evaluation-form h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+fieldset {
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+textarea {
+    font-size: 16px;
+    width: 100%;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+}
+
+.title-card {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    height: 50px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.title-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.title-card h1::before {
+    content: "> ";
+}
+
+ion-icon {
+    margin-left: auto;
+    font-size: 25px;
+}

@@ -1,0 +1,46 @@
+<form class="evaluation-form" id="evaluation-form" required>
+
+    <h3>Paper Evaluation</h3>
+
+    <fieldset>
+        <legend>Overall evaluation: </legend>
+        <input type="radio" id="strong_accept" name="evaluation" value="2" required>
+        <label for="strong_accept">2: strong accept</label><br>
+        <input type="radio" id="accept" name="evaluation" value="1" required>
+        <label for="accept">1: accept</label><br>
+        <input type="radio" id="borderline" name="evaluation" value="0" required>
+        <label for="borderline">0: borderline</label><br>
+        <input type="radio" id="reject" name="evaluation" value="-1" required>
+        <label for="reject">-1: reject</label><br>
+        <input type="radio" id="strong_reject" name="evaluation" value="-2" required>
+        <label for="strong_reject">-2: strong reject</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Paper contribution: </legend>
+        <input type="radio" id="major_contribution" name="contribution" value="5" required>
+        <label for="major_contribution">5: a major and significant contribution</label><br>
+        <input type="radio" id="clear_contribution" name="contribution" value="4" required>
+        <label for="clear_contribution">4: a clear contribution</label><br>
+        <input type="radio" id="minor_contribution" name="contribution" value="3" required>
+        <label for="minor_contribution">3: minor contribution</label><br>
+        <input type="radio" id="no_contribution" name="contribution" value="2" required>
+        <label for="no_contribution">2: no obvious contribution</label><br>
+        <input type="radio" id="no_contribution_2" name="contribution" value="1" required>
+        <label for="no_contribution_2">1: no obvious contribution</label><br>
+    </fieldset>
+
+    <div class="textarea">
+        <p>Paper strengths:</p>
+        <textarea name="strengths" rows="4" required></textarea>
+    </div>
+
+    <div class="textarea">
+        <p>Paper weaknesses:</p>
+        <textarea name="weaknesses" rows="4" required></textarea>
+    </div>
+
+    <div class="btn">
+        <input type="submit" value="submit" class="submit-btn" id="submit-btn">
+    </div>
+</form>

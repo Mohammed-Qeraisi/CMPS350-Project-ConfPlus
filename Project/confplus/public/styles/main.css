@@ -1,4 +1,3 @@
-/* محمد شوف شغلك حد الفوتر والناف */
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +6,16 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 html,
-body{
+body {
     height: 100%;
 }
+
 body {
     background-color: #f7f7f7;
 }
@@ -76,6 +78,7 @@ a:hover {
 .col-12 {
     width: 100%;
 }
+
 .header-btns {
     background-color: #3658C1;
     color: #f7f7f7;

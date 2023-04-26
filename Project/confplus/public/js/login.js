@@ -18,9 +18,13 @@ async function login(event) {
   if (user.errorMessage) {
     alert("Invalid email or password. Please try again.");
   } else {
+    console.log(user);
     window.location.href = "home.html";
     sessionStorage.setItem("isLoggedIn", "true");
-    sessionStorage.setItem("CurrentUser", JSON.stringify(user));
+    sessionStorage.setItem(
+      "CurrentUser",
+      JSON.stringify({ userRole: user.role, userID: user.id })
+    );
   }
 }
 

@@ -1,7 +1,11 @@
 import repo from "./papers-repo";
 
 export async function GET(request) {
-  const papers = await repo.getPapers();
+  const { searchParams } = new URL(request.url);
+
+  const ReviewerID = searchParams.get("ReviewerID");
+
+  const papers = await repo.getPapers(ReviewerID);
 
   return Response.json(papers);
 }

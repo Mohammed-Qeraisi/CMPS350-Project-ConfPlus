@@ -6,6 +6,16 @@ class PapersRepo {
     return await respone.json();
   }
 
+  async getPapersByReviewerID(ReviewerID) {
+    const response = await fetch(`${baseUrl}?ReviewerID=${ReviewerID}`);
+    return await response.json();
+  }
+
+  async getPaperByID(id) {
+    const response = await fetch(`${baseUrl}/${id}`);
+    return await response.json();
+  }
+
   async addPaper(paper) {
     const response = await fetch(baseUrl, {
       method: "POST",
