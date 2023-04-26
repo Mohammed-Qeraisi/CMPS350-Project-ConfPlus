@@ -16,6 +16,16 @@ class PapersRepo {
     return await response.json();
   }
 
+  async updatePaper(updatedPaper) {
+    console.log(updatedPaper.paperID);
+    const response = await fetch(`${baseUrl}/${updatedPaper.paperID}`, {
+      method: "PUT",
+      body: JSON.stringify(updatedPaper),
+      headers: { "Content-type": "application/json" },
+    });
+    return await response.json();
+  }
+
   async addPaper(paper) {
     const response = await fetch(baseUrl, {
       method: "POST",

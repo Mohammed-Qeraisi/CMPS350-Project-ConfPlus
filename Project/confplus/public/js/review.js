@@ -6,6 +6,7 @@ const page_URL = "evaluation-form.html";
 let papers = null;
 let selectedPaper = null;
 let evaluationFromHTML = null;
+let index = null;
 
 window.addEventListener("load", async () => {
   // await loadPaper("ptdxyweXggNeFYWSk2s1-");
@@ -31,8 +32,13 @@ function convertToCards(paper) {
 async function loadPaper(id) {
   selectedPaper = await papersRepo.getPaperByID(id);
   const paperDetail = paperDetails(selectedPaper);
+  index = selectedPaper.reviewersID.findIndex(reviewer => reviewer.id === currentUser.userID);
   mainContainer.innerHTML = paperDetail;
   await createFormPage();
+
+  if (selectedPaper.reviewersID[index].evaluated) {
+    fillForm(selectedPaper.reviewersID[index]);
+  }
 }
 
 function paperDetails(selectedPaper) {
@@ -87,19 +93,34 @@ async function getEvaluationFrom() {
   return await response.text();
 }
 
+function fillForm(evaluated) {
+  document.querySelector('.evaluation[value="' + evaluated.evaluation + '"]').checked = true;
+  document.querySelector('.contribution[value="' + evaluated.contribution + '"]').checked = true;
+  document.querySelector("#strengths").value = evaluated.strengths;
+  document.querySelector("#weaknesses").value = evaluated.weaknesses;
+}
+
 async function formSubmit(event) {
-  event.preventDefault();
-  const formCheck = event.target;
-  const isFormValid = formCheck.checkValidity();
-  if (!isFormValid) return;
+  try {
+    event.preventDefault();
+    const formCheck = event.target;
+    const isFormValid = formCheck.checkValidity();
+    if (!isFormValid) return;
+  
+    const evaluation = formToObject(evaluationFromHTML, index);
 
-  const index = selectedPaper.reviewersID.findIndex(reviewer => reviewer.id === currentUser.userID);
+    const updatePaper = await papersRepo.updatePaper(selectedPaper);
+  
+    console.log(evaluation);
+    console.log("====================");
+    console.log(selectedPaper);
+    console.log("====================");
+    console.log(updatePaper);
 
-  const evaluation = formToObject(evaluationFromHTML, index);
-
-  console.log(evaluation);
-  console.log("====================");
-  console.log(selectedPaper);
+    await reloadPage();
+  } catch (error) {
+    console.log(error.name + " | " + error.message);
+  }
 }
 
 
@@ -115,4 +136,8 @@ function formToObject(formElement, index) {
   data.evaluated = true
 
   return data;
+}
+
+async function reloadPage() {
+  location.reload();
 }

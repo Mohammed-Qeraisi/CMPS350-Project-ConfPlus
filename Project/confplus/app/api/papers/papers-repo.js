@@ -43,6 +43,29 @@ class PapersRepo {
     }
   }
 
+  async updatePaper(updatedPaper) {
+    try {
+      const papers = await fs.readJSON(this.filePath);
+
+      const index = papers.findIndex(
+        (paper) => paper.paperID === updatedPaper.paperID
+      );
+
+      if (index >= 0) {
+        papers[index] = updatedPaper;
+        await fs.writeJson(this.filePath, papers);
+        return {
+          successfully: `updated successfully ID:${updatedPaper.paperID}`,
+        };
+      }
+      return {
+        errorMessage: `No paper found with this ID: ${updatedPaper.paperID}`,
+      };
+    } catch (error) {
+      return { errorMessage: error.name + " | " + error.message };
+    }
+  }
+
   async addPaper(paper) {
     try {
       paper.paperID = nanoid();

@@ -27,7 +27,7 @@
             <fieldset>
                 <h3>Paper Details</h3>
                 <div class="form-group">
-                    <input type="text" id="paper-title" name="paper-title" required>
+                    <input type="text" id="paper-title" name="paperTitle" required>
                     <label for="paper-title">Title</label>
                 </div>
 
@@ -36,19 +36,19 @@
                     <div class="section-title">Author 1</div>
 
                     <div class="form-group">
-                        <input type="text" id="presenter-fname" name="presenter-fname" pattern="^[a-zA-Z]+$" required>
+                        <input type="text" id="presenter-fname" name="presenterFname" pattern="^[a-zA-Z]+$" required>
                         <label for="presenter-fname">Presenter Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="presenter-lname" name="presenter-lname" pattern="^[a-zA-Z]+$" required>
+                        <input type="text" id="presenter-lname" name="presenterLname" pattern="^[a-zA-Z]+$" required>
                         <label for="presenter-lname">Presenter Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="presenter-affiliation" name="presenter-affiliation" required>
+                        <input type="text" id="presenter-affiliation" name="presenterAffiliation" required>
                         <label for="presenter-affiliation">Presenter Affiliation</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="presenter-email" name="presenter-email" required>
+                        <input type="email" id="presenter-email" name="presenterEmail" required>
                         <label for="presenter-email">Presenter Email</label>
                     </div>
 
@@ -63,7 +63,7 @@
                 </section>
 
                 <div class="form-group">
-                    <textarea id="paper-summary" name="paper-summary" rows="10" placeholder="Summary"
+                    <textarea id="paper-summary" name="paperSummary" rows="10" placeholder="Summary"
                         required></textarea>
                     <label for="paper-summary"></label>
                 </div>
@@ -74,7 +74,7 @@
                 <h3>Paper Upload</h3>
                 <div>
                     <label for="paper-upload">Upload Paper (PDF format): &nbsp;</label>
-                    <input type="file" id="paper-upload" name="paper-upload" accept="application/pdf" required>
+                    <input type="file" id="paper-upload" name="paperUpload" accept="application/pdf" required>
                 </div>
             </fieldset>
 

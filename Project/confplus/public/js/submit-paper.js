@@ -33,9 +33,10 @@ submitPaper.addEventListener("click", async (event) => {
     const reviewersID = await getRandomReviewer();
 
     const paper = infoFormToObject(form);
+
     paper.reviewersID = reviewersID;
+
     const addedPaper = await papersRepo.addPaper(paper);
-    console.log(addedPaper);
   } catch (error) {
     console.log(error.name + " | " + error.message);
   }
@@ -59,21 +60,21 @@ function extraAuthor() {
   const newAuthorHtml = ` 
   <div class="section-title">Author ${authorNumber} </div>
    <div class="form-group">
-     <input type="text" id="author-fname" class="author-fname" name="author-fname-${authorNumber}" required>
+     <input type="text" id="author-fname" class="author-fname" name="authorFname${authorNumber}" required>
      <label for="author-fname">Author first Name</label>
    </div>
    <div class="form-group">
-     <input type="text" id="author-lname" class="author-lname" name="author-lname-${authorNumber}" required>
+     <input type="text" id="author-lname" class="author-lname" name="authorLname${authorNumber}" required>
      <label for="author-lname">Author last Name</label>
    </div>
    <div class="form-group">
-     <input type="text" id="author-affiliation" class="author-affiliation" name="author-affiliation-${authorNumber}"
+     <input type="text" id="author-affiliation" class="author-affiliation" name="authorAffiliation${authorNumber}"
          required>
      <label for="author-affiliation">Author Affiliation</label>
    </div>
 
  <div class="form-group">
-     <input type="text" id="author-email" class="author-email" name="author-email-${authorNumber}" required>
+     <input type="text" id="author-email" class="author-email" name="authorEmail${authorNumber}" required>
      <label for="author-email">Email</label>
  </div>
  `;
@@ -93,12 +94,13 @@ function infoFormToObject(form) {
   const regex = /\d+$/;
 
   for (const [key, value] of formData) {
-    if (key.startsWith("presenter-")) {
+    if (key.startsWith("presenter")) {
       data.presenter[key] = value;
-    } else if (key.startsWith("author-")) {
+    } else if (key.startsWith("author")) {
       const authorNumber = key.match(regex)[0];
       const author = authors[authorNumber - 2] || {};
-      author[key] = value;
+      const newKey = key.replace(authorNumber, "");
+      author[newKey] = value;
       authors[authorNumber - 2] = author;
     } else {
       data[key] = value;
