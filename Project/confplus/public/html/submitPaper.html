@@ -37,16 +37,23 @@
 
                     <div class="form-group">
                         <input type="text" id="presenter-fname" name="presenterFname" pattern="^[a-zA-Z]+$" required>
-                        <label for="presenter-fname">Presenter Name</label>
+                        <label for="presenter-fname">Presenter First Name</label>
                     </div>
                     <div class="form-group">
                         <input type="text" id="presenter-lname" name="presenterLname" pattern="^[a-zA-Z]+$" required>
-                        <label for="presenter-lname">Presenter Name</label>
+                        <label for="presenter-lname">Presenter Last Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="presenter-affiliation" name="presenterAffiliation" required>
-                        <label for="presenter-affiliation">Presenter Affiliation</label>
+                        <input type="url" id="presenter-Image" name="presenterImage" required>
+                        <label for="presenter-Image">Presenter Image URL</label>
                     </div>
+
+                    <div class="form-group">
+                        <select id="presenter-Affiliation" name="presenterAffiliation"  required>
+                            <option value="" selected disabled>Select Affiliation</option>
+                        </select>
+                    </div>
+
                     <div class="form-group">
                         <input type="email" id="presenter-email" name="presenterEmail" required>
                         <label for="presenter-email">Presenter Email</label>

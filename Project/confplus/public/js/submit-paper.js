@@ -7,6 +7,21 @@ const deleteAuthor = document.querySelector("#delete-author");
 const authorsContainer = document.querySelector("#extra-author-container");
 const submitPaper = document.querySelector("#submit-paper");
 const form = document.querySelector("#submit-paper-form");
+const dbAffiliation = document.querySelectorAll(
+  "#presenter-Affiliation, #author-Affiliation"
+);
+
+async function dropDownMenue() {
+  const data = await fetch("institutions.json");
+  const affiliations = await data.json();
+
+  dbAffiliation.innerHTML = affiliations
+    .map(
+      (affiliation) =>
+        `<option value="${affiliation.location}">${affiliation.location}</option>`
+    )
+    .join(" ");
+}
 
 addAuthor.addEventListener("click", () => {
   const author = extraAuthor();
@@ -63,14 +78,21 @@ function extraAuthor() {
      <input type="text" id="author-fname" class="author-fname" name="authorFname${authorNumber}" required>
      <label for="author-fname">Author first Name</label>
    </div>
+
    <div class="form-group">
      <input type="text" id="author-lname" class="author-lname" name="authorLname${authorNumber}" required>
      <label for="author-lname">Author last Name</label>
    </div>
+
    <div class="form-group">
-     <input type="text" id="author-affiliation" class="author-affiliation" name="authorAffiliation${authorNumber}"
-         required>
-     <label for="author-affiliation">Author Affiliation</label>
+      <input type="url" id="author-Image" name="authorImage${authorNumber}" required>
+      <label for="author-Image">Author Image URL</label>
+   </div>
+
+   <div class="form-group">
+    <select id="author-Affiliation" name="authorAffiliation${authorNumber}" required>
+       <option value="" selected disabled>Select Affiliation</option>
+    </select>
    </div>
 
  <div class="form-group">

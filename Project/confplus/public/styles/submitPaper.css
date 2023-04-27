@@ -170,7 +170,8 @@ fieldset:hover {
 }
 
 .form-group input[type="text"],
-input[type="email"] {
+input[type="email"],
+input[type="url"] {
     appearance: none;
     background-color: none;
     border: 1px solid black;
@@ -189,7 +190,8 @@ input[type="email"] {
 }
 
 .form-group input[type="text"]:focus,
-input[type="email"]:focus {
+input[type="email"]:focus,
+input[type="url"]:focus {
     outline: none;
     background: #B1D4E0;
     color: white;
@@ -198,20 +200,23 @@ input[type="email"]:focus {
 }
 
 .form-group input[type="text"]:valid,
-input[type="email"]:valid {
+input[type="email"]:valid,
+input[type="url"]:valid {
     margin-top: 1.2rem;
     transition: all 0.3s ease-in-out;
 }
 
 .form-group input[type="text"]:focus~label,
-input[type="email"]:focus~label {
+input[type="email"]:focus~label,
+input[type="url"]:focus~label {
     transform: translateY(-0.2rem);
     transition: all 0.3s ease-in;
     transform: translate(0, -35px);
 }
 
 .form-group input[type="text"]:valid~label,
-input[type="email"]:valid~label {
+input[type="email"]:valid~label,
+input[type="url"]:valid~label {
     transition: all 0.3s ease-in;
     transform: translate(5px, -35px) scale(0.9);
 }
