@@ -24,7 +24,7 @@ function addNav() {
   let newNavLink = null;
 
   if (userRole === "organizer") {
-    newNavLink = `<li><a href="edit-schedule.html">Edit Schedule</a></li>`;
+    newNavLink = `<li><a href="schedule-editor.html">Edit Schedule</a></li>`;
   } else if (userRole === "reviewer") {
     newNavLink = `<li><a href="review.html">Review Papers</a></li>`;
   } else {

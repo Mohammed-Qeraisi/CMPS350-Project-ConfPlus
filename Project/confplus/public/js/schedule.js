@@ -43,6 +43,10 @@ function filterPapersByDate() {
 
     if (selectedDate === "all") {
         // Show all papers if "all" is selected
+        console.log(papers.length)
+        if(papers.length === 0){
+            papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
+        }
         papersContainer.innerHTML = "";
         papers.forEach(paper => {
             papersContainer.innerHTML += generatePaper(paper);
@@ -52,6 +56,9 @@ function filterPapersByDate() {
         
         // Filter papers based on selected day
         const filteredPapers = papers.filter(paper => paper.day === selectedDay.day);
+        if(filteredPapers.length === 0){
+            papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
+        }
         papersContainer.innerHTML = "";
         filteredPapers.forEach(paper => {
             papersContainer.innerHTML += generatePaper(paper);
@@ -62,7 +69,9 @@ function filterPapersByDate() {
 async function loadPapers() {
     users = await usersRepo.getUserByRole('author');
     papers = await papersRepo.getPapers();
-
+    if(papers.length === 0){
+        papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
+    }
     papers.forEach(paper => {
         papersContainer.innerHTML += generatePaper(paper);
     });
