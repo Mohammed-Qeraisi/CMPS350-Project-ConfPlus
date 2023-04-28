@@ -1,6 +1,47 @@
 [
     {
         "id": "1",
+        "day": 1,
         "name": "Conference of CS"
+    },
+    {
+        "id": "2",
+        "day": 2,
+        "name": "Conference of CE"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
+    },
+    {
+        "id": "3",
+        "day": 3,
+        "name": "Conference of Medicine"
     }
 ]

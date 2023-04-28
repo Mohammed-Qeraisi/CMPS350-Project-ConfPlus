@@ -2,6 +2,9 @@ import repo from "../repository/schedule-repo.js"
 
 const container = document.querySelector('.schedule-info-container');
 const button = document.querySelector('#submit-btn');
+const select = document.querySelector('#schedule-dropdown');
+const dropdown = document.querySelector('.dropdown');
+const addForm = document.querySelector('.add-form')
 
 let sessions = [];
 let dates = [];
@@ -10,14 +13,44 @@ let locations = [];
 window.addEventListener('load', async () => {
     sessions = await repo.getSchedule()
     if(sessions.length === 0){
-        button.value = 'Add'
+        const addButton = document.querySelector('#add-btn')
+        addButton.addEventListener('submit', addSession)
+        dropdown.style.display = 'none';
     }
     sessions.forEach(session => {
-        container.innerHTML += loadInfo(session)
+        addForm.style.display = 'none';
+        var option = document.createElement('option')
+        option.text = option.value = session.name
+        select.appendChild(option)
     });
 })
+
+select.addEventListener('change', (e) => {
+    const selectedSession = sessions.find(sessions => sessions.name === e.target.value);
+    if(selectedSession){
+        addForm.style.display = 'none'
+        container.style.display = 'flex'
+        container.innerHTML = loadInfo(selectedSession);
+    }
+    if(e.target.value === "add"){
+        container.style.display = 'none'
+        addForm.style.display = 'flex'
+    }
+})
+
+//Take form and do POST
+function addSession(e){
+
+}
+
+//Take form and do PUT
+function updateSession(e){
+
+}
+
 function loadInfo(session){
     return `
+    <h3>Edit a session</h3>
     <form action="">
     <label for="name">Session Name</label>
     <input type="text" name="name" id="name" value="${session.name}">
@@ -71,8 +104,6 @@ function formToObject(formElement, index) {
     for (const [key, value] of formData) {
       data[key] = value;
     }
-  
-    data.evaluated = true
   
     return data;
 }

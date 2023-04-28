@@ -79,6 +79,7 @@ main {
     flex-direction: column;
     gap: 2rem;
     background-color: #a9a398;
+    /* background-color: #FFFDE7; */
     margin: 0 auto;
     border-radius: 50px 50px 50px 50px;
     transform: translateY(-100px);
