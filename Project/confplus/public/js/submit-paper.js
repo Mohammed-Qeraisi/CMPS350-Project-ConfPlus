@@ -1,26 +1,31 @@
 import papersRepo from "../repository/papers-repo.js";
 import usersRepo from "../repository/users-repo.js";
+import institutionsRrepo from "../repository/institutions-repo.js";
 
 let authorNumber = 1;
+let affiliations = null;
 const addAuthor = document.querySelector("#add-author");
 const deleteAuthor = document.querySelector("#delete-author");
 const authorsContainer = document.querySelector("#extra-author-container");
 const submitPaper = document.querySelector("#submit-paper");
 const form = document.querySelector("#submit-paper-form");
-const dbAffiliation = document.querySelectorAll(
-  "#presenter-Affiliation, #author-Affiliation"
-);
+const dbAffiliation = document.querySelectorAll(".DropDown");
 
-async function dropDownMenue() {
-  const data = await fetch("institutions.json");
-  const affiliations = await data.json();
+window.addEventListener("load", async () => {
+  affiliations = await institutionsRrepo.getInstitutions();
+  fillDropDown();
+});
 
-  dbAffiliation.innerHTML = affiliations
-    .map(
-      (affiliation) =>
-        `<option value="${affiliation.location}">${affiliation.location}</option>`
-    )
-    .join(" ");
+async function fillDropDown() {
+  affiliations = await institutionsRrepo.getInstitutions();
+  dbAffiliation.forEach((ddm) => {
+    ddm.innerHTML += affiliations
+      .map(
+        (affiliation) =>
+          `<option value="${affiliation.name}">${affiliation.name}</option>`
+      )
+      .join(" ");
+  });
 }
 
 addAuthor.addEventListener("click", () => {
@@ -90,8 +95,8 @@ function extraAuthor() {
    </div>
 
    <div class="form-group">
-    <select id="author-Affiliation" name="authorAffiliation${authorNumber}" required>
-       <option value="" selected disabled>Select Affiliation</option>
+    <select id="author-Affiliation" class="DropDown" name="authorAffiliation${authorNumber}" required>
+       <option value="" selected hidden>Select Affiliation</option>
     </select>
    </div>
 
@@ -102,6 +107,7 @@ function extraAuthor() {
  `;
 
   const authorContainer = document.createElement("div");
+ 
   authorContainer.innerHTML = newAuthorHtml;
 
   return authorContainer;
