@@ -61,16 +61,18 @@ a:hover {
 .header-btns {
     background-color: #3658C1;
     color: #f7f7f7;
-    border: 2px solid #f7f7f7;
+    border: 3px solid transparent;
+    font-weight: bold;
     border-radius: 10px;
     padding: 10px;
 }
 
 .header-btns:hover {
     color: #3658C1;
-    border: 2px solid #3658C1;
+    border: 3px solid #3658C1;
     background-color: #f7f7f7;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 #login-button {
@@ -105,7 +107,6 @@ footer {
     gap: 20px;
     margin-top: 0px;
     align-items: center;
-    flex-direction: row;
 }
 
 .footer-link:hover {

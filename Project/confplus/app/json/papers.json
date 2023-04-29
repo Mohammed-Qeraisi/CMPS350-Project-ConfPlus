@@ -1,1 +1,207 @@
-[{"presenter":{"presenterFname":"My paper","presenterLname":"My paper","presenterAffiliation":"My paper","presenterEmail":"My paper"},"paperTitle":"My paper","paperSummary":"My paper","paperUpload":{},"reviewersID":[{"id":9},{"id":12}],"paperID":"soXqoJ_aXXm8yoY5ujlJW"}]
+[
+  {
+    "isAccepted": true,
+    "presenter": {
+      "presenterFname": "David",
+      "presenterLname": "Brown",
+      "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+      "presenterAffiliation": "Qatar University",
+      "presenterEmail": "david@brown.com"
+    },
+    "paperTitle": "Limbs Replacement using nanotechnology and medicine",
+    "paperSummary": "This is a summary for the limbs paper. It's a very good paper, and I hope you like it Mr. Reviewer.",
+    "paperUpload": {},
+    "authors": [
+      {
+        "authorFname": "Mohammed",
+        "authorLname": "Al-Qeraisi",
+        "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+        "authorAffiliation": "Georgetown University in Qatar",
+        "authorEmail": "plusmohammed21@gmail.com"
+      }
+    ],
+    "reviewersID": [
+      {
+        "id": 5,
+        "evaluation": "2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "g",
+        "evaluated": true
+      },
+      {
+        "id": 13,
+        "evaluation": "0",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      }
+    ],
+    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+  },
+  {
+    "isAccepted": true,
+    "presenter": {
+      "presenterFname": "t",
+      "presenterLname": "t",
+      "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+      "presenterAffiliation": "Qatar University",
+      "presenterEmail": "t@t.com"
+    },
+    "paperTitle": "t",
+    "paperSummary": "t",
+    "paperUpload": {},
+    "authors": [
+      {
+        "authorFname": "t",
+        "authorLname": "t",
+        "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+        "authorAffiliation": "Georgetown University in Qatar",
+        "authorEmail": "t@t.com"
+      }
+    ],
+    "reviewersID": [
+      {
+        "id": 5,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      },
+      {
+        "id": 13,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      }
+    ],
+    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+  },
+  {
+    "isAccepted": true,
+    "presenter": {
+      "presenterFname": "t",
+      "presenterLname": "t",
+      "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+      "presenterAffiliation": "Qatar University",
+      "presenterEmail": "t@t.com"
+    },
+    "paperTitle": "t",
+    "paperSummary": "t",
+    "paperUpload": {},
+    "authors": [
+      {
+        "authorFname": "t",
+        "authorLname": "t",
+        "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+        "authorAffiliation": "Georgetown University in Qatar",
+        "authorEmail": "t@t.com"
+      }
+    ],
+    "reviewersID": [
+      {
+        "id": 5,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      },
+      {
+        "id": 13,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      }
+    ],
+    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+  },
+  {
+    "isAccepted": true,
+    "presenter": {
+      "presenterFname": "t",
+      "presenterLname": "t",
+      "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+      "presenterAffiliation": "Qatar University",
+      "presenterEmail": "t@t.com"
+    },
+    "paperTitle": "t",
+    "paperSummary": "t",
+    "paperUpload": {},
+    "authors": [
+      {
+        "authorFname": "t",
+        "authorLname": "t",
+        "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+        "authorAffiliation": "Georgetown University in Qatar",
+        "authorEmail": "t@t.com"
+      }
+    ],
+    "reviewersID": [
+      {
+        "id": 5,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      },
+      {
+        "id": 13,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      }
+    ],
+    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+  },
+  {
+    "isAccepted": false,
+    "presenter": {
+      "presenterFname": "t",
+      "presenterLname": "t",
+      "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+      "presenterAffiliation": "Qatar University",
+      "presenterEmail": "t@t.com"
+    },
+    "paperTitle": "t",
+    "paperSummary": "t",
+    "paperUpload": {},
+    "authors": [
+      {
+        "authorFname": "t",
+        "authorLname": "t",
+        "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+        "authorAffiliation": "Georgetown University in Qatar",
+        "authorEmail": "t@t.com"
+      }
+    ],
+    "reviewersID": [
+      {
+        "id": 5,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      },
+      {
+        "id": 13,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      }
+    ],
+    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+  }
+]
