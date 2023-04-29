@@ -21,11 +21,11 @@ function displayPapers() {
 
 function convertToCards(paper) {
   return `
-        <article class="title-card" id="title-card" onclick="loadPaper('${paper.paperID}')">
-            <h1>${paper.paperTitle}</h1>
-            <ion-icon name="document-text-outline"></ion-icon>
-        </article>
-  `;
+<article class="title-card" id="title-card" onclick="loadPaper('${paper.paperID}')">
+  <h1>${paper.paperTitle}</h1>
+  <ion-icon name="document-text-outline"></ion-icon>
+</article>
+`;
 }
 
 async function loadPaper(id) {
@@ -45,40 +45,50 @@ function paperDetails(selectedPaper) {
   const authors = selectedPaper.authors || []
 
   return `
-  <section class="paper-container">
+<section class="paper-container">
 
-    <div class="presenter-container">
+  <div class="presenter-container">
+    <h1>Presenter</h1>
+    <div class="container">
+      <div class="card-wrapper">
 
-        <article class=card>
+        <div class="staff-card">
 
-            <section class=image>
-                <img src="${selectedPaper.presenter.presenterImage}" alt="Presenter">
-            </section>
+          <div class="card-image">
+            <img src="${selectedPaper.presenter.presenterImage}" alt="Presenter Image">
+          </div>
 
-            <section class=content>
-                <h3>${selectedPaper.presenter.presenterFname} ${selectedPaper.presenter.presenterLname}</h3>
-                <p><a href="mailto:${selectedPaper.presenter.presenterEmail}"> ${selectedPaper.presenter.presenterEmail}</a></p>
-                <p>${selectedPaper.presenter.presenterAffiliation}</p>
-            </section>
-
-        </article>
-
+          <div class="details">
+            <h2>${selectedPaper.presenter.presenterFname} ${selectedPaper.presenter.presenterLname}
+              <br>
+              <div class="affiliation-email">
+                <span>${selectedPaper.presenter.presenterAffiliation}</span>
+                <br>
+                <span><a
+                    href="mailto:${selectedPaper.presenter.presenterEmail}">${selectedPaper.presenter.presenterEmail}</a></span>
+              </div>
+            </h2>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="paper-details">
+  <div class="paper-details">
 
-        <h1>${selectedPaper.paperTitle}</h1>
-        <p>${selectedPaper.paperSummary}</p>
-        <p>Download paper: <a href="http://">link to download the paper</a></p>
-        <section class="authors">
-              ${authors.map((author) => `
-                <h5><a href="mailto:${author.authorEmail}">${author.authorFname} ${author.authorLname}</a> <br> ${author.authorAffiliation} </h5>
-                `).join(" ")}
-        </section>
-    </div>
+    <h1>${selectedPaper.paperTitle}</h1>
+    <p>${selectedPaper.paperSummary}</p>
+    <section class="authors">
+      ${authors.map((author) => `
+      <h5><a href="mailto:${author.authorEmail}">${author.authorFname} ${author.authorLname}</a> <br>
+        ${author.authorAffiliation} </h5>
+      `).join(" ")}
+    </section>
+    <p>Download paper: <a href="http://">link to download the paper</a></p>
+  </div>
 
-  </section>
-  `;
+</section>
+`;
 }
 
 async function createFormPage() {
@@ -107,14 +117,9 @@ async function formSubmit(event) {
     if (!isFormValid) return;
   
     formToObject(evaluationFromHTML);
+    isAccepted();
 
     const updatePaper = await papersRepo.updatePaper(selectedPaper);
-  
-    // console.log(evaluation);
-    console.log("====================");
-    console.log(selectedPaper);
-    console.log("====================");
-    console.log(updatePaper);
 
     await reloadPage();
   } catch (error) {
@@ -122,6 +127,21 @@ async function formSubmit(event) {
   }
 }
 
+function isAccepted() {
+  const sumOfEvaluations = selectedPaper.reviewersID.reduce((total, reviewer) => {
+    return total + parseInt(reviewer.evaluation);
+  }, 0);
+
+  const allReviewed = selectedPaper.reviewersID.every(
+    (reviewer) => reviewer.evaluated === true
+  );
+
+  if (sumOfEvaluations >= 2 && allReviewed) {
+    selectedPaper.isAccepted = true;
+  } else {
+    selectedPaper.isAccepted = false;
+  }
+}
 
 function formToObject(formElement) {
 
