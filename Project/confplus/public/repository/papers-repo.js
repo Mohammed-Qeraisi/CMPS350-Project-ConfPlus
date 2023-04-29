@@ -18,7 +18,7 @@ class PapersRepo {
 
   async updatePaper(updatedPaper) {
     console.log(updatedPaper.paperID);
-    const response = await fetch(`${baseUrl}/${updatedPaper.paperID}`, {
+    const response = await fetch(`${baseUrl}`, {
       method: "PUT",
       body: JSON.stringify(updatedPaper),
       headers: { "Content-type": "application/json" },

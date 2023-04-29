@@ -15,3 +15,14 @@ export async function POST(request) {
   const newPaper = await repo.addPaper(paper);
   return Response.json(newPaper);
 }
+
+export async function PUT(request) {
+  try {
+    const updatedPaper = await request.json();
+    const response = await repo.updatePaper(updatedPaper);
+    return Response.json(response);
+  } catch (error) {
+    console.log(error);
+    return Response.json(error);
+  }
+}

@@ -9,28 +9,30 @@ const deleteAuthor = document.querySelector("#delete-author");
 const authorsContainer = document.querySelector("#extra-author-container");
 const submitPaper = document.querySelector("#submit-paper");
 const form = document.querySelector("#submit-paper-form");
-const dbAffiliation = document.querySelectorAll(".DropDown");
+let dbAffiliation = null;
 
 window.addEventListener("load", async () => {
   affiliations = await institutionsRrepo.getInstitutions();
   fillDropDown();
 });
 
-async function fillDropDown() {
-  affiliations = await institutionsRrepo.getInstitutions();
-  dbAffiliation.forEach((ddm) => {
-    ddm.innerHTML += affiliations
-      .map(
-        (affiliation) =>
-          `<option value="${affiliation.name}">${affiliation.name}</option>`
-      )
-      .join(" ");
-  });
+function fillDropDown() {
+  dbAffiliation = document.querySelectorAll(".DropDown");
+  console.log(dbAffiliation);
+  console.log("+++++++++++++++++++++++");
+  console.log(dbAffiliation[dbAffiliation.length - 1]);
+  dbAffiliation[dbAffiliation.length - 1].innerHTML += affiliations
+    .map(
+      (affiliation) =>
+        `<option value="${affiliation.name}">${affiliation.name}</option>`
+    )
+    .join(" ");
 }
 
 addAuthor.addEventListener("click", () => {
   const author = extraAuthor();
   authorsContainer.appendChild(author);
+  fillDropDown();
 });
 
 deleteAuthor.addEventListener("click", () => {
@@ -46,9 +48,12 @@ deleteAuthor.addEventListener("click", () => {
 submitPaper.addEventListener("click", async (event) => {
   try {
     event.preventDefault();
-    const formCheck = event.target;
+    const formCheck = form;
     const isFormValid = formCheck.checkValidity();
-    if (!isFormValid) return;
+    if (!isFormValid) {
+      alert("Please fill in all required fields.");
+      return;
+    }
 
     const reviewersID = await getRandomReviewer();
 
@@ -107,7 +112,7 @@ function extraAuthor() {
  `;
 
   const authorContainer = document.createElement("div");
- 
+
   authorContainer.innerHTML = newAuthorHtml;
 
   return authorContainer;

@@ -9,7 +9,6 @@ let evaluationFromHTML = null;
 let index = null;
 
 window.addEventListener("load", async () => {
-  // await loadPaper("ptdxyweXggNeFYWSk2s1-");
   window.loadPaper = loadPaper;
   papers = await papersRepo.getPapersByReviewerID(currentUser.userID);
   displayPapers();
@@ -53,7 +52,7 @@ function paperDetails(selectedPaper) {
         <article class=card>
 
             <section class=image>
-                <img src="${selectedPaper.presenter.PresenterImage}" alt="Presenter">
+                <img src="${selectedPaper.presenter.presenterImage}" alt="Presenter">
             </section>
 
             <section class=content>
@@ -107,11 +106,11 @@ async function formSubmit(event) {
     const isFormValid = formCheck.checkValidity();
     if (!isFormValid) return;
   
-    const evaluation = formToObject(evaluationFromHTML, index);
+    formToObject(evaluationFromHTML);
 
     const updatePaper = await papersRepo.updatePaper(selectedPaper);
   
-    console.log(evaluation);
+    // console.log(evaluation);
     console.log("====================");
     console.log(selectedPaper);
     console.log("====================");
@@ -124,7 +123,7 @@ async function formSubmit(event) {
 }
 
 
-function formToObject(formElement, index) {
+function formToObject(formElement) {
 
   const formData = new FormData(formElement);
   const data = selectedPaper.reviewersID[index];
@@ -134,8 +133,6 @@ function formToObject(formElement, index) {
   }
 
   data.evaluated = true
-
-  return data;
 }
 
 async function reloadPage() {
