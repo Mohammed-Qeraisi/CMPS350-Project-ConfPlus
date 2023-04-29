@@ -11,69 +11,78 @@
 </head>
 
 <body>
-    <header>
-        <nav class="main-nav">
-            <h1 class="col-6" id="logo">ConfPlus</h1>
-            <ul class="col-6">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Schedule</a></li>
-                <li><a href="index.html">About</a></li>
-                <button class="header-btns" id="login-button">Login</button>
-            </ul>
-        </nav>
-    </header>
+    <nav class="main-nav">
+        <h1 class="col-6" id="logo">ConfPlus</h1>
+        <ul class="col-6">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="about.html">About</a></li>
+            <button class="header-btns" id="login-button">Login</button>
+        </ul>
+    </nav>
     <main>
         <form action="#" id="submit-paper-form" required>
             <fieldset>
                 <h3>Paper Details</h3>
                 <div class="form-group">
-                    <input type="text" id="paper-title" name="paperTitle" required>
                     <label for="paper-title">Title</label>
+                    <input type="text" id="paper-title" name="paperTitle" required>
                 </div>
 
                 <section id="authors" class="authors">
 
-                    <div class="section-title">Author 1</div>
+                    <article id="presenter-container">
 
-                    <div class="form-group">
-                        <input type="text" id="presenter-fname" name="presenterFname" pattern="^[a-zA-Z]+$" required>
-                        <label for="presenter-fname">Presenter First Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="presenter-lname" name="presenterLname" pattern="^[a-zA-Z]+$" required>
-                        <label for="presenter-lname">Presenter Last Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="url" id="presenter-Image" name="presenterImage" required>
-                        <label for="presenter-Image">Presenter Image URL</label>
-                    </div>
+                        <div class="section-title">Author 1</div>
 
-                    <div class="form-group">
-                        <select id="presenter-Affiliation" class="DropDown" name="presenterAffiliation" required>
-                            <option value="" selected hidden>Select Affiliation</option>
-                        </select>
-                    </div>
+                        <div class="form-group">
+                            <label for="presenter-fname">Presenter First Name</label>
+                            <input type="text" id="presenter-fname" name="presenterFname" pattern="^[a-zA-Z]+$"
+                                required>
 
-                    <div class="form-group">
-                        <input type="email" id="presenter-email" name="presenterEmail" required>
-                        <label for="presenter-email">Presenter Email</label>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="presenter-lname">Presenter Last Name</label>
+                            <input type="text" id="presenter-lname" name="presenterLname" pattern="^[a-zA-Z]+$"
+                                required>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="presenter-Image">Presenter Image URL</label>
+                            <input type="url" id="presenter-Image" name="presenterImage" required>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="presenter-Affiliation">Presenter Affiliation</label>
+                            <select id="presenter-Affiliation" class="DropDown" name="presenterAffiliation" required>
+                                <option value="" selected hidden>Select Affiliation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="presenter-email">Presenter Email</label>
+                            <input type="email" id="presenter-email" name="presenterEmail" required>
+
+                        </div>
+                    </article>
 
                     <section id="extra-author-container">
 
                     </section>
 
-                    <div class="buttons">
-                        <button type="button" id="add-author">Add Author</button>
-                        <button type="button" id="delete-author">Delete Author</button>
+                    <div class="author-btns">
+                        <button type="button" id="add-author" class="header-btns">Add Author</button>
+                        <button type="button" id="delete-author" class="header-btns">Delete Author</button>
                     </div>
 
                 </section>
 
                 <div class="form-group">
+                    <label for="paper-summary"></label>
                     <textarea id="paper-summary" name="paperSummary" rows="10" placeholder="Summary"
                         required></textarea>
-                    <label for="paper-summary"></label>
+                    
                 </div>
 
             </fieldset>
@@ -86,9 +95,27 @@
                 </div>
             </fieldset>
 
-            <button type="submit" id="submit-paper">Submit Paper</button>
+            <button type="submit" id="submit-paper" class="header-btns">Submit Paper</button>
         </form>
     </main>
+
+    <footer>
+        <section class="main-footer">
+            <span class="footer-title">ConfPlus</span>
+            <nav class="footer-nav">
+                <span class="footer-link">Home</span>
+                <span class="footer-link">About</span>
+                <span class="footer-link">Schedule</span>
+                <span class="footer-link">Team</span>
+                <span class="footer-link">FAQ</span>
+            </nav>
+        </section>
+        <div class="home-separator"></div>
+
+        <section class="secondary-footer">
+            <span class="copyright">© 2023 ConfPlus, All Rights Reserved.</span>
+        </section>
+    </footer>
     <script type="module" src="../js/submit-paper.js"></script>
     <script type="module" src="../js/main.js"></script>
 </body>

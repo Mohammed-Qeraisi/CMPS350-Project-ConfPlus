@@ -85,29 +85,33 @@ function extraAuthor() {
   const newAuthorHtml = ` 
   <div class="section-title">Author ${authorNumber} </div>
    <div class="form-group">
-     <input type="text" id="author-fname" class="author-fname" name="authorFname${authorNumber}" required>
-     <label for="author-fname">Author first Name</label>
+    <label for="author-fname">Author First Name</label>
+    <input type="text" id="author-fname" class="author-fname" name="authorFname${authorNumber}" required>
+     
    </div>
 
    <div class="form-group">
+     <label for="author-lname">Author Last Name</label>
      <input type="text" id="author-lname" class="author-lname" name="authorLname${authorNumber}" required>
-     <label for="author-lname">Author last Name</label>
+     
    </div>
 
    <div class="form-group">
-      <input type="url" id="author-Image" name="authorImage${authorNumber}" required>
       <label for="author-Image">Author Image URL</label>
+      <input type="url" id="author-Image" name="authorImage${authorNumber}" required>
+      
    </div>
 
    <div class="form-group">
+   <label for="author-Affiliation">Author Affiliation</label>
     <select id="author-Affiliation" class="DropDown" name="authorAffiliation${authorNumber}" required>
        <option value="" selected hidden>Select Affiliation</option>
     </select>
    </div>
 
  <div class="form-group">
+     <label for="author-email">Author Email</label>
      <input type="text" id="author-email" class="author-email" name="authorEmail${authorNumber}" required>
-     <label for="author-email">Email</label>
  </div>
  `;
 

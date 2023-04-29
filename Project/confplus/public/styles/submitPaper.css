@@ -1,12 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #AFC1D0
-}
-
-header {
-    width: 100%;
-    max-width: 1440px;
+    background-color: #f7f7f7;
 }
 
 main {
@@ -15,8 +10,6 @@ main {
     margin: 0 auto;
     border-radius: 2rem;
     flex-direction: column;
-    width: 800px;
-
 }
 
 form {
@@ -24,8 +17,6 @@ form {
     flex-direction: column;
     align-items: center;
 }
-
-
 
 fieldset {
     position: relative;
@@ -35,7 +26,6 @@ fieldset {
     padding: 30px 25px;
     background-color: white;
     border-radius: 1rem;
-    border-radius: black;
     margin: 40px 0;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 3px 5px #AFC1D0;
@@ -48,10 +38,10 @@ fieldset:hover {
 
 
 .form-group {
-    position: relative;
-    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     width: 100%;
-
 }
 
 
@@ -62,11 +52,7 @@ fieldset:hover {
     letter-spacing: 0.01em;
     font-size: 1rem;
     box-sizing: border-box;
-    padding: 10px 15px;
-    display: block;
-    position: absolute;
-    margin-top: -40px;
-    z-index: 2;
+    padding: 5px 15px;
     pointer-events: none;
 }
 
@@ -83,49 +69,39 @@ input[type="url"] {
     box-sizing: border-box;
     padding: 10px 15px;
     border-radius: 1rem;
-    color: #B1D4E0;
+    color: #2c2c2c;
     font-weight: 100;
     letter-spacing: 0.01em;
-    position: relative;
+    /* position: relative; */
     z-index: 1;
-}
-
-.form-group input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus {
-    outline: none;
-    background: #B1D4E0;
-    color: white;
-    margin-top: 1rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.form-group input[type="text"]:valid,
-input[type="email"]:valid,
-input[type="url"]:valid {
-    margin-top: 1.2rem;
-    transition: all 0.3s ease-in-out;
-}
-
-.form-group input[type="text"]:focus~label,
-input[type="email"]:focus~label,
-input[type="url"]:focus~label {
-    transform: translateY(-0.2rem);
-    transition: all 0.3s ease-in;
-    transform: translate(0, -35px);
 }
 
 .form-group input[type="text"]:valid~label,
 input[type="email"]:valid~label,
-input[type="url"]:valid~label {
-    transition: all 0.3s ease-in;
-    transform: translate(5px, -35px) scale(0.9);
+input[type="url"]:valid~label
+{
+    display: none;
 }
 
+select{
+    padding: 10px 15px;
+    border-radius: 1rem;
+    color: #3658C1;
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 1rem;
+}
+
+select:valid,
+option{
+    color: #2c2c2c;
+}
 
 textarea {
     width: 100%;
     border-radius: 1rem;
+    background: #f7f7f7;
+    color: #2c2c2c;
     border: 1px solid black;
     text-indent: 1rem;
     padding-top: 1rem;
@@ -136,26 +112,22 @@ textarea::placeholder {
     color: #3658C1;
 }
 
-textarea:focus {
-    outline: none;
-    background: #B1D4E0;
-    color: white;
-    margin-top: 1rem;
-    text-indent: 1rem;
-    padding-top: 1rem;
-    transform: translateY(-0.2rem);
-    transition: all 0.3s ease-in;
-}
-
 .authors {
     display: flex;
     flex-direction: column;
+    gap: 2rem;
     border: 1px solid black;
     border-radius: 1rem;
     padding: 1rem;
+    margin-top: 1rem;
 }
 
-
+#presenter-container,
+#extra-author-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 
 .section-title {
     background-color: #f2f2f2;
@@ -170,25 +142,11 @@ textarea:focus {
     justify-content: center;
 }
 
-#submit-paper {
-    background-color: 2E8BC0;
-    color: #ffffff;
-    border: solid 1px;
-    padding: 0.9rem 2rem;
-    border-radius: 30px;
-    margin-right: 1rem;
-    font-size: 1rem;
-    width: fit-content;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#submit-paper{
+    width: 150px;
 }
 
-#submit-paper:hover {
-    background-color: white;
-    color: #2E8BC0;
-}
-
-.buttons {
+.author-btns {
     display: flex;
     gap: 1rem;
     width: 100%;
@@ -197,4 +155,13 @@ textarea:focus {
 #add-author,
 #delete-author {
     width: 100%;
+}
+
+@media screen and (max-width: 767px){
+    main{
+        width: 40%;
+    }
+    fieldset{
+        width: auto;
+    }
 }
