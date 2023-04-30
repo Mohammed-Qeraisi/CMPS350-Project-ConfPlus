@@ -7,13 +7,38 @@ import usersRepo from "../repository/users-repo.js";
 // let papersContainer = document.querySelector(".schedule-cards-container");
 const organizerContainer = document.querySelector('.organizer-container');
 const staffContainer = document.querySelector(".staff-container");
+const CurrentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 // let papersByDay = {};
 // let authorUsers = [];
 let organizerUsers = [];
 let staffUsers = [];
 // let papers = [];
 
+const ctaButton = document.querySelector('#cta-button');
+
 window.addEventListener("load", async () => {
+  //Changing CTA button in home
+  if (!CurrentUser) {
+    ctaButton.innerHTML = 'View Schedule';
+    changeCTALocation('schedule.html');
+  } else {
+    switch (CurrentUser.userRole) {
+      case 'organizer':
+        ctaButton.innerHTML = 'Edit Schedule';
+        changeCTALocation('schedule-editor.html');
+        break;
+      case 'reviewer':
+        ctaButton.innerHTML = 'Review Papers';
+        changeCTALocation('review.html');
+        break;
+      case 'author':
+        ctaButton.innerHTML = 'Submit Paper';
+        changeCTALocation('submitPaper.html');
+        break;
+      default:
+        break;
+    }
+  }
   //   const papers = await papersRepo.getPapers();
 
   //   papers.forEach((paper) => {
@@ -39,6 +64,12 @@ window.addEventListener("load", async () => {
     staffContainer.innerHTML += generateUsers(user);
   });
 });
+
+function changeCTALocation(page) {
+  ctaButton.addEventListener('click', () => {
+    window.location.href = page
+  })
+}
 
 // day1.addEventListener("click", () => {
 //   generatePapersForDay(1);
@@ -87,9 +118,8 @@ function generateUsers(user) {
                 <div class="details">
                     <h2>${user.first_name} ${user.last_name}
                         <br>
-                        <span class="job-title">${
-                          user.role.charAt(0).toUpperCase() + user.role.slice(1)
-                        }</span>
+                        <span class="job-title">${user.role.charAt(0).toUpperCase() + user.role.slice(1)
+    }</span>
                     </h2>
                 </div>
             </div>

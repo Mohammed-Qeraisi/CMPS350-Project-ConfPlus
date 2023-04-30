@@ -114,6 +114,10 @@ footer {
     cursor: pointer;
 }
 
+.footer-anchor{
+    color: #2C2C2C;
+}
+
 .home-separator {
     flex: 0 0 auto;
     width: 100%;

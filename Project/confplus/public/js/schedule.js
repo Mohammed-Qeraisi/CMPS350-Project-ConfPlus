@@ -78,22 +78,23 @@ async function loadPapers() {
 };
 
 function generatePaper(paper){
-    const author = users.find(author => author.id === paper.authorId);
+    const presenter = users.find(author => author.first_name === paper.presenter.presenterFname);
+    console.log(presenter)
     return `
     <article class="schedule-card">
-        <section class="card">
-            <div class="card-info">
-                <div class="card-main-info">
-                    <div class="card-info-header">
-                        <h3>${paper.title}</h3>
-                        <h3>11:00 AM</h3>
-                    </div>
-                    <p>${paper.abstract}</p>
+    <section class="card">
+        <div class="card-info">
+            <div class="card-main-info">
+                <div class="card-info-header">
+                    <h4>${paper.title}</h4>
+                    <h4 id="card-time">11:00 - 11:30</h4>
                 </div>
-                <h4>Speaker: ${author.first_name} ${author.last_name}</h4>
+                <p>${paper.abstract}</p>
             </div>
-        </section>
-    </article>
+            <h4>Speaker: ${presenter.first_name} ${presenter.last_name}</h4>
+        </div>
+    </section>
+</article>
     `
 }
 

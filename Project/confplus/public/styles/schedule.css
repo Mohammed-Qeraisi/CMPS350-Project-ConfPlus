@@ -85,7 +85,7 @@ select {
     border-radius: 20px;
 }
 
-.card h3 {
+.card h4 {
     font-weight: 900;
 }
 
@@ -119,10 +119,43 @@ select {
     justify-content: space-between;
 }
 
+#card-time{
+    color: #3658C1;
+}
+
 .card-info p {
     display: -webkit-box;
     -webkit-line-clamp: 7;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 767px){
+
+    .filtering-container{
+        padding: 3rem;
+    }
+    .papers-container{
+        padding: 0 1rem;
+        width: 80%;
+    }
+
+    .schedule-card{
+        width: 100%;
+    }
+
+    .card{
+        transition: 0.3s;
+        height: 240px;
+    }
+
+    .card-info-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .card-info p {
+        -webkit-line-clamp: 5;
+    }
 }

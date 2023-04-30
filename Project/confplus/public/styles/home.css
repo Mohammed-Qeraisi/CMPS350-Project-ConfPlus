@@ -87,7 +87,8 @@ main {
 }
 
 .schedule-section h1,
-.team-container h1 {
+.team-container h1,
+.faqs-container h1 {
     color: #2C2C2C;
     text-align: center;
     font-size: xx-large;

@@ -9,6 +9,7 @@ if (isLoggedIn) {
   loginBtn.addEventListener("click", () => {
     if (confirm(`Are you sure you want LogOut ?`)) {
       sessionStorage.removeItem("isLoggedIn");
+      sessionStorage.removeItem("CurrentUser");
       window.location.href = "home.html";
     }
   });
@@ -32,4 +33,20 @@ function addNav() {
   }
 
   mainNav.querySelector("ul").insertAdjacentHTML("afterbegin", newNavLink);
+}
+
+function handleFooterNav(page){
+  switch(page){
+    case 'team':
+      window.location.href = 'home.html'
+      break;
+    case 'about':
+      window.location.href = 'about.html'
+      break;
+    case 'schedue':
+      window.location.href = 'schedule.html'
+      break;
+    
+  }
+  
 }
