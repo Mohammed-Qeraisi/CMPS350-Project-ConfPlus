@@ -7,7 +7,7 @@ class PapersRepo {
     this.filePath = path.join(process.cwd(), "app/json/papers.json");
   }
 
-  async getPapers(ReviewerID) {
+  async getPapers(ReviewerID, acceptedPapers) {
     try {
       const papers = await fs.readJSON(this.filePath);
 
@@ -19,6 +19,9 @@ class PapersRepo {
             );
           })
           .map(({ paperID, paperTitle }) => ({ paperID, paperTitle }));
+        return filteredPapers;
+      } else if(acceptedPapers){
+        const filteredPapers = papers.filter(paper => paper.isAccepted === true);
         return filteredPapers;
       }
       return papers;

@@ -4,8 +4,8 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
 
   const ReviewerID = searchParams.get("ReviewerID");
-
-  const papers = await repo.getPapers(ReviewerID);
+  const acceptedPapers = searchParams.get('AcceptedPapers');
+  const papers = await repo.getPapers(ReviewerID, acceptedPapers);
 
   return Response.json(papers);
 }
