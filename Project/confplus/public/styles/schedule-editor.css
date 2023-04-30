@@ -24,7 +24,8 @@ main {
     align-items: center;
     border: 2px #2c2c2c solid;
     border-radius: 20px;
-    height: 300px;
+    margin-bottom: 2rem;
+    height: 340px;
     padding: 0 2rem;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
@@ -54,6 +55,47 @@ input {
     border: 2px solid;
 }
 
+select{
+    padding: 10px 20px;
+    border: 2px solid #3658C1;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.btns{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.header-btns{
+    width: 100%;
+}
+
 #add-btn {
     font-size: large;
 }
+
+#delete-Session{
+    color: #3658C1;
+    border: 3px solid #3658C1;
+    background-color: #f7f7f7;
+}
+
+#delete-Session:hover{
+    color: #f7f7f7;
+    border: 3px solid transparent;
+    background-color: #3658C1;
+}
+
+.paper-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+    
+}
+
+
+@media screen and (max-width: 767px){}
+    /*TO BE IMPLEMENTED ONCE IT NEEDS CHANGES/*

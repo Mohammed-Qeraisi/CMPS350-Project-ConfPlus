@@ -59,6 +59,7 @@ async function handleScheduleDropdownChange(event) {
       papers = await papersRepo.getAcceptedPapers();
 
       const paperFields = document.createElement("div");
+      // paperFields.classList.add("papers-container");
 
       for (const sessionPaper of selectedSession.papers) {
         const paperHtml = await loadPapers(sessionPaper);
@@ -170,6 +171,7 @@ async function updateSession(event) {
       const updated = await scheduleRepo.updateSession(updateSession);
 
       console.log(updated);
+      await reloadPage();
     }
   } catch (error) {
     console.log(error.name + " | " + error.message);
@@ -291,6 +293,7 @@ function loadInfo() {
           </div>
 
           <input type="submit" value="Update" class="header-btns" id="submit-btn">
+          <hr style="height: 3px;">
       </form>
     `;
 }
@@ -324,35 +327,39 @@ function addForm() {
 }
 
 function addPaper() {
+  const dbValue = fillPaperDropDown("");
   ++paperNumber;
 
   return `
+  <section class="paper-container">
     <div>
       <select name="paperID${paperNumber}" id="paper" required>
         <option value="" selected hidden>Select a Paper</option>
+        ${dbValue}
       </select>
     </div>
 
     <div>
       <label for="time-input">Select a time:</label>
-      <input type="time" id="to-time-input${paperNumber}" name="paperFromTime${paperNumber}" min="09:00" max="17:00" step="1800">
+      <input type="time" id="from-time-input${paperNumber}" name="paperFromTime${paperNumber}" min="09:00" max="17:00" step="1800">
     </div>
     
     <div>
       <label for="time-input">Select a time:</label>
-      <input type="time" id="from-time-input${paperNumber}" name="paperToTime${paperNumber}"" min="09:00" max="17:00" step="1800">
+      <input type="time" id="to-time-input${paperNumber}" name="paperToTime${paperNumber}"" min="09:00" max="17:00" step="1800">
     </div>
+    </section>
   `;
 }
 
 async function loadPapers(sessionPaper) {
-  const paper = await papersRepo.getPaperByID(sessionPaper.paperID);
 
   const dbValue = fillPaperDropDown(sessionPaper.paperID);
 
   ++paperNumber;
 
   return `
+  <section class="paper-container">
     <div>
       <select name="paperID${paperNumber}" id="paper" required>
           ${dbValue}
@@ -368,5 +375,6 @@ async function loadPapers(sessionPaper) {
       <label for="time-input">Select a time:</label>
       <input type="time" id="to-time-input${paperNumber}" name="paperToTime${paperNumber}" min="09:00" max="17:00" step="1800" value="${sessionPaper.paperToTime}">
     </div>
+  </section>
   `;
 }
