@@ -28,10 +28,13 @@ class ScheduleRepo {
     }
   }
 
-  async getSession(id) {
+  async getSession(date) {
     try {
       const schedule = await this.getSchedule();
-      const session = schedule.find((session) => session.sessionID === id);
+      const session = schedule.find((session) => session.date === date);
+      if (!session) {
+        return `${date}`
+      }
       return session;
     } catch (error) {
       return { errorMessage: error.name + " | " + error.message };

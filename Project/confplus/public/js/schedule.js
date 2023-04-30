@@ -30,33 +30,14 @@ async function loadDates() {
 
 filterDropdown.addEventListener("change", filterPapersByDate);
 
-function filterPapersByDate() {
-  const selectedDate = filterDropdown.value;
-
-  if (selectedDate === "all") {
-    // Show all papers if "all" is selected
-    console.log(papers.length);
-    if (papers.length === 0) {
-      papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
-    }
-    papersContainer.innerHTML = "";
-    papers.forEach((paper) => {
-      papersContainer.innerHTML += generatePaper(paper);
-    });
-  } else {
-    const selectedDay = dates.find((date) => date.date === selectedDate);
-
-    // Filter papers based on selected day
-    const filteredPapers = papers.filter(
-      (paper) => paper.day === selectedDay.day
-    );
-    if (filteredPapers.length === 0) {
-      papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
-    }
-    papersContainer.innerHTML = "";
-    filteredPapers.forEach((paper) => {
-      papersContainer.innerHTML += generatePaper(paper);
-    });
+async function filterPapersByDate() {
+  const selectedSession = await scheduleRepo.getSessionByDate(
+    filterDropdown.value
+  );
+  papersContainer.innerHTML = "";
+  for (const sessionPaper of selectedSession.papers) {
+    const paperHtml = await generatePaper(sessionPaper);
+    papersContainer.innerHTML += paperHtml;
   }
 }
 
@@ -66,17 +47,15 @@ async function loadPapers() {
   if (sessions.length === 0) {
     papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
   } else {
-    sessions.forEach(async (session) => {
+    for (const session of sessions) {
+      let papersHtml = "";
       for (const sessionPaper of session.papers) {
         const paperHtml = await generatePaper(sessionPaper);
-        papersContainer.innerHTML += paperHtml;
+        papersHtml += paperHtml;
       }
-    });
+      papersContainer.innerHTML += papersHtml;
+    }
   }
-
-  papers.forEach((paper) => {
-    papersContainer.innerHTML += generatePaper(paper);
-  });
 }
 
 async function generatePaper(sessionPaper) {
