@@ -1,4 +1,5 @@
 import fs from "fs-extra";
+import { nanoid } from "nanoid";
 import path from "path";
 
 class ScheduleRepo {
@@ -17,6 +18,7 @@ class ScheduleRepo {
 
   async addSchedule(newSchedule) {
     try {
+      newSchedule.sessionID = nanoid();
       const schedule = await this.getSchedule();
       schedule.push(newSchedule);
       await fs.writeJSON(this.filePath, schedule);
@@ -29,7 +31,7 @@ class ScheduleRepo {
   async getSession(id) {
     try {
       const schedule = await this.getSchedule();
-      const session = schedule.find((sessions) => session.id === id);
+      const session = schedule.find((session) => session.sessionID === id);
       return session;
     } catch (error) {
       return { errorMessage: error.name + " | " + error.message };
@@ -40,20 +42,39 @@ class ScheduleRepo {
     try {
       const schedule = await this.getSchedule();
 
-      const index = sessions.findIndex(
-        (session) => session.id === updatedSession.id
+      const index = schedule.findIndex(
+        (session) => session.sessionID === updatedSession.sessionID
       );
 
       if (index >= 0) {
         schedule[index] = updatedSession;
         await fs.writeJson(this.filePath, schedule);
         return {
-          successfully: `updated successfully ID:${updatedSession.id}`,
+          successfully: `updated successfully ID:${updatedSession.sessionID}`,
         };
       }
       return {
-        errorMessage: `No paper found with this ID: ${updatedSession.id}`,
+        errorMessage: `No paper found with this ID: ${updatedSession.sessionID}`,
       };
+    } catch (error) {
+      return { errorMessage: error.name + " | " + error.message };
+    }
+  }
+
+  async deleteSession(id) {
+    try {
+      const schedule = await this.getSchedule();
+
+      const index = schedule.findIndex((session) => session.sessionID === id);
+
+      if (index < 0)
+        return { errorMessage: `No session found with this ID: ${id}` };
+
+        schedule.splice(index, 1);
+
+      await fs.writeJSON(this.filePath, schedule);
+
+      return { successMessage: "Deleted Successfully" };
     } catch (error) {
       return { errorMessage: error.name + " | " + error.message };
     }

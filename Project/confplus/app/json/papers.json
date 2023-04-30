@@ -49,7 +49,7 @@
       "presenterAffiliation": "Qatar University",
       "presenterEmail": "t@t.com"
     },
-    "paperTitle": "t",
+    "paperTitle": "t1",
     "paperSummary": "t",
     "paperUpload": {},
     "authors": [
@@ -79,7 +79,7 @@
         "evaluated": true
       }
     ],
-    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+    "paperID": "h45bt3"
   },
   {
     "isAccepted": true,
@@ -90,7 +90,7 @@
       "presenterAffiliation": "Qatar University",
       "presenterEmail": "t@t.com"
     },
-    "paperTitle": "t",
+    "paperTitle": "t2",
     "paperSummary": "t",
     "paperUpload": {},
     "authors": [
@@ -120,7 +120,7 @@
         "evaluated": true
       }
     ],
-    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+    "paperID": "3453gfv"
   },
   {
     "isAccepted": true,
@@ -131,7 +131,7 @@
       "presenterAffiliation": "Qatar University",
       "presenterEmail": "t@t.com"
     },
-    "paperTitle": "t",
+    "paperTitle": "t3",
     "paperSummary": "t",
     "paperUpload": {},
     "authors": [
@@ -161,7 +161,7 @@
         "evaluated": true
       }
     ],
-    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+    "paperID": "fsgrdhf"
   },
   {
     "isAccepted": false,
@@ -172,7 +172,7 @@
       "presenterAffiliation": "Qatar University",
       "presenterEmail": "t@t.com"
     },
-    "paperTitle": "t",
+    "paperTitle": "t4",
     "paperSummary": "t",
     "paperUpload": {},
     "authors": [
@@ -202,6 +202,48 @@
         "evaluated": true
       }
     ],
-    "paperID": "FB05f3AcvQT3AaBgm2gEU"
+    "paperID": "efgrhtjyfhgnbfdsf"
+  },
+  {
+    "isAccepted": true,
+    "presenter": {
+      "presenterFname": "t",
+      "presenterLname": "t",
+      "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+      "presenterAffiliation": "Qatar University",
+      "presenterEmail": "t@t.com"
+    },
+    "paperTitle": "t4",
+    "paperSummary": "t",
+    "paperUpload": {},
+    "authors": [
+      {
+        "authorFname": "t",
+        "authorLname": "t",
+        "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+        "authorAffiliation": "Georgetown University in Qatar",
+        "authorEmail": "t@t.com"
+      }
+    ],
+    "reviewersID": [
+      {
+        "id": 5,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      },
+      {
+        "id": 13,
+        "evaluation": "-2",
+        "contribution": "5",
+        "strengths": "g",
+        "weaknesses": "y",
+        "evaluated": true
+      }
+    ],
+    "paperID": "efgrhtjyfhgnbfdsf"
   }
 ]
+

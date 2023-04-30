@@ -3,12 +3,12 @@ body {
     height: 100%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
 }
 
-main{
+main {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,8 @@ main{
     flex: 1;
     gap: 1rem;
 }
-.add-form{
+
+.form {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -27,8 +28,8 @@ main{
     padding: 0 2rem;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-.schedule-info-container{
-    display: none;
+
+.schedule-info-container {
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -38,18 +39,21 @@ main{
     padding: 0 2rem;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-input{
+
+input {
     padding: 10px 15px;
     width: 100%;
     border-radius: 10px;
     outline: none;
     border: 2px solid;
 }
-#add-btn{
+
+#add-btn {
     font-size: large;
 }

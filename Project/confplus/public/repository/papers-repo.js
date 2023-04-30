@@ -11,13 +11,17 @@ class PapersRepo {
     return await response.json();
   }
 
+  async getAcceptedPapers() {
+    const response = await fetch(`${baseUrl}?AcceptedPapers=true`);
+    return await response.json();
+  }
+
   async getPaperByID(id) {
     const response = await fetch(`${baseUrl}/${id}`);
     return await response.json();
   }
 
   async updatePaper(updatedPaper) {
-    console.log(updatedPaper.paperID);
     const response = await fetch(`${baseUrl}`, {
       method: "PUT",
       body: JSON.stringify(updatedPaper),

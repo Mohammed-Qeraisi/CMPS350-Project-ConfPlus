@@ -18,9 +18,6 @@ window.addEventListener("load", async () => {
 
 function fillDropDown() {
   dbAffiliation = document.querySelectorAll(".DropDown");
-  console.log(dbAffiliation);
-  console.log("+++++++++++++++++++++++");
-  console.log(dbAffiliation[dbAffiliation.length - 1]);
   dbAffiliation[dbAffiliation.length - 1].innerHTML += affiliations
     .map(
       (affiliation) =>
@@ -125,6 +122,7 @@ function extraAuthor() {
 function infoFormToObject(form) {
   const formData = new FormData(form);
   let data = {
+    isAccepted: false,
     presenter: {},
   };
   let authors = [];

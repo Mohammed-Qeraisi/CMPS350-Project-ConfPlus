@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../styles/schedule-editor.css">
 
 </head>
+
 <body>
     <nav class="main-nav">
         <h1 class="col-6" id="logo">ConfPlus</h1>
@@ -19,35 +21,14 @@
         </ul>
     </nav>
 
-    <main>
-        <h1>Schedule Editor</h1>
-        <section class="dropdown">
-            <label for="schedule-dropdown">Select a session</label>
-            <select name="schedule" id="schedule-dropdown">
-                <option value="" selected hidden>Select a session</option>
-                <option value="add">+ Add a session</option>
-            </select>
-        </section>
-        <section class="add-form">
-            <h3>Add a session</h3>
-            <form action="">
-                <label for="name">Session Name</label>
-                <input type="text" name="name" id="name">
-            
-                <label for="location">Location</label>
-                <select name="location" id="location">
-                    <option value="" selected hidden>Select a date</option>
-                </select>
 
-                <label for="date">Date</label>
-                <select name="date" id="date">
-                    <option value="" selected hidden>Select a date</option>
-                </select>           
-                <input type="submit" value="Add" class="header-btns" id="add-btn">
-            </form>
-        </section>
-        <div class="schedule-info-container">
-            <h3>Edit a session</h3>
+    <main class="main">
+        <h1>Schedule Editor</h1>
+
+        <section class="dropdown"></section>
+
+        <div id="form-container">
+
         </div>
     </main>
 
@@ -71,4 +52,5 @@
 
     <script type="module" src="../js/schedule-editor.js"></script>
 </body>
+
 </html>

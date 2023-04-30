@@ -1,47 +1,33 @@
 [
-    {
-        "id": "1",
-        "day": 1,
-        "name": "Conference of CS"
-    },
-    {
-        "id": "2",
-        "day": 2,
-        "name": "Conference of CE"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    },
-    {
-        "id": "3",
-        "day": 3,
-        "name": "Conference of Medicine"
-    }
+  {
+    "papers": [
+      {
+        "paperID": "FB05f3AcvQT3AaBgm2gEU",
+        "paperFromTime": "09:00",
+        "paperToTime": "09:30"
+      },
+      {
+        "paperID": "fsgrdhf",
+        "paperFromTime": "09:30",
+        "paperToTime": "10:00"
+      },
+      {
+        "paperID": "3453gfv",
+        "paperFromTime": "10:00",
+        "paperToTime": "10:30"
+      },
+      { "paperID": "h45bt3", "paperFromTime": "10:30", "paperToTime": "12:00" }
+    ],
+    "name": "t",
+    "location": "1",
+    "date": "1",
+    "sessionID": "vJIVrkpaL66hDb4WNLuRz"
+  },
+  {
+    "papers": [],
+    "name": "test2",
+    "location": "2",
+    "date": "2",
+    "sessionID": "tHBa5CMSdzJmeKjkpj24G"
+  }
 ]

@@ -16,6 +16,22 @@ class ScheduleRepo{
           });
           return await response.json();
     }
+
+    async updateSession(updatedSessio) {
+      const response = await fetch(`${baseUrl}`, {
+        method: "PUT",
+        body: JSON.stringify(updatedSessio),
+        headers: { "Content-type": "application/json" },
+      });
+      return await response.json();
+    }
+
+    async deleteSession(id) {
+      const response = await fetch(`${baseUrl}/${id}`, {
+        method: "DELETE",
+      });
+      return response.json();
+    }
 }
 
 export default new ScheduleRepo()
