@@ -1,10 +1,11 @@
 import papersRepo from "../repository/papers-repo.js";
 import usersRepo from "../repository/users-repo.js";
-// import scheduleRepo from "../repository/schedule-repo.js";
+import scheduleRepo from "../repository/schedule-repo.js";
 
-// const day1 = document.querySelector("#day1");
-// const day2 = document.querySelector("#day2");
-// let papersContainer = document.querySelector(".schedule-cards-container");
+const day1 = document.querySelector("#day1");
+const day2 = document.querySelector("#day2");
+let papersContainer = document.querySelector(".schedule-cards-container");
+
 const organizerContainer = document.querySelector('.organizer-container');
 const staffContainer = document.querySelector(".staff-container");
 const CurrentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
@@ -12,11 +13,14 @@ const CurrentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 // let authorUsers = [];
 let organizerUsers = [];
 let staffUsers = [];
-// let papers = [];
+let sessions = [];
+let papers = [];
 
 const ctaButton = document.querySelector('#cta-button');
 
 window.addEventListener("load", async () => {
+  sessions = await scheduleRepo.getSchedule()
+  papers = await papersRepo.getAcceptedPapers()
   //Changing CTA button in home
   if (!CurrentUser) {
     ctaButton.innerHTML = 'View Schedule';
@@ -39,17 +43,9 @@ window.addEventListener("load", async () => {
         break;
     }
   }
-  //   const papers = await papersRepo.getPapers();
-
-  //   papers.forEach((paper) => {
-  //     if (!papersByDay.hasOwnProperty(paper.day)) {
-  //       papersByDay[paper.day] = [];
-  //     }
-  //     papersByDay[paper.day].push(paper);
-  //   });
 
   // Generate papers for the first day by default
-  // generatePapersForDay(1);
+  generatePapersForDay(1);
 
   //getting organizer users
   organizerUsers = await usersRepo.getUserByRole('organizer');
@@ -71,37 +67,48 @@ function changeCTALocation(page) {
   })
 }
 
-// day1.addEventListener("click", () => {
-//   generatePapersForDay(1);
-// });
+day1.addEventListener("click", () => {
+  generatePapersForDay('1');
+});
 
-// day2.addEventListener("click", () => {
-//   generatePapersForDay(2);
-// });
+day2.addEventListener("click", () => {
+  console.log("I am getting called")
+  generatePapersForDay('2');
+});
 
-// function generatePapersForDay(day) {
-//   papersContainer.innerHTML = "";
-//   papersByDay[day].forEach((paper) => {
-//     papersContainer.innerHTML += generatePaper(paper);
-//   });
-// }
+function generatePapersForDay(date) {
+  date = date.toString()
+  papersContainer.innerHTML = "";
+  sessions.forEach((session) => {
+    if (session.date === date) {
+      if(session.papers.length === 0){
+        papersContainer.innerHTML = '<h3>No papers in this session yet...</h3>'
+      }
+      for (const paper in session.papers) {
+        const selectedPaper = papers.find(selectedPaper => selectedPaper.id === paper.id)
+        papersContainer.innerHTML += generatePaper(selectedPaper, session);
+      }
+    }
+  });
+}
 
-// function generatePaper(paper) {
-//   return `
-//     <article class="schedule-card">
-//     <img src="${author.image} alt="">
-//     <section class="card">
-//         <div class="card-info">
-//             <div class="card-info-header">
-//                 <h3>${paper.title}</h3>
-//                 <h3>10:00 AM</h3>
-//             </div>
-//             <p>${paper.abstract}</p>
-//         </div>
-//     </section>
-// </article>
-//     `;
-// }
+function generatePaper(paper, session) {
+  const selectedPaper = session.papers.findIndex(indexedPaper => indexedPaper.paperID === paper.paperID);
+  return `
+    <article class="schedule-card">
+    <img src="${paper.presenter.presenterImage}" alt="${paper.presenter.presenterFname}">
+    <section class="card">
+        <div class="card-info">
+            <div class="card-info-header">
+                <h3>${paper.paperTitle}</h3>
+                <h3>${session.papers[selectedPaper].paperFromTime} - ${session.papers[selectedPaper].paperToTime}</h3>
+            </div>
+            <p>${paper.paperSummary}</p>
+        </div>
+    </section>
+</article>
+    `;
+}
 
 function generateUsers(user) {
   return `
