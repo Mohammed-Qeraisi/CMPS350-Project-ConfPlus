@@ -6,7 +6,7 @@ const day1 = document.querySelector("#day1");
 const day2 = document.querySelector("#day2");
 let papersContainer = document.querySelector(".schedule-cards-container");
 
-const organizerContainer = document.querySelector('.organizer-container');
+const organizerContainer = document.querySelector(".organizer-container");
 const staffContainer = document.querySelector(".staff-container");
 const CurrentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 // let papersByDay = {};
@@ -16,28 +16,28 @@ let staffUsers = [];
 let sessions = [];
 let papers = [];
 
-const ctaButton = document.querySelector('#cta-button');
+const ctaButton = document.querySelector("#cta-button");
 
 window.addEventListener("load", async () => {
-  sessions = await scheduleRepo.getSchedule()
-  papers = await papersRepo.getAcceptedPapers()
+  sessions = await scheduleRepo.getSchedule();
+  papers = await papersRepo.getAcceptedPapers();
   //Changing CTA button in home
   if (!CurrentUser) {
-    ctaButton.innerHTML = 'View Schedule';
-    changeCTALocation('schedule.html');
+    ctaButton.innerHTML = "View Schedule";
+    changeCTALocation("schedule.html");
   } else {
     switch (CurrentUser.userRole) {
-      case 'organizer':
-        ctaButton.innerHTML = 'Edit Schedule';
-        changeCTALocation('schedule-editor.html');
+      case "organizer":
+        ctaButton.innerHTML = "Edit Schedule";
+        changeCTALocation("schedule-editor.html");
         break;
-      case 'reviewer':
-        ctaButton.innerHTML = 'Review Papers';
-        changeCTALocation('review.html');
+      case "reviewer":
+        ctaButton.innerHTML = "Review Papers";
+        changeCTALocation("review.html");
         break;
-      case 'author':
-        ctaButton.innerHTML = 'Submit Paper';
-        changeCTALocation('submitPaper.html');
+      case "author":
+        ctaButton.innerHTML = "Submit Paper";
+        changeCTALocation("submitPaper.html");
         break;
       default:
         break;
@@ -48,7 +48,7 @@ window.addEventListener("load", async () => {
   generatePapersForDay(1);
 
   //getting organizer users
-  organizerUsers = await usersRepo.getUserByRole('organizer');
+  organizerUsers = await usersRepo.getUserByRole("organizer");
   organizerUsers.forEach((user) => {
     organizerContainer.innerHTML += generateUsers(user);
   });
@@ -62,38 +62,42 @@ window.addEventListener("load", async () => {
 });
 
 function changeCTALocation(page) {
-  ctaButton.addEventListener('click', () => {
-    window.location.href = page
-  })
+  ctaButton.addEventListener("click", () => {
+    window.location.href = page;
+  });
 }
 
 day1.addEventListener("click", () => {
-  generatePapersForDay('1');
+  generatePapersForDay("1");
 });
 
 day2.addEventListener("click", () => {
-  console.log("I am getting called")
-  generatePapersForDay('2');
+  console.log("I am getting called");
+  generatePapersForDay("2");
 });
 
 function generatePapersForDay(date) {
-  date = date.toString()
   papersContainer.innerHTML = "";
   sessions.forEach((session) => {
     if (session.date === date) {
-      if(session.papers.length === 0){
-        papersContainer.innerHTML = '<h3>No papers in this session yet...</h3>'
-      }
-      for (const paper in session.papers) {
-        const selectedPaper = papers.find(selectedPaper => selectedPaper.id === paper.id)
-        papersContainer.innerHTML += generatePaper(selectedPaper, session);
+      if (session.papers.length === 0) {
+        papersContainer.innerHTML = "<h3>No papers in this session yet...</h3>";
+      } else {
+        for (const paper in session.papers) {
+          const selectedPaper = papers.find(
+            (selectedPaper) => selectedPaper.id === paper.id
+          );
+          papersContainer.innerHTML += generatePaper(selectedPaper, session);
+        }
       }
     }
   });
 }
 
 function generatePaper(paper, session) {
-  const selectedPaper = session.papers.findIndex(indexedPaper => indexedPaper.paperID === paper.paperID);
+  const selectedPaper = session.papers.findIndex(
+    (indexedPaper) => indexedPaper.paperID === paper.paperID
+  );
   return `
     <article class="schedule-card">
     <img src="${paper.presenter.presenterImage}" alt="${paper.presenter.presenterFname}">
@@ -125,8 +129,9 @@ function generateUsers(user) {
                 <div class="details">
                     <h2>${user.first_name} ${user.last_name}
                         <br>
-                        <span class="job-title">${user.role.charAt(0).toUpperCase() + user.role.slice(1)
-    }</span>
+                        <span class="job-title">${
+                          user.role.charAt(0).toUpperCase() + user.role.slice(1)
+                        }</span>
                     </h2>
                 </div>
             </div>
