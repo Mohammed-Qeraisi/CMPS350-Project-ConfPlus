@@ -43,6 +43,8 @@ async function handleScheduleDropdownChange(event) {
     (sessions) => sessions.name === event.target.value
   );
 
+  paperNumber = 0;
+
   if (selectedSession && event.target.value !== "add") {
     formContainer.innerHTML = loadInfo();
 
@@ -55,11 +57,10 @@ async function handleScheduleDropdownChange(event) {
     deleteSession = document.querySelector("#delete-Session");
     deleteSession.addEventListener("click", handleDeleteSession);
 
-    if (selectedSession.papers.length > 0) {
-      papers = await papersRepo.getAcceptedPapers();
+    papers = await papersRepo.getAcceptedPapers();
 
+    if (selectedSession.papers.length > 0) {
       const paperFields = document.createElement("div");
-      // paperFields.classList.add("papers-container");
 
       for (const sessionPaper of selectedSession.papers) {
         const paperHtml = await loadPapers(sessionPaper);
@@ -170,7 +171,8 @@ async function updateSession(event) {
 
       const updated = await scheduleRepo.updateSession(updateSession);
 
-      console.log(updated);
+      paperNumber = 0;
+
       await reloadPage();
     }
   } catch (error) {
@@ -353,7 +355,6 @@ function addPaper() {
 }
 
 async function loadPapers(sessionPaper) {
-
   const dbValue = fillPaperDropDown(sessionPaper.paperID);
 
   ++paperNumber;

@@ -59,6 +59,12 @@ submitPaper.addEventListener("click", async (event) => {
     paper.reviewersID = reviewersID;
 
     const addedPaper = await papersRepo.addPaper(paper);
+
+    console.log(addedPaper);
+
+    alert(addedPaper.successfully || addedPaper.errorMessage);
+
+    window.location.href = "home.html";
   } catch (error) {
     console.log(error.name + " | " + error.message);
   }

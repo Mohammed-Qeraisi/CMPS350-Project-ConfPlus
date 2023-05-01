@@ -2,10 +2,6 @@ import scheduleRepo from "../repository/schedule-repo.js";
 import papersRepo from "../repository/papers-repo.js";
 import datesRepo from "../repository/dates-repo.js";
 
-window.loadPapers = loadPapers;
-window.handleSearch = handleSearch;
-
-let papers = [];
 let dates = [];
 
 let papersContainer = document.querySelector(".papers-container");
@@ -31,18 +27,23 @@ async function loadDates() {
 filterDropdown.addEventListener("change", filterPapersByDate);
 
 async function filterPapersByDate() {
-  const selectedSession = await scheduleRepo.getSessionByDate(
-    filterDropdown.value
-  );
-  papersContainer.innerHTML = "";
-  for (const sessionPaper of selectedSession.papers) {
-    const paperHtml = await generatePaper(sessionPaper);
-    papersContainer.innerHTML += paperHtml;
+  if (filterDropdown.value === "all") {
+    loadPapers();
+  } else {
+    const selectedSession = await scheduleRepo.getSessionByDate(
+      filterDropdown.value
+    );
+    papersContainer.innerHTML = "";
+    for (const sessionPaper of selectedSession.papers) {
+      const paperHtml = await generatePaper(sessionPaper);
+      papersContainer.innerHTML += paperHtml;
+    }
   }
 }
 
 async function loadPapers() {
   const sessions = await scheduleRepo.getSchedule();
+  papersContainer.innerHTML = "";
 
   if (sessions.length === 0) {
     papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
@@ -77,21 +78,4 @@ async function generatePaper(sessionPaper) {
     </section>
 </article>
     `;
-}
-
-function handleSearch(input) {
-  if (input !== "") {
-    papersContainer.innerHTML = "";
-    const searchedPapers = papers.filter((paper) =>
-      paper.title.toLowerCase().includes(input)
-    );
-    if (searchedPapers.length > 0) {
-      searchedPapers.forEach((paper) => {
-        papersContainer.innerHTML += generatePaper(paper);
-      });
-    }
-  } else {
-    papersContainer.innerHTML = "";
-    loadPapers();
-  }
 }

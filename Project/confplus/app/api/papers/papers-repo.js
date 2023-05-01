@@ -20,8 +20,10 @@ class PapersRepo {
           })
           .map(({ paperID, paperTitle }) => ({ paperID, paperTitle }));
         return filteredPapers;
-      } else if(acceptedPapers){
-        const filteredPapers = papers.filter(paper => paper.isAccepted === true);
+      } else if (acceptedPapers) {
+        const filteredPapers = papers.filter(
+          (paper) => paper.isAccepted === true
+        );
         return filteredPapers;
       }
       return papers;
@@ -75,7 +77,9 @@ class PapersRepo {
       const papers = await this.getPapers();
       papers.push(paper);
       await fs.writeJSON(this.filePath, papers);
-      return paper;
+      return {
+        successfully: "Your paper has been successfully submitted. Thank you!",
+      };
     } catch (error) {
       return { errorMessage: error.name + " | " + error.message };
     }
