@@ -84,7 +84,7 @@ function paperDetails(selectedPaper) {
         ${author.authorAffiliation} </h5>
       `).join(" ")}
     </section>
-    <p>Download paper: <a href="http://">link to download the paper</a></p>
+    <p>Download paper: <a href="http://" download>link to download the paper</a></p>
   </div>
 
 </section>
