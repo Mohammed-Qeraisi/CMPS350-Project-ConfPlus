@@ -1,0 +1,25 @@
+main {
+    padding: 20px;
+}
+
+article {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.reviewer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.reviewer div {
+    width: 50%;
+}
+
+.paper-section {
+    margin-bottom: 10px;
+}

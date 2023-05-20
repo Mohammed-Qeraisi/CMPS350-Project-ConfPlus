@@ -4,6 +4,7 @@ import institutionsRrepo from "../repository/institutions-repo.js";
 
 let authorNumber = 1;
 let affiliations = null;
+const currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 const addAuthor = document.querySelector("#add-author");
 const deleteAuthor = document.querySelector("#delete-author");
 const authorsContainer = document.querySelector("#extra-author-container");
@@ -12,80 +13,79 @@ const form = document.querySelector("#submit-paper-form");
 let dbAffiliation = null;
 
 window.addEventListener("load", async () => {
-  affiliations = await institutionsRrepo.getInstitutions();
-  fillDropDown();
+    affiliations = await institutionsRrepo.getInstitutions();
+    fillDropDown();
 });
 
 function fillDropDown() {
-  dbAffiliation = document.querySelectorAll(".DropDown");
-  dbAffiliation[dbAffiliation.length - 1].innerHTML += affiliations
-    .map(
-      (affiliation) =>
-        `<option value="${affiliation.name}">${affiliation.name}</option>`
-    )
-    .join(" ");
+    dbAffiliation = document.querySelectorAll(".DropDown");
+    dbAffiliation[dbAffiliation.length - 1].innerHTML += affiliations
+        .map(
+            (affiliation) =>
+                `<option value="${affiliation.name}">${affiliation.name}</option>`
+        )
+        .join(" ");
 }
 
 addAuthor.addEventListener("click", () => {
-  const author = extraAuthor();
-  authorsContainer.appendChild(author);
-  fillDropDown();
+    const author = extraAuthor();
+    authorsContainer.appendChild(author);
+    fillDropDown();
 });
 
 deleteAuthor.addEventListener("click", () => {
-  if (authorNumber > 1) {
-    const lastExtraAuthor = authorsContainer.lastElementChild;
-    authorsContainer.removeChild(lastExtraAuthor);
-    authorNumber--;
-  } else {
-    alert("There must be at least 1 Author");
-  }
+    if (authorNumber > 1) {
+        const lastExtraAuthor = authorsContainer.lastElementChild;
+        authorsContainer.removeChild(lastExtraAuthor);
+        authorNumber--;
+    } else {
+        alert("There must be at least 1 Author");
+    }
 });
 
 submitPaper.addEventListener("click", async (event) => {
-  try {
-    event.preventDefault();
-    const formCheck = form;
-    const isFormValid = formCheck.checkValidity();
-    if (!isFormValid) {
-      alert("Please fill in all required fields.");
-      return;
+    try {
+        event.preventDefault();
+        const formCheck = form;
+        const isFormValid = formCheck.checkValidity();
+        if (!isFormValid) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        const reviewersID = await getRandomReviewer();
+
+        const paper = infoFormToObject(form);
+
+        paper.reviewersID = reviewersID;
+        paper.userID = currentUser.userID;
+
+        const addedPaper = await papersRepo.addPaper(paper);
+
+        alert(addedPaper.successfully || addedPaper.errorMessage);
+
+        window.location.href = "home.html";
+    } catch (error) {
+        console.log(error.name + " | " + error.message);
     }
-
-    const reviewersID = await getRandomReviewer();
-
-    const paper = infoFormToObject(form);
-
-    paper.reviewersID = reviewersID;
-
-    const addedPaper = await papersRepo.addPaper(paper);
-
-    console.log(addedPaper);
-
-    alert(addedPaper.successfully || addedPaper.errorMessage);
-
-    window.location.href = "home.html";
-  } catch (error) {
-    console.log(error.name + " | " + error.message);
-  }
 });
 
 async function getRandomReviewer() {
-  const reviewerUsers = await usersRepo.getUserByRole("reviewer");
-  const reviewers = [];
-  const numReviewers = Math.min(2, reviewerUsers.length);
-  for (let i = 0; i < numReviewers; i++) {
-    const index = Math.floor(Math.random() * reviewerUsers.length);
-    reviewers.push({ id: reviewerUsers[index].id });
-    reviewerUsers.splice(index, 1);
-  }
-  return reviewers;
+    const reviewerUsers = await usersRepo.getUserByRole("reviewer");
+    const reviewers = [];
+    const numReviewers = Math.min(2, reviewerUsers.length);
+    for (let i = 0; i < numReviewers; i++) {
+        const index = Math.floor(Math.random() * reviewerUsers.length);
+        reviewers.push({ id: reviewerUsers[index].id, evaluated: false });
+        reviewerUsers.splice(index, 1);
+    }
+    return reviewers;
 }
 
 function extraAuthor() {
-  ++authorNumber;
+    ++authorNumber;
 
-  const newAuthorHtml = ` 
+    const newAuthorHtml = ` 
   <div class="section-title">Author ${authorNumber} </div>
    <div class="form-group">
     <label for="author-fname">Author First Name</label>
@@ -118,39 +118,39 @@ function extraAuthor() {
  </div>
  `;
 
-  const authorContainer = document.createElement("div");
+    const authorContainer = document.createElement("div");
 
-  authorContainer.innerHTML = newAuthorHtml;
+    authorContainer.innerHTML = newAuthorHtml;
 
-  return authorContainer;
+    return authorContainer;
 }
 
 function infoFormToObject(form) {
-  const formData = new FormData(form);
-  let data = {
-    isAccepted: false,
-    presenter: {},
-  };
-  let authors = [];
-  const regex = /\d+$/;
+    const formData = new FormData(form);
+    let data = {
+        isAccepted: false,
+        presenter: {},
+    };
+    let authors = [];
+    const regex = /\d+$/;
 
-  for (const [key, value] of formData) {
-    if (key.startsWith("presenter")) {
-      data.presenter[key] = value;
-    } else if (key.startsWith("author")) {
-      const authorNumber = key.match(regex)[0];
-      const author = authors[authorNumber - 2] || {};
-      const newKey = key.replace(authorNumber, "");
-      author[newKey] = value;
-      authors[authorNumber - 2] = author;
-    } else {
-      data[key] = value;
+    for (const [key, value] of formData) {
+        if (key.startsWith("presenter")) {
+            data.presenter[key] = value;
+        } else if (key.startsWith("author")) {
+            const authorNumber = key.match(regex)[0];
+            const author = authors[authorNumber - 2] || {};
+            const newKey = key.replace(authorNumber, "");
+            author[newKey] = value;
+            authors[authorNumber - 2] = author;
+        } else {
+            data[key] = value;
+        }
     }
-  }
 
-  if (authors.length > 0) {
-    data.authors = authors;
-  }
+    if (authors.length > 0) {
+        data.authors = authors;
+    }
 
-  return data;
+    return data;
 }

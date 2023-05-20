@@ -11,6 +11,11 @@ class PapersRepo {
     return await response.json();
   }
 
+  async getPapersByUserID(userID) {
+    const response = await fetch(`${baseUrl}?UserID=${userID}`);
+    return await response.json();
+  }
+
   async getAcceptedPapers() {
     const response = await fetch(`${baseUrl}?AcceptedPapers=true`);
     return await response.json();

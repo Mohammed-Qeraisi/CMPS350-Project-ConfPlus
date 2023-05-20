@@ -9,42 +9,44 @@ let evaluationFromHTML = null;
 let index = null;
 
 window.addEventListener("load", async () => {
-  window.loadPaper = loadPaper;
-  papers = await papersRepo.getPapersByReviewerID(currentUser.userID);
-  displayPapers();
+    window.loadPaper = loadPaper;
+    papers = await papersRepo.getPapersByReviewerID(currentUser.userID);
+    displayPapers();
 });
 
 function displayPapers() {
-  const papersCards = papers.map((paper) => convertToCards(paper)).join(" ");
-  mainContainer.innerHTML = papersCards;
+    const papersCards = papers.map((paper) => convertToCards(paper)).join(" ");
+    mainContainer.innerHTML = papersCards;
 }
 
 function convertToCards(paper) {
-  return `
+    const icon = paper.evaluated ? "document-text" : "document-text-outline"
+    return `
 <article class="title-card" id="title-card" onclick="loadPaper('${paper.paperID}')">
   <h1>${paper.paperTitle}</h1>
-  <ion-icon name="document-text-outline"></ion-icon>
+  <ion-icon name="${icon}"></ion-icon>
 </article>
 `;
 }
 
 async function loadPaper(id) {
-  selectedPaper = await papersRepo.getPaperByID(id);
-  const paperDetail = paperDetails(selectedPaper);
-  index = selectedPaper.reviewersID.findIndex(reviewer => reviewer.id === currentUser.userID);
-  mainContainer.innerHTML = paperDetail;
-  await createFormPage();
+    selectedPaper = await papersRepo.getPaperByID(id);
+    const paperDetail = paperDetails(selectedPaper);
+    index = selectedPaper.reviewersID.findIndex(
+        (reviewer) => reviewer.id === currentUser.userID
+    );
+    mainContainer.innerHTML = paperDetail;
+    await createFormPage();
 
-  if (selectedPaper.reviewersID[index].evaluated) {
-    fillForm(selectedPaper.reviewersID[index]);
-  }
+    if (selectedPaper.reviewersID[index].evaluated) {
+        fillForm(selectedPaper.reviewersID[index]);
+    }
 }
 
 function paperDetails(selectedPaper) {
+    const authors = selectedPaper.authors || [];
 
-  const authors = selectedPaper.authors || []
-
-  return `
+    return `
 <section class="paper-container">
 
   <div class="presenter-container">
@@ -55,17 +57,23 @@ function paperDetails(selectedPaper) {
         <div class="staff-card">
 
           <div class="card-image">
-            <img src="${selectedPaper.presenter.presenterImage}" alt="Presenter Image">
+            <img src="${
+                selectedPaper.presenter.presenterImage
+            }" alt="Presenter Image">
           </div>
 
           <div class="details">
-            <h2>${selectedPaper.presenter.presenterFname} ${selectedPaper.presenter.presenterLname}
+            <h2>${selectedPaper.presenter.presenterFname} ${
+        selectedPaper.presenter.presenterLname
+    }
               <br>
               <div class="affiliation-email">
                 <span>${selectedPaper.presenter.presenterAffiliation}</span>
                 <br>
                 <span><a
-                    href="mailto:${selectedPaper.presenter.presenterEmail}">${selectedPaper.presenter.presenterEmail}</a></span>
+                    href="mailto:${selectedPaper.presenter.presenterEmail}">${
+        selectedPaper.presenter.presenterEmail
+    }</a></span>
               </div>
             </h2>
           </div>
@@ -79,10 +87,14 @@ function paperDetails(selectedPaper) {
     <h1>${selectedPaper.paperTitle}</h1>
     <p>${selectedPaper.paperSummary}</p>
     <section class="authors">
-      ${authors.map((author) => `
+      ${authors
+          .map(
+              (author) => `
       <h5><a href="mailto:${author.authorEmail}">${author.authorFname} ${author.authorLname}</a> <br>
         ${author.authorAffiliation} </h5>
-      `).join(" ")}
+      `
+          )
+          .join(" ")}
     </section>
     <p>Download paper: <a href="http://" download>link to download the paper</a></p>
   </div>
@@ -92,69 +104,75 @@ function paperDetails(selectedPaper) {
 }
 
 async function createFormPage() {
-  mainContainer.innerHTML += await getEvaluationFrom();
-  evaluationFromHTML = document.querySelector("#evaluation-form");
-  evaluationFromHTML.addEventListener("submit", formSubmit);
+    mainContainer.innerHTML += await getEvaluationFrom();
+    evaluationFromHTML = document.querySelector("#evaluation-form");
+    evaluationFromHTML.addEventListener("submit", formSubmit);
 }
 
 async function getEvaluationFrom() {
-  const response = await fetch(page_URL);
-  return await response.text();
+    const response = await fetch(page_URL);
+    return await response.text();
 }
 
 function fillForm(evaluated) {
-  document.querySelector('.evaluation[value="' + evaluated.evaluation + '"]').checked = true;
-  document.querySelector('.contribution[value="' + evaluated.contribution + '"]').checked = true;
-  document.querySelector("#strengths").value = evaluated.strengths;
-  document.querySelector("#weaknesses").value = evaluated.weaknesses;
+    document.querySelector(
+        '.evaluation[value="' + evaluated.evaluation + '"]'
+    ).checked = true;
+    document.querySelector(
+        '.contribution[value="' + evaluated.contribution + '"]'
+    ).checked = true;
+    document.querySelector("#strengths").value = evaluated.strengths;
+    document.querySelector("#weaknesses").value = evaluated.weaknesses;
 }
 
 async function formSubmit(event) {
-  try {
-    event.preventDefault();
-    const formCheck = event.target;
-    const isFormValid = formCheck.checkValidity();
-    if (!isFormValid) return;
-  
-    formToObject(evaluationFromHTML);
-    isAccepted();
+    try {
+        event.preventDefault();
+        const formCheck = event.target;
+        const isFormValid = formCheck.checkValidity();
+        if (!isFormValid) return;
 
-    const updatePaper = await papersRepo.updatePaper(selectedPaper);
+        formToObject(evaluationFromHTML);
+        isAccepted();
 
-    await reloadPage();
-  } catch (error) {
-    console.log(error.name + " | " + error.message);
-  }
+        const updatePaper = await papersRepo.updatePaper(selectedPaper);
+
+        await reloadPage();
+    } catch (error) {
+        console.log(error.name + " | " + error.message);
+    }
 }
 
 function isAccepted() {
-  const sumOfEvaluations = selectedPaper.reviewersID.reduce((total, reviewer) => {
-    return total + parseInt(reviewer.evaluation);
-  }, 0);
+    const sumOfEvaluations = selectedPaper.reviewersID.reduce(
+        (total, reviewer) => {
+            return total + parseInt(reviewer.evaluation);
+        },
+        0
+    );
 
-  const allReviewed = selectedPaper.reviewersID.every(
-    (reviewer) => reviewer.evaluated === true
-  );
+    const allReviewed = selectedPaper.reviewersID.every(
+        (reviewer) => reviewer.evaluated === true
+    );
 
-  if (sumOfEvaluations >= 2 && allReviewed) {
-    selectedPaper.isAccepted = true;
-  } else {
-    selectedPaper.isAccepted = false;
-  }
+    if (sumOfEvaluations >= 2 && allReviewed) {
+        selectedPaper.isAccepted = true;
+    } else {
+        selectedPaper.isAccepted = false;
+    }
 }
 
 function formToObject(formElement) {
+    const formData = new FormData(formElement);
+    const data = selectedPaper.reviewersID[index];
 
-  const formData = new FormData(formElement);
-  const data = selectedPaper.reviewersID[index];
+    for (const [key, value] of formData) {
+        data[key] = value;
+    }
 
-  for (const [key, value] of formData) {
-    data[key] = value;
-  }
-
-  data.evaluated = true
+    data.evaluated = true;
 }
 
 async function reloadPage() {
-  location.reload();
+    location.reload();
 }
