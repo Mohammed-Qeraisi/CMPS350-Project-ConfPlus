@@ -1,5 +1,25 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+}
+
 main {
-    padding: 20px;
+    flex: 1;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 article {
@@ -20,6 +40,98 @@ article {
     width: 50%;
 }
 
+.reviewer-container,
+.details-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 300px;
+    box-shadow: 0px 2px 2px #2c2c2c;
+}
+
+.reviewer-container-not-reviewed {
+    margin-top: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 300px;
+}
+
 .paper-section {
     margin-bottom: 10px;
+}
+
+.evaluation-wrapper {
+    max-height: 200px;
+    max-width: 300px;
+    /* Set a maximum height for the evaluation wrapper */
+    overflow: hidden;
+}
+
+.evaluation-content {
+    position: relative;
+}
+
+.evaluation-content::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    /* Set the height of the fade-out gradient */
+}
+
+.paper-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    transition: height 0.3s;
+}
+
+.paper-card:hover {
+    background-color: #f5f5f5;
+}
+
+.paper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paper-title {
+    margin: 0;
+}
+
+.paper-status {
+    font-weight: bold;
+}
+
+ion-icon{
+    font-size: 32px;
+}
+
+ion-icon[name="close-circle"]{
+    color: red;
+}
+ion-icon[name="checkmark-circle"]{
+    color: green;
+}
+ion-icon[name="hourglass"]{
+    color: goldenrod;
+}
+
+.paper-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.paper-card.active .paper-details {
+    display: flex;
+    gap: 5rem;
 }

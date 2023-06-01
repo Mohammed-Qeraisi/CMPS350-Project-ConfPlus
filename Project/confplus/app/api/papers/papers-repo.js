@@ -10,7 +10,6 @@ class PapersRepo {
     async getPapers(ReviewerID, acceptedPapers, userID) {
         try {
             const papers = await fs.readJSON(this.filePath);
-
             if (ReviewerID) {
                 const filteredPapers = papers
                     .filter((paper) => {
@@ -33,7 +32,7 @@ class PapersRepo {
                 return filteredPapers;
             } else if (userID) {
                 const filteredPapers = papers.filter(
-                    (paper) => paper.userID === userID
+                    (paper) => paper.userID == userID
                 );
                 return filteredPapers;
             }
