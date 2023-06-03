@@ -1,0 +1,102 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "  -client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userID    Int       @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String    @unique
+  password  String
+  role      String
+  image     String
+  Papers    Papers[]
+  Ratings   Ratings[]
+
+  @@unique([firstName, lastName])
+}
+
+model Dates {
+  dayNo    Int        @id @default(autoincrement())
+  date     String
+  Schedule Schedule[]
+}
+
+model Institutions {
+  institutionID   Int    @id @default(autoincrement())
+  institutionName String
+}
+
+model Locations {
+  locationID Int        @id @default(autoincrement())
+  location   String
+  Schedule   Schedule[]
+}
+
+model Papers {
+  paperID              String    @id @default(cuid())
+  isAccepted           Boolean   @default(false)
+  paperTitle           String
+  paperSummary         String
+  paperPDF             String
+  presenter            Presenter @relation(fields: [presenterPresenterID], references: [presenterID])
+  presenterPresenterID String
+  authors              Author[]
+  userID               User      @relation(fields: [userUserID], references: [userID])
+  userUserID           Int
+  ratings              Ratings[]
+  Schedule             Schedule? @relation(fields: [scheduleSessionID], references: [sessionID])
+  scheduleSessionID    String?
+}
+
+model Presenter {
+  presenterID          String   @id @default(cuid())
+  presenterFname       String
+  presenterLname       String
+  presenterImage       String
+  presenterAffiliation String
+  presenterEmail       String
+  Papers               Papers[]
+}
+
+model Author {
+  authorID          String @id @default(cuid())
+  authorFname       String
+  authorLname       String
+  authorImage       String
+  authorAffiliation String
+  authorEmail       String
+  Papers            Papers @relation(fields: [papersPaperID], references: [paperID])
+  papersPaperID     String
+}
+
+model Ratings {
+  rating        String  @id @default(cuid())
+  evaluated     Boolean @default(false)
+  evaluation    Int
+  contribution  Int
+  strengths     String
+  weaknesses    String
+  userID        User    @relation(fields: [userUserID], references: [userID])
+  userUserID    Int
+  Papers        Papers  @relation(fields: [papersPaperID], references: [paperID])
+  papersPaperID String
+}
+
+model Schedule {
+  sessionID           String    @id @default(cuid())
+  sessionTitle        String
+  papers              Papers[]
+  dateID              Dates     @relation(fields: [datesDayNo], references: [dayNo])
+  datesDayNo          Int
+  locationID          Locations @relation(fields: [locationsLocationID], references: [locationID])
+  locationsLocationID Int
+}
