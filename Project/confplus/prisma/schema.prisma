@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userID    Int       @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String    @unique
+  password  String
+  role      String
+  image     String?
+  Papers    Papers[]
+  Ratings   Ratings[]
+
+  @@unique([firstName, lastName])
+}
+
+model Dates {
+  dayNo    Int       @id @default(autoincrement())
+  date     String
+  Schedule Schedule?
+}
+
+model Institutions {
+  institutionID   Int         @id @default(autoincrement())
+  institutionName String
+  Presenter       Presenter[]
+  Author          Author[]
+}
+
+model Locations {
+  locationID Int        @id @default(autoincrement())
+  location   String
+  Schedule   Schedule[]
+}
+
+model Papers {
+  paperID      String    @id @default(cuid())
+  isAccepted   Boolean   @default(false)
+  paperTitle   String
+  paperSummary String
+  paperPDF     String
+  Presenter    Presenter @relation(fields: [presenterID], references: [presenterID], onDelete: Cascade, onUpdate: Cascade)
+  presenterID  String    @unique
+  Authors      Author[]
+  User         User      @relation(fields: [userID], references: [userID])
+  userID       Int
+  Ratings      Ratings[]
+  Session      Schedule? @relation(fields: [sessionID], references: [sessionID], onUpdate: Cascade)
+  sessionID    String?
+}
+
+model Presenter {
+  presenterID          String       @id @default(cuid())
+  presenterFname       String
+  presenterLname       String
+  presenterImage       String
+  PresenterAffiliation Institutions @relation(fields: [institutionID], references: [institutionID])
+  institutionID        Int
+  presenterEmail       String
+  Papers               Papers?
+}
+
+model Author {
+  authorID          String       @id @default(cuid())
+  authorFname       String
+  authorLname       String
+  authorImage       String
+  AuthorAffiliation Institutions @relation(fields: [institutionID], references: [institutionID], onUpdate: Cascade)
+  institutionID     Int
+  authorEmail       String
+  Papers            Papers       @relation(fields: [paperID], references: [paperID], onUpdate: Cascade)
+  paperID           String
+}
+
+model Ratings {
+  ratingID     String  @id @default(cuid())
+  evaluated    Boolean @default(false)
+  evaluation   Int?
+  contribution Int?
+  strengths    String?
+  weaknesses   String?
+  User         User    @relation(fields: [userID], references: [userID], onUpdate: Cascade)
+  userID       Int
+  Papers       Papers  @relation(fields: [paperID], references: [paperID], onUpdate: Cascade)
+  paperID      String
+}
+
+model Schedule {
+  sessionID    String    @id @default(cuid())
+  sessionTitle String
+  Papers       Papers[]
+  Date         Dates     @relation(fields: [dateNo], references: [dayNo], onUpdate: Cascade)
+  dateNo       Int       @unique
+  Location     Locations @relation(fields: [locationID], references: [locationID], onUpdate: Cascade)
+  locationID   Int
+}

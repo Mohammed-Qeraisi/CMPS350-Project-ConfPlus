@@ -1,7 +1,12 @@
-import repo from "./dates-repo"
+import repo from "./dates-repo";
 
 export async function GET(request) {
-  const dates = await repo.getDates();
-
-  return Response.json(dates);
+    try {
+        const dates = await repo.getDates();
+        return Response.json(dates);
+    } catch (error) {
+        return Response.json({
+            errorMessage: error.name + " | " + error.message,
+        });
+    }
 }

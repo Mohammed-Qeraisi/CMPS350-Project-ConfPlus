@@ -5,17 +5,15 @@ const mainContainer = document.querySelector("#main-container");
 let papers = null;
 
 window.addEventListener("load", async () => {
-
     papers = await papersRepo.getPapersByUserID(currentUser.userID);
     displayPapers();
-    const cards = document.querySelectorAll('.paper-card');
-    console.log(cards)
-    cards.forEach(function(card) {
-        card.addEventListener('click', function() {
-            this.classList.toggle('active');
+    const cards = document.querySelectorAll(".paper-card");
+    console.log(cards);
+    cards.forEach(function (card) {
+        card.addEventListener("click", function () {
+            this.classList.toggle("active");
         });
-});
-
+    });
 });
 
 function displayPapers() {
@@ -26,14 +24,13 @@ function displayPapers() {
 function convertToCards(paper) {
     const reviewers = paper.reviewersID;
 
-    let status = ""
-    if(!reviewers[0].evaluated || !reviewers[1].evaluated){
-        status = "hourglass"
-    }
-    else if(paper.isAccepted){
-        status = "checkmark-circle"
+    let status = "";
+    if (!reviewers[0].evaluated || !reviewers[1].evaluated) {
+        status = "hourglass";
+    } else if (paper.isAccepted) {
+        status = "checkmark-circle";
     } else {
-        status = "close-circle"
+        status = "close-circle";
     }
 
     let reviewer1Content = "";
@@ -97,7 +94,7 @@ function convertToCards(paper) {
         `;
     }
 
-    let details = ""
+    let details = "";
     details = `
     <div class="details-container">
         <h3>Session Details: </h3>
@@ -109,7 +106,7 @@ function convertToCards(paper) {
         <p>9:00 AM</p>
     </div>
     `;
-    
+
     return `
     <article class="paper-card">
         <div class="paper-header">

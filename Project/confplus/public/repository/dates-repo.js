@@ -1,7 +1,7 @@
-const baseUrl = '/api/dates';
+const baseUrl = "/api/dates";
 
-class DatesRepo{
-    async getDates(){
+class DatesRepo {
+    async getDates() {
         const respone = await fetch(baseUrl);
         return await respone.json();
     }

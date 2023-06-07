@@ -1,7 +1,7 @@
-const baseUrl = '/api/locations';
+const baseUrl = "/api/locations";
 
-class LocationsRepo{
-    async getLocations(){
+class LocationsRepo {
+    async getLocations() {
         const respone = await fetch(baseUrl);
         return await respone.json();
     }
