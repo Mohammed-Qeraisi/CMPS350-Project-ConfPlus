@@ -117,7 +117,7 @@ function fillDateDropDown() {
   dateDropDown = document.querySelector("#date");
 
   dateDropDown.innerHTML += dates
-    .map((date) => `<option value="${date.day}">${date.date}</option>`)
+    .map((date) => `<option value="${date.dayNo}">${date.date}</option>`)
     .join(" ");
 
   if (selectedSession) {

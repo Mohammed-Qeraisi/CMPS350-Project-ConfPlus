@@ -42,6 +42,3312 @@
         "paperID": "sDrJlh4_-hPlRiu4o_P0X"
     },
     {
+        "isAccepted": true,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
+        "isAccepted": false,
+        "presenter": {
+            "presenterFname": "Mohammed",
+            "presenterLname": "AlQeraisi",
+            "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+            "presenterAffiliation": "Qatar University",
+            "presenterEmail": "test@test.com"
+        },
+        "paperTitle": "Test Paper",
+        "paperSummary": "This is a short summary",
+        "paperUpload": {},
+        "authors": [
+            {
+                "authorFname": "t",
+                "authorLname": "t",
+                "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+                "authorAffiliation": "University of Doha for Science and Technology",
+                "authorEmail": "t"
+            }
+        ],
+        "reviewersID": [
+            {
+                "id": 4,
+                "evaluated": true,
+                "evaluation": "2",
+                "contribution": "5",
+                "strengths": "formatted paper.",
+                "weaknesses": "This paper has a very poor grammar. In fact its grammar cannot compare with a 3rd grader's grammar. It is so pathetic that I feel sad about it."
+            },
+            {
+                "id": 12,
+                "evaluated": false
+            }
+        ],
+        "userID": 20,
+        "paperID": "sDrJlh4_-hPlRiu4o_P0X"
+    },
+    {
         "isAccepted": false,
         "presenter": {
             "presenterFname": "Mohammed",

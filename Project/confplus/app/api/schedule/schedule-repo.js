@@ -31,7 +31,8 @@ class ScheduleRepo {
   async getSession(date) {
     try {
       const schedule = await this.getSchedule();
-      const session = schedule.find((session) => session.date === date);
+      const session = schedule.find((session) => session.date == date);
+
       if (!session) {
         return `${date}`
       }

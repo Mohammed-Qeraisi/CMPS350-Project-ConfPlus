@@ -18,7 +18,7 @@ async function loadDates() {
 
   dates.forEach((date) => {
     var option = document.createElement("option");
-    option.value = date.day;
+    option.value = date.dayNo;
     option.text = date.date;
     filterDropdown.appendChild(option);
   });
@@ -33,10 +33,14 @@ async function filterPapersByDate() {
     const selectedSession = await scheduleRepo.getSessionByDate(
       filterDropdown.value
     );
-    papersContainer.innerHTML = "";
-    for (const sessionPaper of selectedSession.papers) {
-      const paperHtml = await generatePaper(sessionPaper);
-      papersContainer.innerHTML += paperHtml;
+    if(!selectedSession.papers){
+      papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
+    } else {
+      papersContainer.innerHTML = "";
+      for (const sessionPaper of selectedSession.papers) {
+        const paperHtml = await generatePaper(sessionPaper);
+        papersContainer.innerHTML += paperHtml;
+      }
     }
   }
 }
@@ -49,7 +53,9 @@ async function loadPapers() {
     papersContainer.innerHTML = `<h1>No papers in this session...</h1>`;
   } else {
     for (const session of sessions) {
-      let papersHtml = "";
+      let papersHtml = `
+      <h1>Conference Name: ${session.name}</h1>
+      `;
       for (const sessionPaper of session.papers) {
         const paperHtml = await generatePaper(sessionPaper);
         papersHtml += paperHtml;
@@ -61,19 +67,19 @@ async function loadPapers() {
 
 async function generatePaper(sessionPaper) {
   const paper = await papersRepo.getPaperByID(sessionPaper.paperID);
-
+  console.log(paper)
   return `
     <article class="schedule-card">
     <section class="card">
         <div class="card-info">
             <div class="card-main-info">
                 <div class="card-info-header">
-                    <h4>${paper.paperTitle}</h4>
+                    <h4>Title: ${paper.paperTitle}</h4>
                     <h4 id="card-time">${sessionPaper.paperFromTime} - ${sessionPaper.paperToTime}</h4>
                 </div>
-                <p>${paper.paperSummary}</p>
+                <p>Abstract: ${paper.paperSummary}</p>
             </div>
-            <h4>Speaker:${paper.presenter.presenterFname} ${paper.presenter.presenterLname}</h4>
+            <h4>Speaker: ${paper.presenter.presenterFname} ${paper.presenter.presenterLname}</h4>
         </div>
     </section>
 </article>

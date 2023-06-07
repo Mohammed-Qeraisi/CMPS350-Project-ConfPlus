@@ -1,1 +1,33 @@
-[]
+[
+    {
+        "papers": [
+            {
+                "paperID": "sDrJlh4_-hPlRiu4o_P0X",
+                "paperFromTime": "09:00",
+                "paperToTime": "09:30"
+            },
+            {
+                "paperID": "sDrJlh4_-hPlRiu4o_P0X",
+                "paperFromTime": "10:00",
+                "paperToTime": "10:30"
+            }
+        ],
+        "name": "Conference of NOT CS",
+        "location": "1",
+        "date": "1",
+        "sessionID": "yhk00RFhnD_JJQ8G9D1Wj"
+    },
+    {
+        "papers": [
+            {
+                "paperID": "sDrJlh4_-hPlRiu4o_P0X",
+                "paperFromTime": "10:00",
+                "paperToTime": "10:30"
+            }
+        ],
+        "name": "Conference of CS",
+        "location": "4",
+        "date": "2",
+        "sessionID": "kSWpVtI0M-iGoUa9Jgp0o"
+    }
+]

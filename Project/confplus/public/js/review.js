@@ -33,9 +33,10 @@ function displayPapers() {
 
 function convertToCards(paper) {
     const icon = paper.evaluated ? "document-text" : "document-text-outline";
+    const status = paper.evaluated ? "evaluated" : "not-evaluated"
     return `
-<article class="title-card" id="title-card" onclick="loadPaper('${paper.paperID}')">
-  <h1>${paper.paperTitle}</h1>
+<article class="title-card" id="${status}" onclick="loadPaper('${paper.paperID}')">
+  <h1>Title: ${paper.paperTitle}</h1>
   <ion-icon name="${icon}"></ion-icon>
 </article>
 `;
@@ -124,7 +125,8 @@ function addPaginationButtons() {
 
     // Previous Button
     const previousButton = document.createElement("button");
-    previousButton.textContent = "Previous";
+    previousButton.classList.add('pagination-btns');
+    previousButton.textContent = "< Previous";
     previousButton.addEventListener("click", () => {
         if (currentPage > 1) {
             currentPage--;
@@ -170,7 +172,8 @@ function addPaginationButtons() {
 
     // Next Button
     const nextButton = document.createElement("button");
-    nextButton.textContent = "Next";
+    nextButton.classList.add('pagination-btns');
+    nextButton.textContent = "Next >";
     nextButton.addEventListener("click", () => {
         if (currentPage < totalPages) {
             currentPage++;
@@ -184,6 +187,7 @@ function addPaginationButtons() {
 
 function createPageButton(pageNumber) {
     const button = document.createElement("button");
+    button.classList.add('pages-btns')
     button.textContent = pageNumber;
     button.addEventListener("click", () => {
         currentPage = pageNumber;
