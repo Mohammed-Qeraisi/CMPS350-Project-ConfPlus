@@ -22,7 +22,7 @@ function fillDropDown() {
     dbAffiliation[dbAffiliation.length - 1].innerHTML += affiliations
         .map(
             (affiliation) =>
-                `<option value="${affiliation.name}">${affiliation.name}</option>`
+                `<option value="${affiliation.institutionID}">${affiliation.institutionName}</option>`
         )
         .join(" ");
 }
@@ -57,8 +57,9 @@ submitPaper.addEventListener("click", async (event) => {
 
         const paper = infoFormToObject(form);
 
-        paper.reviewersID = reviewersID;
-        paper.userID = currentUser.userID;
+        paper.ratings.create = reviewersID;
+        paper.userID = { connect: { userID: parseInt(currentUser.userID) } };
+        paper.paperPDF = "PDF";
 
         const addedPaper = await papersRepo.addPaper(paper);
 
@@ -76,7 +77,9 @@ async function getRandomReviewer() {
     const numReviewers = Math.min(2, reviewerUsers.length);
     for (let i = 0; i < numReviewers; i++) {
         const index = Math.floor(Math.random() * reviewerUsers.length);
-        reviewers.push({ id: reviewerUsers[index].id, evaluated: false });
+        reviewers.push({
+            userID: { connect: { userID: reviewerUsers[index].userID } },
+        });
         reviewerUsers.splice(index, 1);
     }
     return reviewers;
@@ -127,30 +130,116 @@ function extraAuthor() {
 
 function infoFormToObject(form) {
     const formData = new FormData(form);
+
     let data = {
-        isAccepted: false,
-        presenter: {},
+        presenter: { create: {} },
+        ratings: { create: [] },
     };
-    let authors = [];
+
+    let authors = { create: [] };
     const regex = /\d+$/;
 
     for (const [key, value] of formData) {
         if (key.startsWith("presenter")) {
-            data.presenter[key] = value;
+            if (key === "presenterAffiliation") {
+                data.presenter.create[key] = {
+                    connect: {
+                        institutionID: parseInt(value),
+                    },
+                };
+            } else {
+                data.presenter.create[key] = value;
+            }
         } else if (key.startsWith("author")) {
             const authorNumber = key.match(regex)[0];
-            const author = authors[authorNumber - 2] || {};
-            const newKey = key.replace(authorNumber, "");
-            author[newKey] = value;
-            authors[authorNumber - 2] = author;
+            const author = authors.create[authorNumber - 2] || {};
+            if (key === `authorAffiliation${authorNumber}`) {
+                author["authorAffiliation"] = {
+                    connect: {
+                        institutionID: parseInt(value),
+                    },
+                };
+            } else {
+                const newKey = key.replace(authorNumber, "");
+                author[newKey] = value;
+            }
+            authors.create[authorNumber - 2] = author;
         } else {
             data[key] = value;
         }
     }
 
-    if (authors.length > 0) {
+    if (authors.create.length > 0) {
         data.authors = authors;
     }
 
     return data;
 }
+
+// {
+//     "paperTitle": "Neurology and Computer Interface to Create Artificial Limbs",
+//     "paperSummary": "This is a short summary",
+//     "paperPDF": "PDF",
+//     "presenter": {
+//       "create": {
+//         "presenterFname": "Mohammed",
+//         "presenterLname": "AlQeraisi",
+//         "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+//         "presenterEmail": "test@test.com",
+//         "presenterAffiliation": {
+//           "connect": {
+//             "institutionID": 1
+//           }
+//         }
+//       }
+//     },
+//     "authors": {
+//       "create": [
+//         {
+//           "authorFname": "t",
+//           "authorLname": "t",
+//           "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+//           "authorEmail": "test@test.com",
+//           "authorAffiliation": {
+//             "connect": {
+//               "institutionID": 1
+//             }
+//           }
+//         },
+//         {
+//           "authorFname": "a",
+//           "authorLname": "a",
+//           "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
+//           "authorEmail": "a@a.com",
+//           "authorAffiliation": {
+//             "connect": {
+//               "institutionID": 1
+//             }
+//           }
+//         }
+//       ]
+//     },
+// "ratings": {
+//   "create": [
+//     {
+//       "userID": {
+//         "connect": {
+//           "userID": 7
+//         }
+//       }
+//     },
+//     {
+//       "userID": {
+//         "connect": {
+//           "userID": 8
+//         }
+//       }
+//     }
+//   ]
+// },
+//     "userID": {
+//       "connect": {
+//         "userID": 20
+//       }
+//     }
+//   }

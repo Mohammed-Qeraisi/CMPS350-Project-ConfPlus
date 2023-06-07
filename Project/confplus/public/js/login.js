@@ -23,7 +23,7 @@ async function login(event) {
     sessionStorage.setItem("isLoggedIn", "true");
     sessionStorage.setItem(
       "CurrentUser",
-      JSON.stringify({ userRole: user.role, userID: user.id })
+      JSON.stringify({ userRole: user.role, userID: user.userID })
     );
   }
 }
