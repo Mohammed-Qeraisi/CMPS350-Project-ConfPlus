@@ -182,7 +182,6 @@ textarea {
 .title-card {
     display: flex;
     align-items: center;
-    background-color: gray;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -190,6 +189,14 @@ textarea {
     height: 50px;
     padding: 30px 10px;
     margin-bottom: 10px;
+}
+
+#evaluated{
+    background-color: #3658C1;
+}
+
+#not-evaluated{
+    background-color: gray;
 }
 
 .title-card:hover {
@@ -208,6 +215,66 @@ ion-icon {
 
 .header-btns{
     width: 150px;
+}
+
+.pagination{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.pages-btns{
+    background-color: #f7f7f7;
+    color: #3658C1;
+    border: 3px solid #3658C1;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.pages-btns:hover{
+    background-color: #3658C1;
+    color: #f7f7f7;
+    border: 3px solid transparent;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.pagination-btns{
+    background-color: #3658C1;
+    color: #f7f7f7;
+    border: 3px solid transparent;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.pagination-btns:hover {
+    color: #3658C1;
+    border: 3px solid #3658C1;
+    background-color: #f7f7f7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ellipsis{
+    background-color: #3658C1;
+    color: #f7f7f7;
+    border: 3px solid transparent;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.active{
+    background-color: #3658C1;
+    color: #f7f7f7;
+    border: 3px solid transparent;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 767px){

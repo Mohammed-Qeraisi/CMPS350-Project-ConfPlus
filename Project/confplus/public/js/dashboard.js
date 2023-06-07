@@ -3,7 +3,8 @@ import papersRepo from "../repository/papers-repo.js";
 const currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 const mainContainer = document.querySelector("#main-container");
 let papers = null;
-
+let currentPage = 1
+let papersPerPage = 6
 window.addEventListener("load", async () => {
     papers = await papersRepo.getPapersByUserID(currentUser.userID);
     displayPapers();
@@ -17,8 +18,20 @@ window.addEventListener("load", async () => {
 });
 
 function displayPapers() {
-    const papersCards = papers.map((paper) => convertToCards(paper)).join(" ");
+    // const papersCards = papers.map((paper) => convertToCards(paper)).join(" ");
+    // mainContainer.innerHTML = papersCards;
+
+    const startIndex = (currentPage - 1) * papersPerPage;
+    const endIndex = startIndex + papersPerPage;
+    const displayedPapers = papers.slice(startIndex, endIndex);
+
+    const papersCards = displayedPapers
+        .map((paper) => convertToCards(paper))
+        .join(" ");
+
     mainContainer.innerHTML = papersCards;
+
+    addPaginationButtons();
 }
 
 function convertToCards(paper) {
@@ -120,4 +133,97 @@ function convertToCards(paper) {
         </div>
     </article>
     `;
+}
+
+function addPaginationButtons() {
+    const totalPages = Math.ceil(papers.length / papersPerPage);
+    const maxVisiblePages = 3;
+
+    const paginationContainer = document.createElement("div");
+    paginationContainer.classList.add("pagination");
+
+    // Previous Button
+    const previousButton = document.createElement("button");
+    previousButton.classList.add('pagination-btns');
+    previousButton.textContent = "< Previous";
+    previousButton.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            displayPapers();
+        }
+    });
+    paginationContainer.appendChild(previousButton);
+
+    // Calculate visible pages range
+    let startPageIndex = Math.max(
+        1,
+        currentPage - Math.floor(maxVisiblePages / 2)
+    );
+    const endPageIndex = Math.min(
+        totalPages,
+        startPageIndex + maxVisiblePages - 1
+    );
+
+    // Display first page button
+    if (startPageIndex > 1) {
+        const firstPageButton = createPageButton(1);
+        paginationContainer.appendChild(firstPageButton);
+
+        if (startPageIndex > 2) {
+            paginationContainer.appendChild(createEllipsisButton());
+        }
+    }
+
+    // Display visible page buttons
+    for (let i = startPageIndex; i <= endPageIndex; i++) {
+        const button = createPageButton(i);
+        paginationContainer.appendChild(button);
+    }
+
+    // Add ellipsis and last page if needed
+    if (endPageIndex < totalPages) {
+        if (endPageIndex < totalPages - 1) {
+            paginationContainer.appendChild(createEllipsisButton());
+        }
+        const lastPageButton = createPageButton(totalPages);
+        paginationContainer.appendChild(lastPageButton);
+    }
+
+    // Next Button
+    const nextButton = document.createElement("button");
+    nextButton.classList.add('pagination-btns');
+    nextButton.textContent = "Next >";
+    nextButton.addEventListener("click", () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            displayPapers();
+        }
+    });
+    paginationContainer.appendChild(nextButton);
+
+    mainContainer.appendChild(paginationContainer);
+}
+
+function createPageButton(pageNumber) {
+    const button = document.createElement("button");
+    button.classList.add('pages-btns')
+    button.textContent = pageNumber;
+    button.addEventListener("click", () => {
+        currentPage = pageNumber;
+        displayPapers();
+    });
+
+    if (pageNumber === currentPage) {
+        button.classList.add("active");
+    }
+
+    return button;
+}
+
+function createEllipsisButton() {
+    const button = document.createElement("button");
+    button.textContent = "...";
+    button.disabled = true;
+    button.classList.add("ellipsis");
+    return button;
 }

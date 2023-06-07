@@ -38,7 +38,13 @@ input {
     border-radius: 20px;
     color: #2C2C2C;
 }
-
+.search-container{
+    width: 50%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
 .filtering-container {
     display: flex;
     justify-content: center;
