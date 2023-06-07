@@ -1,0 +1,120 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Users {
+  userID Int [pk, increment]
+  firstName String [not null]
+  lastName String [not null]
+  email String [unique, not null]
+  password String [not null]
+  role String [not null]
+  image String
+  Papers Papers [not null]
+  Ratings Ratings [not null]
+
+  indexes {
+    (firstName, lastName) [unique]
+  }
+}
+
+Table Dates {
+  dayNo Int [pk, increment]
+  date String [not null]
+  Schedule Schedule
+}
+
+Table Institutions {
+  institutionID Int [pk, increment]
+  institutionName String [not null]
+  Presenter Presenter [not null]
+  Author Author [not null]
+}
+
+Table Locations {
+  locationID Int [pk, increment]
+  location String [not null]
+  Schedule Schedule [not null]
+}
+
+Table Papers {
+  paperID String [pk]
+  isAccepted Boolean [not null, default: false]
+  paperTitle String [not null]
+  paperSummary String [not null]
+  paperPDF String [not null]
+  Presenter Presenter [not null]
+  presenterID String [unique, not null]
+  Authors Author [not null]
+  User Users [not null]
+  userID Int [not null]
+  Ratings Ratings [not null]
+  Session Schedule
+  sessionID String
+}
+
+Table Presenter {
+  presenterID String [pk]
+  presenterFname String [not null]
+  presenterLname String [not null]
+  presenterImage String [not null]
+  PresenterAffiliation Institutions [not null]
+  institutionID Int [not null]
+  presenterEmail String [not null]
+  Papers Papers
+}
+
+Table Author {
+  authorID String [pk]
+  authorFname String [not null]
+  authorLname String [not null]
+  authorImage String [not null]
+  AuthorAffiliation Institutions [not null]
+  institutionID Int [not null]
+  authorEmail String [not null]
+  Papers Papers [not null]
+  paperID String [not null]
+}
+
+Table Ratings {
+  ratingID String [pk]
+  evaluated Boolean [not null, default: false]
+  evaluation Int
+  contribution Int
+  strengths String
+  weaknesses String
+  User Users [not null]
+  userID Int [not null]
+  Papers Papers [not null]
+  paperID String [not null]
+}
+
+Table Schedule {
+  sessionID String [pk]
+  sessionTitle String [not null]
+  Papers Papers [not null]
+  Date Dates [not null]
+  dateNo Int [unique, not null]
+  Location Locations [not null]
+  locationID Int [not null]
+}
+
+Ref: Papers.presenterID - Presenter.presenterID [delete: Cascade]
+
+Ref: Papers.userID > Users.userID
+
+Ref: Papers.sessionID > Schedule.sessionID
+
+Ref: Presenter.institutionID > Institutions.institutionID
+
+Ref: Author.institutionID > Institutions.institutionID
+
+Ref: Author.paperID > Papers.paperID
+
+Ref: Ratings.userID > Users.userID
+
+Ref: Ratings.paperID > Papers.paperID
+
+Ref: Schedule.dateNo - Dates.dayNo
+
+Ref: Schedule.locationID > Locations.locationID
