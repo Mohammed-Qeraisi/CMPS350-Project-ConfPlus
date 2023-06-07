@@ -198,28 +198,22 @@ export default new PapersRepo();
 //         }
 //     }
 
-//     async updatePaper(updatedPaper) {
+//     async updateRatings(newRating) {
 //         try {
-//             const existingPaper = await prisma.papers.findUnique({
+//             const updatedRating = await prisma.ratings.update({
 //                 where: {
-//                     paperID: updatedPaper.paperID,
+//                     ratingID: newRating.ratingID,
 //                 },
+//                 data: newRating,
 //             });
 
-//             if (existingPaper) {
-//                 await prisma.paper.update({
-//                     where: {
-//                         paperID: updatedPaper.paperID,
-//                     },
-//                     data: updatedPaper,
-//                 });
-
+//             if (updatedRating) {
 //                 return {
-//                     successfully: `Updated successfully ID:${updatedPaper.paperID}`,
+//                     successfully: `Updated successfully RatingID:${newRating.ratingID}`,
 //                 };
 //             } else {
 //                 return {
-//                     errorMessage: `No paper found with this ID:${updatedPaper.paperID}`,
+//                     errorMessage: `No rating found with this ID:${newRating.ratingID}`,
 //                 };
 //             }
 //         } catch (error) {
