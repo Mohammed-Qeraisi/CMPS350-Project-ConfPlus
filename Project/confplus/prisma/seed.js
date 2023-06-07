@@ -15,7 +15,7 @@ async function main() {
         const institutions = await fs.readJson(institutionPath)
         const locations = await fs.readJson(locationPath)
         const users = await fs.readJson(userPath)
-        console.log("hihihihihi");
+   
 
         for (const conference of conferences)  await prisma.dates.create({ data: conference })
         for (const institution of institutions)  await prisma.institutions.create({ data: institution })
