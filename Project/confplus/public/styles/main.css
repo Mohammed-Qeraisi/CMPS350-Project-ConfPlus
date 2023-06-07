@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background-color: #f7f7f7;
+    background-color: #b5bdd6;
 }
 
 /*Nav*/
@@ -37,6 +37,8 @@ body {
     font-size: 32px;
     margin-left: 1rem;
     color: #2C2C2C;
+    text-shadow: 0px 10px 5px #97a1c0;
+
 }
 
 ul {
@@ -83,7 +85,7 @@ a:hover {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: #f7f7f7;
+    background-color: #b5bdd6;
 }
 
 .main-footer {

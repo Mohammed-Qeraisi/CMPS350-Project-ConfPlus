@@ -1,13 +1,30 @@
+body{
+    background-color: #b5bdd6;
+}
+footer{
+    background-color: #b5bdd6;
+}
+body nav h1{
+    text-shadow: 0px 10px 5px #97a1c0;
+    
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
-    gap: 3rem;
+    height: auto; /* Change height to auto to allow for content expansion */
+    flex-wrap: wrap; /* Added flex-wrap to allow wrapping on smaller screens */
+   
+    margin-bottom: 3rem; /* Add margin-bottom to create space for the footer */
+    gap:3rem;
+    padding-bottom: 3rem;
+
 }
 
-.card {
-    background-color: #fff;
+  
+  .card {
+    background-color: #667dc2 ;
     border-radius: 1rem;
     width: 21.875rem;
     text-align: center;
@@ -17,57 +34,70 @@
     justify-content: center;
     align-items: center;
     height: 18.75rem;
-    box-shadow: 20px 0px 5px black;
-}
-
-.card:hover {
+    box-shadow: 0px 20px 15px #071233;
+   
+  }
+  
+  .card:hover {
     transform: scale(1.05);
-}
-
-.main-title {
+  }
+  
+  .main-title {
+    padding-top: 2rem;
     font-size: 1.8rem;
-    color: #2C2C2C;
+    color: black;
     margin-bottom: 2rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.title {
+    text-shadow: 0px 20px 15px #071233;
+  }
+  
+  .title {
     font-size: 1.3rem;
-    color: #2C2C2C;
+    color: black;
     margin-bottom: 10px;
-}
-
-.statistic {
+  }
+  
+  .statistic {
     font-size: 1rem;
-    color: #3658C1;
+    color: rgb(0, 0, 0);
     margin-bottom: 1rem;
-}
-
-.description {
+  }
+  
+  .description {
     font-size: 16px;
-    color: #2C2C2C;
+    color: #2c2c2c;
     margin-bottom: 20px;
-}
-
-@media screen and (max-width: 767px) {
+  }
+  .footer-title{
+  
+    color: #3658c1;
+ 
+  }
+  
+  @media screen and (max-width: 767px) {
+    .container {
+      margin-bottom: 0; /* Remove margin-bottom for smaller screens */
+    }
+  
     .card {
-        width: 100%;
-        padding: 20px;
+      width: calc(50% - 1.5rem); /* Set width to 50% minus the gap between cards */
+      margin-bottom: 1.5rem; /* Add margin bottom for spacing */
+      padding: 20px;
     }
-
+  
     .title {
-        padding-top: 1rem;
-        font-size: 0.9rem;
+      padding-top: 1rem;
+      font-size: 0.9rem;
     }
-
+  
     .statistic {
-        font-size: 1rem;
+      font-size: 1rem;
     }
-
+  
     .description {
-        font-size: 0.8rem;
+      font-size: 0.8rem;
     }
-}
+  }

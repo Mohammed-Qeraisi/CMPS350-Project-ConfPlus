@@ -30,6 +30,8 @@ main {
 .form-container {
     display: flex;
     background-color: #f7f7f7;
+    box-shadow: 0px 20px 15px #071233;
+    border-radius: 1rem;
 }
 
 .rightside {
