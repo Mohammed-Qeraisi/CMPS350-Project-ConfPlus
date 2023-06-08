@@ -3,8 +3,8 @@ import papersRepo from "../repository/papers-repo.js";
 const currentUser = JSON.parse(sessionStorage.getItem("CurrentUser"));
 const mainContainer = document.querySelector("#main-container");
 let papers = null;
-let currentPage = 1
-let papersPerPage = 6
+let currentPage = 1;
+let papersPerPage = 6;
 window.addEventListener("load", async () => {
     papers = await papersRepo.getPapersByUserID(currentUser.userID);
     displayPapers();
@@ -35,30 +35,20 @@ function displayPapers() {
 }
 
 function convertToCards(paper) {
-    const reviewers = paper.reviewersID;
-    let details = "";
+    const reviewers = paper.Ratings;
+
     let status = "";
     if (!reviewers[0].evaluated || !reviewers[1].evaluated) {
         status = "hourglass";
     } else if (paper.isAccepted) {
         status = "checkmark-circle";
-        details = `
-        <div class="details-container">
-            <h3>Session Details: </h3>
-            <h5>Location: </h5>
-            <p>Doha City Center</p>
-            <h5>Date: </h5>
-            <p>01-05-2023</p>
-            <h5>Time: </h5>
-            <p>9:00 AM</p>
-        </div>
-        `;
     } else {
         status = "close-circle";
     }
 
     let reviewer1Content = "";
     let reviewer2Content = "";
+    let details = "";
 
     if (!reviewers[0].evaluated) {
         reviewer1Content = `
@@ -118,6 +108,26 @@ function convertToCards(paper) {
         `;
     }
 
+    if (!paper.Session) {
+        details = `
+        <div class="details-container">
+            <h3>There is no associated session</h3>
+        </div>
+        `;
+    } else {
+        details = `
+        <div class="details-container">
+            <h3>Session Details: </h3>
+            <h5>Location: </h5>
+            <p>Doha City Center</p>
+            <h5>Date: </h5>
+            <p>01-05-2023</p>
+            <h5>Time: </h5>
+            <p>9:00 AM</p>
+        </div>
+        `;
+    }
+
     return `
     <article class="paper-card">
         <div class="paper-header">
@@ -142,7 +152,7 @@ function addPaginationButtons() {
 
     // Previous Button
     const previousButton = document.createElement("button");
-    previousButton.classList.add('pagination-btns');
+    previousButton.classList.add("pagination-btns");
     previousButton.textContent = "< Previous";
     previousButton.addEventListener("click", () => {
         if (currentPage > 1) {
@@ -189,7 +199,7 @@ function addPaginationButtons() {
 
     // Next Button
     const nextButton = document.createElement("button");
-    nextButton.classList.add('pagination-btns');
+    nextButton.classList.add("pagination-btns");
     nextButton.textContent = "Next >";
     nextButton.addEventListener("click", () => {
         if (currentPage < totalPages) {
@@ -204,7 +214,7 @@ function addPaginationButtons() {
 
 function createPageButton(pageNumber) {
     const button = document.createElement("button");
-    button.classList.add('pages-btns')
+    button.classList.add("pages-btns");
     button.textContent = pageNumber;
     button.addEventListener("click", () => {
         currentPage = pageNumber;
