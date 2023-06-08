@@ -5,6 +5,7 @@ export async function GET(request) {
         const locations = await repo.getLocations();
         return Response.json(locations);
     } catch (error) {
+        console.log(error);
         return Response.json({
             errorMessage: error.name + " | " + error.message,
         });

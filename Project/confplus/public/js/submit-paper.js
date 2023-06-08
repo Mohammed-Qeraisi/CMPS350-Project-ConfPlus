@@ -57,8 +57,8 @@ submitPaper.addEventListener("click", async (event) => {
 
         const paper = infoFormToObject(form);
 
-        paper.ratings.create = reviewersID;
-        paper.userID = { connect: { userID: parseInt(currentUser.userID) } };
+        paper.ratings = reviewersID;
+        paper.userID = parseInt(currentUser.userID);
         paper.paperPDF = "PDF";
 
         const addedPaper = await papersRepo.addPaper(paper);
@@ -78,7 +78,7 @@ async function getRandomReviewer() {
     for (let i = 0; i < numReviewers; i++) {
         const index = Math.floor(Math.random() * reviewerUsers.length);
         reviewers.push({
-            userID: { connect: { userID: reviewerUsers[index].userID } },
+            userID: reviewerUsers[index].userID,
         });
         reviewerUsers.splice(index, 1);
     }
@@ -132,114 +132,40 @@ function infoFormToObject(form) {
     const formData = new FormData(form);
 
     let data = {
-        presenter: { create: {} },
-        ratings: { create: [] },
+        presenter: {},
+        ratings: [],
     };
 
-    let authors = { create: [] };
+    let authors = [];
     const regex = /\d+$/;
 
-    for (const [key, value] of formData) {
+    const formObject = Object.fromEntries(formData.entries());
+
+    for (const [key, value] of Object.entries(formObject)) {
         if (key.startsWith("presenter")) {
             if (key === "presenterAffiliation") {
-                data.presenter.create[key] = {
-                    connect: {
-                        institutionID: parseInt(value),
-                    },
-                };
+                data.presenter["institutionID"] = parseInt(value);
             } else {
-                data.presenter.create[key] = value;
+                data.presenter[key] = value.toString();
             }
         } else if (key.startsWith("author")) {
             const authorNumber = key.match(regex)[0];
-            const author = authors.create[authorNumber - 2] || {};
+            const author = authors[authorNumber - 2] || {};
             if (key === `authorAffiliation${authorNumber}`) {
-                author["authorAffiliation"] = {
-                    connect: {
-                        institutionID: parseInt(value),
-                    },
-                };
+                author["institutionID"] = parseInt(value);
             } else {
                 const newKey = key.replace(authorNumber, "");
-                author[newKey] = value;
+                author[newKey] = value.toString();
             }
-            authors.create[authorNumber - 2] = author;
+            authors[authorNumber - 2] = author;
         } else {
             data[key] = value;
         }
     }
 
-    if (authors.create.length > 0) {
+    if (authors.length > 0) {
         data.authors = authors;
     }
 
     return data;
 }
-
-// {
-//     "paperTitle": "Neurology and Computer Interface to Create Artificial Limbs",
-//     "paperSummary": "This is a short summary",
-//     "paperPDF": "PDF",
-//     "presenter": {
-//       "create": {
-//         "presenterFname": "Mohammed",
-//         "presenterLname": "AlQeraisi",
-//         "presenterImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
-//         "presenterEmail": "test@test.com",
-//         "presenterAffiliation": {
-//           "connect": {
-//             "institutionID": 1
-//           }
-//         }
-//       }
-//     },
-//     "authors": {
-//       "create": [
-//         {
-//           "authorFname": "t",
-//           "authorLname": "t",
-//           "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
-//           "authorEmail": "test@test.com",
-//           "authorAffiliation": {
-//             "connect": {
-//               "institutionID": 1
-//             }
-//           }
-//         },
-//         {
-//           "authorFname": "a",
-//           "authorLname": "a",
-//           "authorImage": "https://i.postimg.cc/pVsBtM4D/afacCzY.png",
-//           "authorEmail": "a@a.com",
-//           "authorAffiliation": {
-//             "connect": {
-//               "institutionID": 1
-//             }
-//           }
-//         }
-//       ]
-//     },
-// "ratings": {
-//   "create": [
-//     {
-//       "userID": {
-//         "connect": {
-//           "userID": 7
-//         }
-//       }
-//     },
-//     {
-//       "userID": {
-//         "connect": {
-//           "userID": 8
-//         }
-//       }
-//     }
-//   ]
-// },
-//     "userID": {
-//       "connect": {
-//         "userID": 20
-//       }
-//     }
-//   }

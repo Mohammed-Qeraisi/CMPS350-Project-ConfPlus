@@ -7,17 +7,17 @@ class PapersRepo {
     }
 
     async getPapersByReviewerID(ReviewerID) {
-        const response = await fetch(`${baseUrl}?ReviewerID=${ReviewerID}`);
+        const response = await fetch(`${baseUrl}/reviewer/${ReviewerID}`);
         return await response.json();
     }
 
     async getPapersByUserID(userID) {
-        const response = await fetch(`${baseUrl}?UserID=${userID}`);
+        const response = await fetch(`${baseUrl}/user/${userID}`);
         return await response.json();
     }
 
     async getAcceptedPapers() {
-        const response = await fetch(`${baseUrl}?AcceptedPapers=true`);
+        const response = await fetch(`${baseUrl}/status/true`);
         return await response.json();
     }
 
@@ -43,6 +43,7 @@ class PapersRepo {
             },
             body: JSON.stringify(paper),
         });
+        console.log(JSON.stringify(paper));
         return await response.json();
     }
 }
