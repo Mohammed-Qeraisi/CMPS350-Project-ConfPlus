@@ -59,6 +59,7 @@ article {
     border-radius: 10px;
     padding: 0.5rem;
     width: 300px;
+    box-shadow: 0px 2px 2px #2c2c2c;
 }
 
 .paper-section {
@@ -92,6 +93,7 @@ article {
     padding: 10px;
     cursor: pointer;
     transition: height 0.3s;
+    background-color: #667dc2;
 }
 
 .paper-card:hover {
@@ -129,6 +131,11 @@ ion-icon[name="hourglass"]{
 .paper-details {
     display: none;
     margin-top: 10px;
+}
+
+.paper-card.active{
+    background-color: #f7f7f7;
+    color: #2c2c2c;
 }
 
 .paper-card.active .paper-details {

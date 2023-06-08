@@ -36,12 +36,23 @@ function displayPapers() {
 
 function convertToCards(paper) {
     const reviewers = paper.reviewersID;
-
+    let details = "";
     let status = "";
     if (!reviewers[0].evaluated || !reviewers[1].evaluated) {
         status = "hourglass";
     } else if (paper.isAccepted) {
         status = "checkmark-circle";
+        details = `
+        <div class="details-container">
+            <h3>Session Details: </h3>
+            <h5>Location: </h5>
+            <p>Doha City Center</p>
+            <h5>Date: </h5>
+            <p>01-05-2023</p>
+            <h5>Time: </h5>
+            <p>9:00 AM</p>
+        </div>
+        `;
     } else {
         status = "close-circle";
     }
@@ -106,19 +117,6 @@ function convertToCards(paper) {
             </div>
         `;
     }
-
-    let details = "";
-    details = `
-    <div class="details-container">
-        <h3>Session Details: </h3>
-        <h5>Location: </h5>
-        <p>Doha City Center</p>
-        <h5>Date: </h5>
-        <p>01-05-2023</p>
-        <h5>Time: </h5>
-        <p>9:00 AM</p>
-    </div>
-    `;
 
     return `
     <article class="paper-card">
