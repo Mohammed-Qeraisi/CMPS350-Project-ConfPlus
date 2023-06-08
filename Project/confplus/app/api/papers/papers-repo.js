@@ -107,19 +107,22 @@ class PapersRepo {
         try {
             return await prisma.papers.findMany();
         } catch (error) {
+            console.log(error.message);
             return { errorMessage: error.name + " | " + error.message };
         }
     }
 
     async getPapersByReviewerID(id) {
         try {
-            const papers = await prisma.ratings.findMany({
+            const papers = await prisma.Ratings.findMany({
                 where: {
                     userID: +id,
                 },
-                Papers: {
-                    select: {
-                        paperTitle: true,
+                include: {
+                    Papers: {
+                        select: {
+                            paperTitle: true,
+                        },
                     },
                 },
             });
@@ -132,6 +135,7 @@ class PapersRepo {
                 };
             }
         } catch (error) {
+            console.log(error.message);
             return { errorMessage: error.name + " | " + error.message };
         }
     }
@@ -152,6 +156,7 @@ class PapersRepo {
                 };
             }
         } catch (error) {
+            console.log(error.message);
             return { errorMessage: error.name + " | " + error.message };
         }
     }
@@ -160,17 +165,15 @@ class PapersRepo {
         try {
             const papers = await prisma.papers.findMany({
                 where: {
-                    paperID: id,
-                },
-                select: {
-                    isAccepted: true,
-                    paperTitle: true,
+                    userID: +id,
                 },
                 include: {
                     Ratings: true,
                     Session: true,
                 },
             });
+
+            console.log(papers);
 
             if (papers) {
                 return papers;
@@ -180,6 +183,7 @@ class PapersRepo {
                 };
             }
         } catch (error) {
+            console.log(error.message);
             return { errorMessage: error.name + " | " + error.message };
         }
     }
@@ -191,8 +195,17 @@ class PapersRepo {
                     paperID: id,
                 },
                 include: {
-                    Presenter: true,
-                    Authors: true,
+                    Presenter: {
+                        include: {
+                            PresenterAffiliation: true,
+                        },
+                    },
+                    Authors: {
+                        include: {
+                            AuthorAffiliation: true,
+                        },
+                    },
+                    Ratings: true,
                 },
             });
 
@@ -202,6 +215,7 @@ class PapersRepo {
                 return { errorMessage: `No paper found with this ID:${id}` };
             }
         } catch (error) {
+            console.log(error.message);
             return { errorMessage: error.name + " | " + error.message };
         }
     }
@@ -225,6 +239,33 @@ class PapersRepo {
                 };
             }
         } catch (error) {
+            console.log(error.message);
+            return { errorMessage: error.name + " | " + error.message };
+        }
+    }
+
+    async updatePaper(newPaper) {
+        try {
+            const updatedPaper = await prisma.papers.update({
+                where: {
+                    paperID: newPaper.paperID,
+                },
+                data: {
+                    isAccepted: newPaper.isAccepted,
+                },
+            });
+
+            if (updatedPaper) {
+                return {
+                    successfully: `Updated successfully paperID:${newPaper.paperID}`,
+                };
+            } else {
+                return {
+                    errorMessage: `No paper found with this ID:${newPaper.paperID}`,
+                };
+            }
+        } catch (error) {
+            console.log(error.message);
             return { errorMessage: error.name + " | " + error.message };
         }
     }

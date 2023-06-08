@@ -33,10 +33,10 @@ function displayPapers() {
 
 function convertToCards(paper) {
     const icon = paper.evaluated ? "document-text" : "document-text-outline";
-    const status = paper.evaluated ? "evaluated" : "not-evaluated"
+    const status = paper.evaluated ? "evaluated" : "not-evaluated";
     return `
 <article class="title-card" id="${status}" onclick="loadPaper('${paper.paperID}')">
-  <h1>Title: ${paper.paperTitle}</h1>
+  <h1>Title: ${paper.Papers.paperTitle}</h1>
   <ion-icon name="${icon}"></ion-icon>
 </article>
 `;
@@ -45,19 +45,19 @@ function convertToCards(paper) {
 async function loadPaper(id) {
     selectedPaper = await papersRepo.getPaperByID(id);
     const paperDetail = paperDetails(selectedPaper);
-    index = selectedPaper.reviewersID.findIndex(
-        (reviewer) => reviewer.id === currentUser.userID
+    index = selectedPaper.Ratings.findIndex(
+        (rating) => rating.userID === parseInt(currentUser.userID)
     );
     mainContainer.innerHTML = paperDetail;
     await createFormPage();
 
-    if (selectedPaper.reviewersID[index].evaluated) {
-        fillForm(selectedPaper.reviewersID[index]);
+    if (selectedPaper.Ratings[index].evaluated) {
+        fillForm(selectedPaper.Ratings[index]);
     }
 }
 
 function paperDetails(selectedPaper) {
-    const authors = selectedPaper.authors || [];
+    const authors = selectedPaper.Authors || [];
 
     return `
 <section class="paper-container">
@@ -71,21 +71,23 @@ function paperDetails(selectedPaper) {
 
           <div class="card-image">
             <img src="${
-                selectedPaper.presenter.presenterImage
+                selectedPaper.Presenter.presenterImage
             }" alt="Presenter Image">
           </div>
 
           <div class="details">
-            <h2>${selectedPaper.presenter.presenterFname} ${
-        selectedPaper.presenter.presenterLname
+            <h2>${selectedPaper.Presenter.presenterFname} ${
+        selectedPaper.Presenter.presenterLname
     }
               <br>
               <div class="affiliation-email">
-                <span>${selectedPaper.presenter.presenterAffiliation}</span>
+                <span>${
+                    selectedPaper.Presenter.PresenterAffiliation.institutionName
+                }</span>
                 <br>
                 <span><a
-                    href="mailto:${selectedPaper.presenter.presenterEmail}">${
-        selectedPaper.presenter.presenterEmail
+                    href="mailto:${selectedPaper.Presenter.presenterEmail}">${
+        selectedPaper.Presenter.presenterEmail
     }</a></span>
               </div>
             </h2>
@@ -104,7 +106,7 @@ function paperDetails(selectedPaper) {
           .map(
               (author) => `
       <h5><a href="mailto:${author.authorEmail}">${author.authorFname} ${author.authorLname}</a> <br>
-        ${author.authorAffiliation} </h5>
+        ${author.AuthorAffiliation.institutionName} </h5>
       `
           )
           .join(" ")}
@@ -125,7 +127,7 @@ function addPaginationButtons() {
 
     // Previous Button
     const previousButton = document.createElement("button");
-    previousButton.classList.add('pagination-btns');
+    previousButton.classList.add("pagination-btns");
     previousButton.textContent = "< Previous";
     previousButton.addEventListener("click", () => {
         if (currentPage > 1) {
@@ -172,7 +174,7 @@ function addPaginationButtons() {
 
     // Next Button
     const nextButton = document.createElement("button");
-    nextButton.classList.add('pagination-btns');
+    nextButton.classList.add("pagination-btns");
     nextButton.textContent = "Next >";
     nextButton.addEventListener("click", () => {
         if (currentPage < totalPages) {
@@ -187,7 +189,7 @@ function addPaginationButtons() {
 
 function createPageButton(pageNumber) {
     const button = document.createElement("button");
-    button.classList.add('pages-btns')
+    button.classList.add("pages-btns");
     button.textContent = pageNumber;
     button.addEventListener("click", () => {
         currentPage = pageNumber;
@@ -238,10 +240,17 @@ async function formSubmit(event) {
         const isFormValid = formCheck.checkValidity();
         if (!isFormValid) return;
 
-        formToObject(evaluationFromHTML);
+        const newRating = formToObject(evaluationFromHTML);
         isAccepted();
 
-        const updatePaper = await papersRepo.updatePaper(selectedPaper);
+        // console.log(selectedPaper);
+
+        // alert(selectedPaper);
+
+        const updateRating = await papersRepo.updateRatings(newRating);
+        await papersRepo.updatePaper(selectedPaper);
+
+        alert(updateRating.successfully || updateRating.errorMessage);
 
         await reloadPage();
     } catch (error) {
@@ -250,14 +259,11 @@ async function formSubmit(event) {
 }
 
 function isAccepted() {
-    const sumOfEvaluations = selectedPaper.reviewersID.reduce(
-        (total, reviewer) => {
-            return total + parseInt(reviewer.evaluation);
-        },
-        0
-    );
+    const sumOfEvaluations = selectedPaper.Ratings.reduce((total, reviewer) => {
+        return total + parseInt(reviewer.evaluation);
+    }, 0);
 
-    const allReviewed = selectedPaper.reviewersID.every(
+    const allReviewed = selectedPaper.Ratings.every(
         (reviewer) => reviewer.evaluated === true
     );
 
@@ -270,13 +276,19 @@ function isAccepted() {
 
 function formToObject(formElement) {
     const formData = new FormData(formElement);
-    const data = selectedPaper.reviewersID[index];
+    const data = selectedPaper.Ratings[index];
 
     for (const [key, value] of formData) {
-        data[key] = value;
+        if (key === "evaluation" || key === "contribution") {
+            data[key] = parseInt(value);
+        } else {
+            data[key] = value;
+        }
     }
 
     data.evaluated = true;
+
+    return data;
 }
 
 async function reloadPage() {

@@ -28,7 +28,7 @@ export async function POST(request) {
 export async function PUT(request) {
     try {
         const updatedPaper = await request.json();
-        const response = await repo.updateRatings(updatedPaper);
+        const response = await repo.updatePaper(updatedPaper);
         return Response.json(response);
     } catch (error) {
         console.log(error);

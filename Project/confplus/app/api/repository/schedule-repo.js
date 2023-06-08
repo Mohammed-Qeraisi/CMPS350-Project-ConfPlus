@@ -57,7 +57,7 @@ export default class ScheduleRepo {
                 });
 
                 return {
-                    successfully: `Updated successfully ID:${updatedSession.sessionID}`,
+                    successfully: `Updated successfully ID: ${updatedSession.sessionID}`,
                 };
             } else {
                 return {

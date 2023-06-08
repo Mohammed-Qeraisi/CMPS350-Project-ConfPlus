@@ -8,34 +8,33 @@ const eyeIcon = document.querySelector("#eye");
 loginForm.addEventListener("submit", login);
 
 async function login(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  const email = emailInput.value;
-  const password = passwordInput.value;
+    const email = emailInput.value;
+    const password = passwordInput.value;
 
-  const user = await usersRepo.getUser(email, password);
+    const user = await usersRepo.getUser(email, password);
 
-  if (user.errorMessage) {
-    alert("Invalid email or password. Please try again.");
-  } else {
-    console.log(user);
-    window.location.href = "home.html";
-    sessionStorage.setItem("isLoggedIn", "true");
-    sessionStorage.setItem(
-      "CurrentUser",
-      JSON.stringify({ userRole: user.role, userID: user.userID })
-    );
-  }
+    if (user.errorMessage) {
+        alert("Invalid email or password. Please try again.");
+    } else {
+        window.location.href = "home.html";
+        sessionStorage.setItem("isLoggedIn", "true");
+        sessionStorage.setItem(
+            "CurrentUser",
+            JSON.stringify({ userRole: user.role, userID: user.userID })
+        );
+    }
 }
 
 eyeIcon.addEventListener("click", () => {
-  const type = passwordInput.type === "password" ? "text" : "password";
+    const type = passwordInput.type === "password" ? "text" : "password";
 
-  passwordInput.type = type;
+    passwordInput.type = type;
 
-  if (type === "password") {
-    eyeIcon.name = "eye-outline";
-  } else {
-    eyeIcon.name = "eye-off-outline";
-  }
+    if (type === "password") {
+        eyeIcon.name = "eye-outline";
+    } else {
+        eyeIcon.name = "eye-off-outline";
+    }
 });

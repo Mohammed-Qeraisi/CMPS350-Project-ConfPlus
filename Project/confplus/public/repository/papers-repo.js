@@ -26,6 +26,15 @@ class PapersRepo {
         return await response.json();
     }
 
+    async updateRatings(updatedRatings) {
+        const response = await fetch(`${baseUrl}/reviewer`, {
+            method: "PUT",
+            body: JSON.stringify(updatedRatings),
+            headers: { "Content-type": "application/json" },
+        });
+        return await response.json();
+    }
+
     async updatePaper(updatedPaper) {
         const response = await fetch(`${baseUrl}`, {
             method: "PUT",
@@ -43,7 +52,6 @@ class PapersRepo {
             },
             body: JSON.stringify(paper),
         });
-        console.log(JSON.stringify(paper));
         return await response.json();
     }
 }

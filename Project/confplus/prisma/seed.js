@@ -9,6 +9,7 @@ const conferenceDatePath = path.join(process.cwd(), 'app/json/conference-dates.j
 const institutionPath = path.join(process.cwd(), 'app/json/institutions.json')
 const locationPath = path.join(process.cwd(), 'app/json/locations.json')
 const userPath = path.join(process.cwd(), 'app/json/users.json')
+
 async function main() {
     try {
         const conferences =  await fs.readJson(conferenceDatePath)
